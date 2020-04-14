@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,10 +18,26 @@ namespace SistemaAcademico
         //CONSTRUCTOR
         public Form1()
         {
+            //tread (progress bar)
+            Thread trd = new Thread(new ThreadStart (formRun));
+            trd.Start();
+            Thread.Sleep(9000);
+            trd.Abort();
+
+            //
+
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
         }
+
+        private void formRun()
+        {
+            Application.Run(new Welcome());
+
+            throw new NotImplementedException();
+        }
+
         //METODO PARA REDIMENCIONA EL FORMULARIO
         private int tolerance = 15;
         private const int WM_NCHITTEST = 132;
@@ -174,6 +191,7 @@ namespace SistemaAcademico
         private void Form1_Load(object sender, EventArgs e)
         {
             MostrarLogoINU();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
