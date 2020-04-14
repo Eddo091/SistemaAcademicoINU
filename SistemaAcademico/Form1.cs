@@ -15,6 +15,8 @@ namespace SistemaAcademico
 {
     public partial class Form1 : Form
     {
+        //
+        
         //CONSTRUCTOR
         public Form1()
         {
@@ -191,9 +193,11 @@ namespace SistemaAcademico
         private void Form1_Load(object sender, EventArgs e)
         {
             MostrarLogoINU();
-
+           
         }
+        
 
+        //BtnClick
         private void button1_Click(object sender, EventArgs e)
         {
             Estudiantes fm = new Estudiantes();
