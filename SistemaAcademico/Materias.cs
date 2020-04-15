@@ -27,5 +27,12 @@ namespace SistemaAcademico
             Asignaturas frm = new Asignaturas();
             frm.ShowDialog();
         }
+
+        private void Materias_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.MATERIAS' Puede moverla o quitarla según sea necesario.
+            this.mATERIASTableAdapter.Fill(this.dataSet.MATERIAS);
+
+        }
     }
 }

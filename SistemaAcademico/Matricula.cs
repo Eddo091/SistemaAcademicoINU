@@ -45,5 +45,14 @@ namespace SistemaAcademico
             else
                 MessageBox.Show("DEBE SELECCIONAR UNA FILA PARA EDITAR");
         }
+
+        private void Matricula_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.ESPECIALIDAD' Puede moverla o quitarla según sea necesario.
+            this.eSPECIALIDADTableAdapter.Fill(this.dataSet.ESPECIALIDAD);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.Estudiante' Puede moverla o quitarla según sea necesario.
+            this.estudianteTableAdapter.Fill(this.dataSet.Estudiante);
+
+        }
     }
 }

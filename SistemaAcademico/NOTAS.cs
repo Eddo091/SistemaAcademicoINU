@@ -26,5 +26,12 @@ namespace SistemaAcademico
         {
 
         }
+
+        private void NOTAS_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.Notas' Puede moverla o quitarla según sea necesario.
+            this.notasTableAdapter.Fill(this.dataSet.Notas);
+
+        }
     }
 }

@@ -27,5 +27,12 @@ namespace SistemaAcademico
            Docentes frm = new Docentes();
             frm.ShowDialog();
         }
+
+        private void Profesores_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.DOCENTES' Puede moverla o quitarla según sea necesario.
+            this.dOCENTESTableAdapter.Fill(this.dataSet.DOCENTES);
+
+        }
     }
 }

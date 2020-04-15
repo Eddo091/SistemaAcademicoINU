@@ -48,8 +48,15 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtYear = new System.Windows.Forms.TextBox();
+            this.grbNavegacionAlumnos = new System.Windows.Forms.GroupBox();
+            this.lblnregistros = new System.Windows.Forms.Label();
+            this.btnultimo = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
+            this.btnanterior = new System.Windows.Forms.Button();
+            this.btnprimero = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
+            this.grbNavegacionAlumnos.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -79,7 +86,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(451, 58);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
@@ -95,7 +102,7 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(544, 220);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(120, 35);
             this.btnCancelar.TabIndex = 42;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -112,7 +119,7 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(441, 220);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 35);
+            this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 41;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
@@ -204,7 +211,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(656, 38);
+            this.BarraTitulo.Size = new System.Drawing.Size(676, 38);
             this.BarraTitulo.TabIndex = 32;
             // 
             // label6
@@ -261,12 +268,93 @@
             this.txtYear.Size = new System.Drawing.Size(244, 22);
             this.txtYear.TabIndex = 50;
             // 
+            // grbNavegacionAlumnos
+            // 
+            this.grbNavegacionAlumnos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbNavegacionAlumnos.Controls.Add(this.lblnregistros);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnultimo);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnsiguiente);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnanterior);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnprimero);
+            this.grbNavegacionAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbNavegacionAlumnos.Location = new System.Drawing.Point(178, 266);
+            this.grbNavegacionAlumnos.Name = "grbNavegacionAlumnos";
+            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(244, 95);
+            this.grbNavegacionAlumnos.TabIndex = 52;
+            this.grbNavegacionAlumnos.TabStop = false;
+            this.grbNavegacionAlumnos.Text = "Navegacion ";
+            // 
+            // lblnregistros
+            // 
+            this.lblnregistros.AutoSize = true;
+            this.lblnregistros.Font = new System.Drawing.Font("Georgia", 9F);
+            this.lblnregistros.Location = new System.Drawing.Point(106, 53);
+            this.lblnregistros.Name = "lblnregistros";
+            this.lblnregistros.Size = new System.Drawing.Size(41, 15);
+            this.lblnregistros.TabIndex = 4;
+            this.lblnregistros.Text = "x de n";
+            // 
+            // btnultimo
+            // 
+            this.btnultimo.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnultimo.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnultimo.Location = new System.Drawing.Point(203, 36);
+            this.btnultimo.Name = "btnultimo";
+            this.btnultimo.Size = new System.Drawing.Size(39, 46);
+            this.btnultimo.TabIndex = 17;
+            this.btnultimo.Text = ">|";
+            this.btnultimo.UseVisualStyleBackColor = false;
+            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
+            // 
+            // btnsiguiente
+            // 
+            this.btnsiguiente.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsiguiente.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnsiguiente.Location = new System.Drawing.Point(158, 36);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(39, 46);
+            this.btnsiguiente.TabIndex = 16;
+            this.btnsiguiente.Text = ">";
+            this.btnsiguiente.UseVisualStyleBackColor = false;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
+            // 
+            // btnanterior
+            // 
+            this.btnanterior.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnanterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnanterior.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnanterior.Location = new System.Drawing.Point(51, 36);
+            this.btnanterior.Name = "btnanterior";
+            this.btnanterior.Size = new System.Drawing.Size(39, 46);
+            this.btnanterior.TabIndex = 15;
+            this.btnanterior.Text = "<";
+            this.btnanterior.UseVisualStyleBackColor = false;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
+            // 
+            // btnprimero
+            // 
+            this.btnprimero.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnprimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnprimero.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnprimero.Location = new System.Drawing.Point(6, 36);
+            this.btnprimero.Name = "btnprimero";
+            this.btnprimero.Size = new System.Drawing.Size(39, 46);
+            this.btnprimero.TabIndex = 14;
+            this.btnprimero.Text = "|<";
+            this.btnprimero.UseVisualStyleBackColor = false;
+            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
+            // 
             // Estudiantil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(656, 271);
+            this.ClientSize = new System.Drawing.Size(676, 373);
+            this.Controls.Add(this.grbNavegacionAlumnos);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label5);
@@ -292,6 +380,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
+            this.grbNavegacionAlumnos.ResumeLayout(false);
+            this.grbNavegacionAlumnos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +408,11 @@
         public System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.GroupBox grbNavegacionAlumnos;
+        private System.Windows.Forms.Label lblnregistros;
+        private System.Windows.Forms.Button btnultimo;
+        private System.Windows.Forms.Button btnsiguiente;
+        private System.Windows.Forms.Button btnanterior;
+        private System.Windows.Forms.Button btnprimero;
     }
 }

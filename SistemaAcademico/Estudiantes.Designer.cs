@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estudiantes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,7 +40,21 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataSet = new SistemaAcademico.DataSet();
+            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estudianteTableAdapter = new SistemaAcademico.DataSetTableAdapters.EstudianteTableAdapter();
+            this.iDESTUDIANTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODESTUDIANTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDESPECIALIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDSECCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDMODALIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDAÑODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDUSUARIOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -161,9 +176,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -178,6 +196,17 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDESTUDIANTEDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.apellidoDataGridViewTextBoxColumn,
+            this.cODESTUDIANTEDataGridViewTextBoxColumn,
+            this.iDESPECIALIDADDataGridViewTextBoxColumn,
+            this.iDSECCIONDataGridViewTextBoxColumn,
+            this.iDMODALIDADDataGridViewTextBoxColumn,
+            this.iDAÑODataGridViewTextBoxColumn,
+            this.iDUSUARIOSDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.estudianteBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,6 +219,7 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridView1.Location = new System.Drawing.Point(6, 74);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -202,6 +232,94 @@
             this.dataGridView1.Size = new System.Drawing.Size(849, 286);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // estudianteBindingSource
+            // 
+            this.estudianteBindingSource.DataMember = "Estudiante";
+            this.estudianteBindingSource.DataSource = this.dataSet;
+            // 
+            // estudianteTableAdapter
+            // 
+            this.estudianteTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDESTUDIANTEDataGridViewTextBoxColumn
+            // 
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.DataPropertyName = "ID_ESTUDIANTE";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.HeaderText = "ID_ESTUDIANTE";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Name = "iDESTUDIANTEDataGridViewTextBoxColumn";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Visible = false;
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 79;
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.apellidoDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // cODESTUDIANTEDataGridViewTextBoxColumn
+            // 
+            this.cODESTUDIANTEDataGridViewTextBoxColumn.DataPropertyName = "COD_ESTUDIANTE";
+            this.cODESTUDIANTEDataGridViewTextBoxColumn.HeaderText = "Codigo Estudiante";
+            this.cODESTUDIANTEDataGridViewTextBoxColumn.Name = "cODESTUDIANTEDataGridViewTextBoxColumn";
+            this.cODESTUDIANTEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cODESTUDIANTEDataGridViewTextBoxColumn.Width = 131;
+            // 
+            // iDESPECIALIDADDataGridViewTextBoxColumn
+            // 
+            this.iDESPECIALIDADDataGridViewTextBoxColumn.DataPropertyName = "ID_ESPECIALIDAD";
+            this.iDESPECIALIDADDataGridViewTextBoxColumn.HeaderText = "Especialidad";
+            this.iDESPECIALIDADDataGridViewTextBoxColumn.Name = "iDESPECIALIDADDataGridViewTextBoxColumn";
+            this.iDESPECIALIDADDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDESPECIALIDADDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // iDSECCIONDataGridViewTextBoxColumn
+            // 
+            this.iDSECCIONDataGridViewTextBoxColumn.DataPropertyName = "ID_SECCION";
+            this.iDSECCIONDataGridViewTextBoxColumn.HeaderText = "Seccion";
+            this.iDSECCIONDataGridViewTextBoxColumn.Name = "iDSECCIONDataGridViewTextBoxColumn";
+            this.iDSECCIONDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDSECCIONDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // iDMODALIDADDataGridViewTextBoxColumn
+            // 
+            this.iDMODALIDADDataGridViewTextBoxColumn.DataPropertyName = "ID_MODALIDAD";
+            this.iDMODALIDADDataGridViewTextBoxColumn.HeaderText = "Modalidad";
+            this.iDMODALIDADDataGridViewTextBoxColumn.Name = "iDMODALIDADDataGridViewTextBoxColumn";
+            this.iDMODALIDADDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDMODALIDADDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // iDAÑODataGridViewTextBoxColumn
+            // 
+            this.iDAÑODataGridViewTextBoxColumn.DataPropertyName = "ID_AÑO";
+            this.iDAÑODataGridViewTextBoxColumn.HeaderText = "Año";
+            this.iDAÑODataGridViewTextBoxColumn.Name = "iDAÑODataGridViewTextBoxColumn";
+            this.iDAÑODataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDAÑODataGridViewTextBoxColumn.Width = 52;
+            // 
+            // iDUSUARIOSDataGridViewTextBoxColumn
+            // 
+            this.iDUSUARIOSDataGridViewTextBoxColumn.DataPropertyName = "ID_USUARIOS";
+            this.iDUSUARIOSDataGridViewTextBoxColumn.HeaderText = "Usuarios";
+            this.iDUSUARIOSDataGridViewTextBoxColumn.Name = "iDUSUARIOSDataGridViewTextBoxColumn";
+            this.iDUSUARIOSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDUSUARIOSDataGridViewTextBoxColumn.Visible = false;
+            this.iDUSUARIOSDataGridViewTextBoxColumn.Width = 80;
             // 
             // Estudiantes
             // 
@@ -222,6 +340,8 @@
             this.Text = "Estudiantes";
             this.Load += new System.EventHandler(this.Estudiantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +356,17 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource estudianteBindingSource;
+        private DataSetTableAdapters.EstudianteTableAdapter estudianteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDESTUDIANTEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODESTUDIANTEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDESPECIALIDADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDSECCIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDMODALIDADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDAÑODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDUSUARIOSDataGridViewTextBoxColumn;
     }
 }

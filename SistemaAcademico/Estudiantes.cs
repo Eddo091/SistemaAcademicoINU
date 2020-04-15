@@ -24,6 +24,16 @@ namespace SistemaAcademico
 
         private void Estudiantes_Load(object sender, EventArgs e)
         {
+            try {
+                // TODO: esta línea de código carga datos en la tabla 'dataSet.Estudiante' Puede moverla o quitarla según sea necesario.
+                this.estudianteTableAdapter.Fill(this.dataSet.Estudiante);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mostrar datos Estudiante",
+  MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
 
         }
 

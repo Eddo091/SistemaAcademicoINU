@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,14 +40,25 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataSet = new SistemaAcademico.DataSet();
+            this.mATERIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIASTableAdapter = new SistemaAcademico.DataSetTableAdapters.MATERIASTableAdapter();
+            this.idMATERIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDPERSONALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIASBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -61,6 +73,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idMATERIASDataGridViewTextBoxColumn,
+            this.mATERIASDataGridViewTextBoxColumn,
+            this.iDPERSONALDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.mATERIASBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,6 +90,7 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridView1.Location = new System.Drawing.Point(7, 79);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -198,6 +216,45 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "MATERIAS";
             // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mATERIASBindingSource
+            // 
+            this.mATERIASBindingSource.DataMember = "MATERIAS";
+            this.mATERIASBindingSource.DataSource = this.dataSet;
+            // 
+            // mATERIASTableAdapter
+            // 
+            this.mATERIASTableAdapter.ClearBeforeFill = true;
+            // 
+            // idMATERIASDataGridViewTextBoxColumn
+            // 
+            this.idMATERIASDataGridViewTextBoxColumn.DataPropertyName = "Id_MATERIAS";
+            this.idMATERIASDataGridViewTextBoxColumn.HeaderText = "Id_MATERIAS";
+            this.idMATERIASDataGridViewTextBoxColumn.Name = "idMATERIASDataGridViewTextBoxColumn";
+            this.idMATERIASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idMATERIASDataGridViewTextBoxColumn.Visible = false;
+            this.idMATERIASDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // mATERIASDataGridViewTextBoxColumn
+            // 
+            this.mATERIASDataGridViewTextBoxColumn.DataPropertyName = "MATERIAS";
+            this.mATERIASDataGridViewTextBoxColumn.HeaderText = "MATERIAS";
+            this.mATERIASDataGridViewTextBoxColumn.Name = "mATERIASDataGridViewTextBoxColumn";
+            this.mATERIASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mATERIASDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // iDPERSONALDataGridViewTextBoxColumn
+            // 
+            this.iDPERSONALDataGridViewTextBoxColumn.DataPropertyName = "ID_PERSONAL";
+            this.iDPERSONALDataGridViewTextBoxColumn.HeaderText = "PERSONAL";
+            this.iDPERSONALDataGridViewTextBoxColumn.Name = "iDPERSONALDataGridViewTextBoxColumn";
+            this.iDPERSONALDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDPERSONALDataGridViewTextBoxColumn.Width = 96;
+            // 
             // Materias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,7 +271,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Materias";
             this.Text = "Materias";
+            this.Load += new System.EventHandler(this.Materias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIASBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +289,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource mATERIASBindingSource;
+        private DataSetTableAdapters.MATERIASTableAdapter mATERIASTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMATERIASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mATERIASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDPERSONALDataGridViewTextBoxColumn;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,14 +40,30 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataSet = new SistemaAcademico.DataSet();
+            this.notasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.notasTableAdapter = new SistemaAcademico.DataSetTableAdapters.NotasTableAdapter();
+            this.idNOTASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDMATERIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDESTUDIANTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOTA1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOTA2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOTA3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROMEDIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDPERIODODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -61,6 +78,16 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idNOTASDataGridViewTextBoxColumn,
+            this.iDMATERIADataGridViewTextBoxColumn,
+            this.iDESTUDIANTEDataGridViewTextBoxColumn,
+            this.nOTA1DataGridViewTextBoxColumn,
+            this.nOTA2DataGridViewTextBoxColumn,
+            this.nOTA3DataGridViewTextBoxColumn,
+            this.pROMEDIODataGridViewTextBoxColumn,
+            this.iDPERIODODataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.notasBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,6 +100,7 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridView1.Location = new System.Drawing.Point(7, 79);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
@@ -198,6 +226,85 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "NOTAS";
             // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // notasBindingSource
+            // 
+            this.notasBindingSource.DataMember = "Notas";
+            this.notasBindingSource.DataSource = this.dataSet;
+            // 
+            // notasTableAdapter
+            // 
+            this.notasTableAdapter.ClearBeforeFill = true;
+            // 
+            // idNOTASDataGridViewTextBoxColumn
+            // 
+            this.idNOTASDataGridViewTextBoxColumn.DataPropertyName = "Id_NOTAS";
+            this.idNOTASDataGridViewTextBoxColumn.HeaderText = "Id_NOTAS";
+            this.idNOTASDataGridViewTextBoxColumn.Name = "idNOTASDataGridViewTextBoxColumn";
+            this.idNOTASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idNOTASDataGridViewTextBoxColumn.Visible = false;
+            this.idNOTASDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // iDMATERIADataGridViewTextBoxColumn
+            // 
+            this.iDMATERIADataGridViewTextBoxColumn.DataPropertyName = "ID_MATERIA";
+            this.iDMATERIADataGridViewTextBoxColumn.HeaderText = "MATERIA";
+            this.iDMATERIADataGridViewTextBoxColumn.Name = "iDMATERIADataGridViewTextBoxColumn";
+            this.iDMATERIADataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDMATERIADataGridViewTextBoxColumn.Width = 83;
+            // 
+            // iDESTUDIANTEDataGridViewTextBoxColumn
+            // 
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.DataPropertyName = "ID_ESTUDIANTE";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.HeaderText = "ESTUDIANTE";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Name = "iDESTUDIANTEDataGridViewTextBoxColumn";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // nOTA1DataGridViewTextBoxColumn
+            // 
+            this.nOTA1DataGridViewTextBoxColumn.DataPropertyName = "NOTA 1";
+            this.nOTA1DataGridViewTextBoxColumn.HeaderText = "NOTA 1";
+            this.nOTA1DataGridViewTextBoxColumn.Name = "nOTA1DataGridViewTextBoxColumn";
+            this.nOTA1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOTA1DataGridViewTextBoxColumn.Width = 73;
+            // 
+            // nOTA2DataGridViewTextBoxColumn
+            // 
+            this.nOTA2DataGridViewTextBoxColumn.DataPropertyName = "NOTA 2";
+            this.nOTA2DataGridViewTextBoxColumn.HeaderText = "NOTA 2";
+            this.nOTA2DataGridViewTextBoxColumn.Name = "nOTA2DataGridViewTextBoxColumn";
+            this.nOTA2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOTA2DataGridViewTextBoxColumn.Width = 73;
+            // 
+            // nOTA3DataGridViewTextBoxColumn
+            // 
+            this.nOTA3DataGridViewTextBoxColumn.DataPropertyName = "NOTA 3";
+            this.nOTA3DataGridViewTextBoxColumn.HeaderText = "NOTA 3";
+            this.nOTA3DataGridViewTextBoxColumn.Name = "nOTA3DataGridViewTextBoxColumn";
+            this.nOTA3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOTA3DataGridViewTextBoxColumn.Width = 73;
+            // 
+            // pROMEDIODataGridViewTextBoxColumn
+            // 
+            this.pROMEDIODataGridViewTextBoxColumn.DataPropertyName = "PROMEDIO";
+            this.pROMEDIODataGridViewTextBoxColumn.HeaderText = "PROMEDIO";
+            this.pROMEDIODataGridViewTextBoxColumn.Name = "pROMEDIODataGridViewTextBoxColumn";
+            this.pROMEDIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.pROMEDIODataGridViewTextBoxColumn.Width = 97;
+            // 
+            // iDPERIODODataGridViewTextBoxColumn
+            // 
+            this.iDPERIODODataGridViewTextBoxColumn.DataPropertyName = "ID_PERIODO";
+            this.iDPERIODODataGridViewTextBoxColumn.HeaderText = "PERIODO";
+            this.iDPERIODODataGridViewTextBoxColumn.Name = "iDPERIODODataGridViewTextBoxColumn";
+            this.iDPERIODODataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDPERIODODataGridViewTextBoxColumn.Width = 86;
+            // 
             // NOTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,7 +321,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NOTAS";
             this.Text = "NOTAS";
+            this.Load += new System.EventHandler(this.NOTAS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +339,16 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource notasBindingSource;
+        private DataSetTableAdapters.NotasTableAdapter notasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idNOTASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDMATERIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDESTUDIANTEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOTA1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOTA2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOTA3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pROMEDIODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDPERIODODataGridViewTextBoxColumn;
     }
 }
