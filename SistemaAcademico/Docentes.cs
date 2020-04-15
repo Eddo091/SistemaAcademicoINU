@@ -20,6 +20,17 @@ namespace SistemaAcademico
         {
             InitializeComponent();
         }
+        //limpiar cajas
+        void limpiar_cajas()
+        {
+            lblid.Text = "";
+            txtName.Text = "";
+            txtApellido.Text = "";
+            txtCodigo.Text = "";
+            txtMateria.Text = "";
+
+
+        }
         //Navegacion
 
         private void btnprimero_Click(object sender, EventArgs e)
@@ -48,6 +59,7 @@ namespace SistemaAcademico
             {
                 posicion++;
                 Mostrardatos();
+                btnelim.Visible = true;
             }
             else
             {
@@ -67,6 +79,7 @@ namespace SistemaAcademico
             //DB
             actualizarDs();
             Mostrardatos();
+            btnelim.Visible = false;
         }
         void actualizarDs()
         {
@@ -77,6 +90,8 @@ namespace SistemaAcademico
         {
             try
             {
+
+                lblid.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 txtName.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtApellido.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtCodigo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
@@ -90,7 +105,35 @@ namespace SistemaAcademico
   MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+           
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String[] valores = {
+                      txtName.Text,
+            txtApellido.Text,
+            txtCodigo.Text,
+            txtMateria.Text,
+            };
+            objconexion.mantenimientodatos_Docente(valores, accion);
+            actualizarDs();
+            posicion = tbl.Rows.Count - 1;
+            MessageBox.Show("Datos: " + valores, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mostrardatos();
+        }
+
+        private void btnelim_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de eliminar a " + txtName.Text + " ?", "Docentes", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                String[] valores = { lblid.Text };
+                objconexion.mantenimientodatos_Docente(valores, "eliminar");
+                actualizarDs();
+                posicion = posicion > 0 ? posicion - 1 : 0;
+                Mostrardatos();
+            }
         }
     }
 }

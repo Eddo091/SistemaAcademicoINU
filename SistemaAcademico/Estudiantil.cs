@@ -27,6 +27,7 @@ namespace SistemaAcademico
             //DB
             actualizarDs();
             Mostrardatos();
+            btnelim.Visible = false;
         }
         //DB
         void actualizarDs()
@@ -38,6 +39,7 @@ namespace SistemaAcademico
         {
             try
             {
+                lblid.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 txtName.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtApellido.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtCodigo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
@@ -46,11 +48,27 @@ namespace SistemaAcademico
                 txtModalidad.Text = tbl.Rows[posicion].ItemArray[6].ToString();
                 txtYear.Text = tbl.Rows[posicion].ItemArray[7].ToString();
             }
-            catch (Exception e) {
-                MessageBox.Show( e.Message,  "Mostrar datos Estudiante",
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Mostrar datos Estudiante",
   MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
+
+        }
+        //Limpiar cajas
+        void limpiar_cajas()
+        {
+            lblid.Text = "";
+            txtName.Text = "";
+            txtApellido.Text = "";
+            txtCodigo.Text = "";
+            txtEspecialidad.Text = "";
+            txtSeccion.Text = "";
+            txtModalidad.Text = "";
+            txtYear.Text = "";
+
+
 
         }
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -85,6 +103,7 @@ namespace SistemaAcademico
             {
                 posicion++;
                 Mostrardatos();
+                btnelim.Visible = true;
             }
             else
             {
@@ -97,6 +116,57 @@ namespace SistemaAcademico
         {
             posicion = tbl.Rows.Count - 1;
             Mostrardatos();
+        }
+        //boton de guardar
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1.Text == "Guardar")
+            {//boton de nuevo
+                btnCancelar.Tag = "Cancelar";
+                accion = "nuevo";
+
+                limpiar_cajas();
+
+
+
+
+            }
+            else
+            {
+                
+                String[] valores = {
+                      txtName.Text,
+            txtApellido.Text,
+            txtCodigo.Text,
+            txtEspecialidad.Text,
+            txtSeccion.Text,
+            txtModalidad.Text,
+            txtYear.Text };
+                objconexion.mantenimiento_datos(valores, accion);
+                actualizarDs();
+                posicion = tbl.Rows.Count - 1;
+                MessageBox.Show("Datos: " + valores, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Mostrardatos();
+
+
+
+
+            }
+
+
+
+        }
+        //Eliminar
+        private void btnelim_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de eliminar a " + txtName.Text + " ?", "Estudiantes", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                String[] valores = { lblid.Text };
+                objconexion.mantenimiento_datos(valores, "eliminar");
+                actualizarDs();
+                posicion = posicion > 0 ? posicion - 1 : 0;
+                Mostrardatos();
+            }
         }
     }
 }

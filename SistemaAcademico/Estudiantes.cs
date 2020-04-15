@@ -12,10 +12,23 @@ namespace SistemaAcademico
 {
     public partial class Estudiantes : Form
     {
+        //BD
+        Conexion objconexion = new Conexion();
+        int posicion = 0;
+        
+        DataTable tbl = new DataTable();
         public Estudiantes()
         {
             InitializeComponent();
         }
+        void filtrar_datos(String valor)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = "Nombre like '%" + valor + "%'";
+            dataGridView1.DataSource = bs;
+        }
+        public int _codEstu;
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -39,8 +52,11 @@ namespace SistemaAcademico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Falta el cuadro de busqueda");
+            filtrar_datos(txtbuscar.Text);
+
+
         }
+        
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -50,12 +66,13 @@ namespace SistemaAcademico
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            Estudiantil frm = new Estudiantil();
+            frm.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

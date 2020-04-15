@@ -16,7 +16,14 @@ namespace SistemaAcademico
         {
             InitializeComponent();
         }
-
+        void filtrar_datos(String valor)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = "Nombre like '%" + valor + "%'";
+            dataGridView1.DataSource = bs;
+        }
+        public int _codDocen;
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -37,7 +44,13 @@ namespace SistemaAcademico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Falta el cuadro de busqueda, por cierto usuarios es donde iba el usuario y contraseña u.u");
+            filtrar_datos(txtbuscar.Text);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Docentes frm = new Docentes();
+            frm.ShowDialog();
         }
     }
 }

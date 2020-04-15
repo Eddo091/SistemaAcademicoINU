@@ -40,9 +40,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet = new SistemaAcademico.DataSet();
-            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estudianteTableAdapter = new SistemaAcademico.DataSetTableAdapters.EstudianteTableAdapter();
             this.iDESTUDIANTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +49,13 @@
             this.iDMODALIDADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDAÑODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDUSUARIOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new SistemaAcademico.DataSet();
+            this.estudianteTableAdapter = new SistemaAcademico.DataSetTableAdapters.EstudianteTableAdapter();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -233,20 +234,6 @@
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estudianteBindingSource
-            // 
-            this.estudianteBindingSource.DataMember = "Estudiante";
-            this.estudianteBindingSource.DataSource = this.dataSet;
-            // 
-            // estudianteTableAdapter
-            // 
-            this.estudianteTableAdapter.ClearBeforeFill = true;
-            // 
             // iDESTUDIANTEDataGridViewTextBoxColumn
             // 
             this.iDESTUDIANTEDataGridViewTextBoxColumn.DataPropertyName = "ID_ESTUDIANTE";
@@ -254,7 +241,7 @@
             this.iDESTUDIANTEDataGridViewTextBoxColumn.Name = "iDESTUDIANTEDataGridViewTextBoxColumn";
             this.iDESTUDIANTEDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDESTUDIANTEDataGridViewTextBoxColumn.Visible = false;
-            this.iDESTUDIANTEDataGridViewTextBoxColumn.Width = 125;
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Width = 126;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -319,7 +306,28 @@
             this.iDUSUARIOSDataGridViewTextBoxColumn.Name = "iDUSUARIOSDataGridViewTextBoxColumn";
             this.iDUSUARIOSDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDUSUARIOSDataGridViewTextBoxColumn.Visible = false;
-            this.iDUSUARIOSDataGridViewTextBoxColumn.Width = 80;
+            this.iDUSUARIOSDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // estudianteBindingSource
+            // 
+            this.estudianteBindingSource.DataMember = "Estudiante";
+            this.estudianteBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // estudianteTableAdapter
+            // 
+            this.estudianteTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(298, 29);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(424, 20);
+            this.txtbuscar.TabIndex = 26;
             // 
             // Estudiantes
             // 
@@ -327,6 +335,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1026, 383);
+            this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button1);
@@ -340,8 +349,8 @@
             this.Text = "Estudiantes";
             this.Load += new System.EventHandler(this.Estudiantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +377,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDMODALIDADDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDAÑODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDUSUARIOSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

@@ -54,6 +54,8 @@
             this.btnsiguiente = new System.Windows.Forms.Button();
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
+            this.btnelim = new System.Windows.Forms.Button();
+            this.lblid = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
@@ -123,6 +125,7 @@
             this.button1.TabIndex = 41;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -207,6 +210,7 @@
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BarraTitulo.Controls.Add(this.lblid);
             this.BarraTitulo.Controls.Add(this.label6);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
@@ -348,12 +352,42 @@
             this.btnprimero.UseVisualStyleBackColor = false;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
             // 
+            // btnelim
+            // 
+            this.btnelim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnelim.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnelim.FlatAppearance.BorderSize = 0;
+            this.btnelim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnelim.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnelim.ForeColor = System.Drawing.Color.Black;
+            this.btnelim.Location = new System.Drawing.Point(496, 255);
+            this.btnelim.Name = "btnelim";
+            this.btnelim.Size = new System.Drawing.Size(120, 35);
+            this.btnelim.TabIndex = 53;
+            this.btnelim.Text = "Eliminar";
+            this.btnelim.UseVisualStyleBackColor = false;
+            this.btnelim.Click += new System.EventHandler(this.btnelim_Click);
+            // 
+            // lblid
+            // 
+            this.lblid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblid.ForeColor = System.Drawing.Color.White;
+            this.lblid.Location = new System.Drawing.Point(632, 9);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(0, 16);
+            this.lblid.TabIndex = 16;
+            // 
             // Estudiantil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(676, 373);
+            this.Controls.Add(this.btnelim);
             this.Controls.Add(this.grbNavegacionAlumnos);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtYear);
@@ -414,5 +448,7 @@
         private System.Windows.Forms.Button btnsiguiente;
         private System.Windows.Forms.Button btnanterior;
         private System.Windows.Forms.Button btnprimero;
+        private System.Windows.Forms.Button btnelim;
+        private System.Windows.Forms.Label lblid;
     }
 }

@@ -24,7 +24,7 @@ namespace SistemaAcademico
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Hice doble click en el xd, pensé que habia");
         }
 
         private void NOTAS_Load(object sender, EventArgs e)

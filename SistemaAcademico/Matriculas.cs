@@ -108,5 +108,38 @@ namespace SistemaAcademico
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String[] valores1 = {
+                      txtName.Text,
+            txtApellido.Text,
+            txtCodigo.Text,
+            };
+            String[] valores2 = {
+                      txtEspecialidad.Text
+            };
+            String[] valores3 = {
+                      txtSeccion.Text
+            };
+            String[] valores4 = {
+                    txtModalidad.Text
+            };
+
+            objconexion.mantenimiento_datos(valores1, accion); //estudiante
+            objconexion.mantenimiento_datos(valores2, accion); //especialidad
+            objconexion.mantenimiento_datos(valores3, accion); //Seccion
+            objconexion.mantenimiento_datos(valores4, accion);//Modalidad
+            actualizarDs();
+            posicion = tbl.Rows.Count - 1;
+            Mostrardatos();
+
+
+        }
+
+        private void btnelim_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
