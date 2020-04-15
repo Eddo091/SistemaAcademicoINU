@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SistemaAcademico
 {
@@ -15,18 +16,30 @@ namespace SistemaAcademico
         public Welcome()
         {
             InitializeComponent();
+            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+          
+            
             if (this.Opacity < 1) this.Opacity += 0.05;
-            progressBar1.Value += 1;
-            progressBar1.Text = progressBar1.Value.ToString();
-            if (progressBar1.Value == 100)
+         
+            //Circular
+            for (int i = 0; i < 100; i++)
             {
-                timer1.Stop();
-                timer2.Start();
+                circularProgressBar1.Value = i;
+                circularProgressBar1.Update();
+                if (circularProgressBar1.Value == 100)
+                {
+                    timer1.Stop();
+                    timer2.Start();
+                   
+                }
             }
+            
+            
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -45,10 +58,17 @@ namespace SistemaAcademico
         private void Welcome_Load(object sender, EventArgs e)
         {
             this.Opacity = 0.0;
-            progressBar1.Value = 0;
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = 100;
+          
+            circularProgressBar1.Value = 0;
+            circularProgressBar1.Minimum = 0;
+            circularProgressBar1.Maximum = 100;
             timer1.Start();
+            
+
+
+
+
+
         }
     }
 }
