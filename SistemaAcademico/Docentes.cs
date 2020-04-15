@@ -83,7 +83,7 @@ namespace SistemaAcademico
         }
         void actualizarDs()
         {
-            tbl = objconexion.obtener_datos().Tables["DOCENTES"];
+            tbl = objconexion.obtener_datosDocente().Tables["DOCENTES"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["Id_DOCENTES"] };
         }
         void Mostrardatos()

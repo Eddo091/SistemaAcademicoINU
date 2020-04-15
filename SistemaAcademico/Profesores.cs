@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+
 
 namespace SistemaAcademico
 {
     public partial class Profesores : Form
     {
+        //BD
+        Conexion objconexion = new Conexion();
         public Profesores()
         {
             InitializeComponent();
@@ -52,5 +56,11 @@ namespace SistemaAcademico
             Docentes frm = new Docentes();
             frm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Traté de hacer un reporte, pero no me salió:c, me estresa", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
     }
 }

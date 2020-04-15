@@ -14,13 +14,21 @@ namespace SistemaAcademico
     {
         //BD
         Conexion objconexion = new Conexion();
-        int posicion = 0;
+        
         
         DataTable tbl = new DataTable();
+
+     
         public Estudiantes()
         {
             InitializeComponent();
+
         }
+        //Reporte 
+       
+
+
+            //Filtrar datos
         void filtrar_datos(String valor)
         {
             BindingSource bs = new BindingSource();
@@ -66,7 +74,8 @@ namespace SistemaAcademico
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            MessageBox.Show("Traté de hacer un reporte, pero no me salió:c, me estresa", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

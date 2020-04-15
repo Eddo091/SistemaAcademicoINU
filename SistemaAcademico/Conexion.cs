@@ -22,7 +22,7 @@ namespace SistemaAcademico
             miConexion.Open();
 
             }
-        public DataSet obtener_datos()
+        public DataSet obtener_datosEstudiante()
         {
             ds.Clear();
             comandoSQL.Connection = miConexion;
@@ -31,51 +31,150 @@ namespace SistemaAcademico
             comandoSQL.CommandText = "select * from Estudiante";
             miAdaptadorDatos.SelectCommand = comandoSQL;
             miAdaptadorDatos.Fill(ds, "Estudiante");
-            //Docentes
-
-            comandoSQL.CommandText = "select * from DOCENTES";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "DOCENTES");
-            //Materias
-
-            comandoSQL.CommandText = "select * from MATERIAS";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "MATERIAS");
-            //Notas
-
-            comandoSQL.CommandText = "select * from Notas";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "Notas");
-            //Notas_Periodo
-
-            comandoSQL.CommandText = "select * from NOTAS_PERIODO";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "NOTAS_PERIODO");
-            //Año
-            comandoSQL.CommandText = "select * from AÑO";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "AÑO");
-            //Modalidad
-            comandoSQL.CommandText = "select * from MODALIDAD";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "MODALIDAD");
-            //Especialidad
-            comandoSQL.CommandText = "select * from ESPECIALIDAD";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "ESPECIALIDAD");
-            //Seccion
-            comandoSQL.CommandText = "select * from SECCION";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "SECCION");
-            //Usuarios
-            comandoSQL.CommandText = "select * from USUARIOS";
-            miAdaptadorDatos.SelectCommand = comandoSQL;
-            miAdaptadorDatos.Fill(ds, "USUARIOS");
 
             return ds;
 
 
         }
+        //Docentes
+        public DataSet obtener_datosDocente()
+        {
+            ds.Clear();
+            comandoSQL.Connection = miConexion;
+
+            comandoSQL.CommandText = "select * from DOCENTES";
+        miAdaptadorDatos.SelectCommand = comandoSQL;
+        miAdaptadorDatos.Fill(ds, "DOCENTES");
+
+            return ds;
+
+
+        }
+             
+        //Materias
+         public DataSet obtener_datosMaterias()
+        {
+            ds.Clear();
+            comandoSQL.Connection = miConexion;
+
+             comandoSQL.CommandText = "select * from MATERIAS";
+        miAdaptadorDatos.SelectCommand = comandoSQL;
+        miAdaptadorDatos.Fill(ds, "MATERIAS");
+
+            return ds;
+
+
+        }
+
+       
+
+
+
+    //Notas
+      public DataSet obtener_datosNotas()
+    {
+        ds.Clear();
+        comandoSQL.Connection = miConexion;
+        comandoSQL.CommandText = "select * from Notas";
+        miAdaptadorDatos.SelectCommand = comandoSQL;
+        miAdaptadorDatos.Fill(ds, "Notas");
+        return ds;
+
+
+    }
+
+    
+
+//Notas_Periodo
+  public DataSet obtener_datosNotasPeriodo()
+{
+    ds.Clear();
+   comandoSQL.CommandText = "select * from NOTAS_PERIODO";
+   miAdaptadorDatos.SelectCommand = comandoSQL;
+   miAdaptadorDatos.Fill(ds, "NOTAS_PERIODO");
+    return ds;
+
+
+}
+
+
+
+
+//Año
+  public DataSet obtener_datosAño()
+{
+    ds.Clear();
+   comandoSQL.CommandText = "select * from AÑO";
+miAdaptadorDatos.SelectCommand = comandoSQL;
+miAdaptadorDatos.Fill(ds, "AÑO");
+    return ds;
+
+
+}
+
+
+
+//Modalidad
+  public DataSet obtener_datosModalidad()
+{
+    ds.Clear();
+  comandoSQL.CommandText = "select * from MODALIDAD";
+miAdaptadorDatos.SelectCommand = comandoSQL;
+miAdaptadorDatos.Fill(ds, "MODALIDAD");
+    return ds;
+
+
+}
+
+
+
+
+//Especialidad
+
+public DataSet obtener_datosEspecialidad()
+{
+    ds.Clear();
+   
+comandoSQL.CommandText = "select * from ESPECIALIDAD";
+miAdaptadorDatos.SelectCommand = comandoSQL;
+miAdaptadorDatos.Fill(ds, "ESPECIALIDAD");
+    return ds;
+
+
+}
+
+
+//Seccion
+
+  public DataSet obtener_datosSeccion()
+{
+    ds.Clear();
+   comandoSQL.CommandText = "select * from SECCION";
+miAdaptadorDatos.SelectCommand = comandoSQL;
+miAdaptadorDatos.Fill(ds, "SECCION");
+    return ds;
+
+
+}
+
+
+
+
+//Usuarios
+  public DataSet obtener_datosUsuario()
+{
+    ds.Clear();
+   comandoSQL.CommandText = "select * from USUARIOS";
+miAdaptadorDatos.SelectCommand = comandoSQL;
+miAdaptadorDatos.Fill(ds, "USUARIOS");
+    return ds;
+
+
+}
+
+
+
+
         //Estudiante
         public void mantenimiento_datos(String[] datos, String accion)
         {

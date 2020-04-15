@@ -79,13 +79,13 @@ namespace SistemaAcademico
         //DB
         void actualizarDs()
         {
-            tbl = objconexion.obtener_datos().Tables["Estudiante"];
+            tbl = objconexion.obtener_datosEstudiante().Tables["Estudiante"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["ID_ESTUDIANTE"] };
-            tbl2 = objconexion.obtener_datos().Tables["ESPECIALIDAD"];
+            tbl2 = objconexion.obtener_datosEspecialidad().Tables["ESPECIALIDAD"];
             tbl2.PrimaryKey = new DataColumn[] { tbl2.Columns["ID_ESPECIALIDAD"] };
-            tbl3 = objconexion.obtener_datos().Tables["SECCION"];
+            tbl3 = objconexion.obtener_datosSeccion().Tables["SECCION"];
             tbl3.PrimaryKey = new DataColumn[] { tbl2.Columns["Id_SECCION"] };
-            tbl4 = objconexion.obtener_datos().Tables["MODALIDAD"];
+            tbl4 = objconexion.obtener_datosModalidad().Tables["MODALIDAD"];
             tbl4.PrimaryKey = new DataColumn[] { tbl2.Columns["Id_MODALIDAD"] };
         }
         void Mostrardatos()
