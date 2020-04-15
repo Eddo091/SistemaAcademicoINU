@@ -39,7 +39,7 @@ namespace SistemaAcademico
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Falta el cuadro de busqueda");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

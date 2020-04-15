@@ -34,21 +34,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Materias));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idMATERIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDPERSONALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new SistemaAcademico.DataSet();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataSet = new SistemaAcademico.DataSet();
-            this.mATERIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mATERIASTableAdapter = new SistemaAcademico.DataSetTableAdapters.MATERIASTableAdapter();
-            this.idMATERIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mATERIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDPERSONALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -103,6 +103,41 @@
             this.dataGridView1.Size = new System.Drawing.Size(849, 286);
             this.dataGridView1.TabIndex = 32;
             // 
+            // idMATERIASDataGridViewTextBoxColumn
+            // 
+            this.idMATERIASDataGridViewTextBoxColumn.DataPropertyName = "Id_MATERIAS";
+            this.idMATERIASDataGridViewTextBoxColumn.HeaderText = "Id_MATERIAS";
+            this.idMATERIASDataGridViewTextBoxColumn.Name = "idMATERIASDataGridViewTextBoxColumn";
+            this.idMATERIASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idMATERIASDataGridViewTextBoxColumn.Visible = false;
+            this.idMATERIASDataGridViewTextBoxColumn.Width = 109;
+            // 
+            // mATERIASDataGridViewTextBoxColumn
+            // 
+            this.mATERIASDataGridViewTextBoxColumn.DataPropertyName = "MATERIAS";
+            this.mATERIASDataGridViewTextBoxColumn.HeaderText = "MATERIAS";
+            this.mATERIASDataGridViewTextBoxColumn.Name = "mATERIASDataGridViewTextBoxColumn";
+            this.mATERIASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mATERIASDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // iDPERSONALDataGridViewTextBoxColumn
+            // 
+            this.iDPERSONALDataGridViewTextBoxColumn.DataPropertyName = "ID_PERSONAL";
+            this.iDPERSONALDataGridViewTextBoxColumn.HeaderText = "PERSONAL";
+            this.iDPERSONALDataGridViewTextBoxColumn.Name = "iDPERSONALDataGridViewTextBoxColumn";
+            this.iDPERSONALDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDPERSONALDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // mATERIASBindingSource
+            // 
+            this.mATERIASBindingSource.DataMember = "MATERIAS";
+            this.mATERIASBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -138,6 +173,7 @@
             this.button1.Text = "Buscar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuevo
             // 
@@ -216,44 +252,9 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "MATERIAS";
             // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mATERIASBindingSource
-            // 
-            this.mATERIASBindingSource.DataMember = "MATERIAS";
-            this.mATERIASBindingSource.DataSource = this.dataSet;
-            // 
             // mATERIASTableAdapter
             // 
             this.mATERIASTableAdapter.ClearBeforeFill = true;
-            // 
-            // idMATERIASDataGridViewTextBoxColumn
-            // 
-            this.idMATERIASDataGridViewTextBoxColumn.DataPropertyName = "Id_MATERIAS";
-            this.idMATERIASDataGridViewTextBoxColumn.HeaderText = "Id_MATERIAS";
-            this.idMATERIASDataGridViewTextBoxColumn.Name = "idMATERIASDataGridViewTextBoxColumn";
-            this.idMATERIASDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idMATERIASDataGridViewTextBoxColumn.Visible = false;
-            this.idMATERIASDataGridViewTextBoxColumn.Width = 108;
-            // 
-            // mATERIASDataGridViewTextBoxColumn
-            // 
-            this.mATERIASDataGridViewTextBoxColumn.DataPropertyName = "MATERIAS";
-            this.mATERIASDataGridViewTextBoxColumn.HeaderText = "MATERIAS";
-            this.mATERIASDataGridViewTextBoxColumn.Name = "mATERIASDataGridViewTextBoxColumn";
-            this.mATERIASDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mATERIASDataGridViewTextBoxColumn.Width = 91;
-            // 
-            // iDPERSONALDataGridViewTextBoxColumn
-            // 
-            this.iDPERSONALDataGridViewTextBoxColumn.DataPropertyName = "ID_PERSONAL";
-            this.iDPERSONALDataGridViewTextBoxColumn.HeaderText = "PERSONAL";
-            this.iDPERSONALDataGridViewTextBoxColumn.Name = "iDPERSONALDataGridViewTextBoxColumn";
-            this.iDPERSONALDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDPERSONALDataGridViewTextBoxColumn.Width = 96;
             // 
             // Materias
             // 
@@ -273,8 +274,8 @@
             this.Text = "Materias";
             this.Load += new System.EventHandler(this.Materias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -34,15 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NOTAS));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataSet = new SistemaAcademico.DataSet();
-            this.notasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.notasTableAdapter = new SistemaAcademico.DataSetTableAdapters.NotasTableAdapter();
             this.idNOTASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDMATERIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDESTUDIANTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,9 +42,18 @@
             this.nOTA3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROMEDIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDPERIODODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new SistemaAcademico.DataSet();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.notasTableAdapter = new SistemaAcademico.DataSetTableAdapters.NotasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -113,6 +113,81 @@
             this.dataGridView1.Size = new System.Drawing.Size(849, 286);
             this.dataGridView1.TabIndex = 39;
             // 
+            // idNOTASDataGridViewTextBoxColumn
+            // 
+            this.idNOTASDataGridViewTextBoxColumn.DataPropertyName = "Id_NOTAS";
+            this.idNOTASDataGridViewTextBoxColumn.HeaderText = "Id_NOTAS";
+            this.idNOTASDataGridViewTextBoxColumn.Name = "idNOTASDataGridViewTextBoxColumn";
+            this.idNOTASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idNOTASDataGridViewTextBoxColumn.Visible = false;
+            this.idNOTASDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // iDMATERIADataGridViewTextBoxColumn
+            // 
+            this.iDMATERIADataGridViewTextBoxColumn.DataPropertyName = "ID_MATERIA";
+            this.iDMATERIADataGridViewTextBoxColumn.HeaderText = "MATERIA";
+            this.iDMATERIADataGridViewTextBoxColumn.Name = "iDMATERIADataGridViewTextBoxColumn";
+            this.iDMATERIADataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDMATERIADataGridViewTextBoxColumn.Width = 83;
+            // 
+            // iDESTUDIANTEDataGridViewTextBoxColumn
+            // 
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.DataPropertyName = "ID_ESTUDIANTE";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.HeaderText = "ESTUDIANTE";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Name = "iDESTUDIANTEDataGridViewTextBoxColumn";
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDESTUDIANTEDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // nOTA1DataGridViewTextBoxColumn
+            // 
+            this.nOTA1DataGridViewTextBoxColumn.DataPropertyName = "NOTA 1";
+            this.nOTA1DataGridViewTextBoxColumn.HeaderText = "NOTA 1";
+            this.nOTA1DataGridViewTextBoxColumn.Name = "nOTA1DataGridViewTextBoxColumn";
+            this.nOTA1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOTA1DataGridViewTextBoxColumn.Width = 73;
+            // 
+            // nOTA2DataGridViewTextBoxColumn
+            // 
+            this.nOTA2DataGridViewTextBoxColumn.DataPropertyName = "NOTA 2";
+            this.nOTA2DataGridViewTextBoxColumn.HeaderText = "NOTA 2";
+            this.nOTA2DataGridViewTextBoxColumn.Name = "nOTA2DataGridViewTextBoxColumn";
+            this.nOTA2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOTA2DataGridViewTextBoxColumn.Width = 73;
+            // 
+            // nOTA3DataGridViewTextBoxColumn
+            // 
+            this.nOTA3DataGridViewTextBoxColumn.DataPropertyName = "NOTA 3";
+            this.nOTA3DataGridViewTextBoxColumn.HeaderText = "NOTA 3";
+            this.nOTA3DataGridViewTextBoxColumn.Name = "nOTA3DataGridViewTextBoxColumn";
+            this.nOTA3DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOTA3DataGridViewTextBoxColumn.Width = 73;
+            // 
+            // pROMEDIODataGridViewTextBoxColumn
+            // 
+            this.pROMEDIODataGridViewTextBoxColumn.DataPropertyName = "PROMEDIO";
+            this.pROMEDIODataGridViewTextBoxColumn.HeaderText = "PROMEDIO";
+            this.pROMEDIODataGridViewTextBoxColumn.Name = "pROMEDIODataGridViewTextBoxColumn";
+            this.pROMEDIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.pROMEDIODataGridViewTextBoxColumn.Width = 97;
+            // 
+            // iDPERIODODataGridViewTextBoxColumn
+            // 
+            this.iDPERIODODataGridViewTextBoxColumn.DataPropertyName = "ID_PERIODO";
+            this.iDPERIODODataGridViewTextBoxColumn.HeaderText = "PERIODO";
+            this.iDPERIODODataGridViewTextBoxColumn.Name = "iDPERIODODataGridViewTextBoxColumn";
+            this.iDPERIODODataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDPERIODODataGridViewTextBoxColumn.Width = 86;
+            // 
+            // notasBindingSource
+            // 
+            this.notasBindingSource.DataMember = "Notas";
+            this.notasBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -148,6 +223,7 @@
             this.button1.Text = "Buscar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuevo
             // 
@@ -226,84 +302,9 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "NOTAS";
             // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // notasBindingSource
-            // 
-            this.notasBindingSource.DataMember = "Notas";
-            this.notasBindingSource.DataSource = this.dataSet;
-            // 
             // notasTableAdapter
             // 
             this.notasTableAdapter.ClearBeforeFill = true;
-            // 
-            // idNOTASDataGridViewTextBoxColumn
-            // 
-            this.idNOTASDataGridViewTextBoxColumn.DataPropertyName = "Id_NOTAS";
-            this.idNOTASDataGridViewTextBoxColumn.HeaderText = "Id_NOTAS";
-            this.idNOTASDataGridViewTextBoxColumn.Name = "idNOTASDataGridViewTextBoxColumn";
-            this.idNOTASDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idNOTASDataGridViewTextBoxColumn.Visible = false;
-            this.idNOTASDataGridViewTextBoxColumn.Width = 88;
-            // 
-            // iDMATERIADataGridViewTextBoxColumn
-            // 
-            this.iDMATERIADataGridViewTextBoxColumn.DataPropertyName = "ID_MATERIA";
-            this.iDMATERIADataGridViewTextBoxColumn.HeaderText = "MATERIA";
-            this.iDMATERIADataGridViewTextBoxColumn.Name = "iDMATERIADataGridViewTextBoxColumn";
-            this.iDMATERIADataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDMATERIADataGridViewTextBoxColumn.Width = 83;
-            // 
-            // iDESTUDIANTEDataGridViewTextBoxColumn
-            // 
-            this.iDESTUDIANTEDataGridViewTextBoxColumn.DataPropertyName = "ID_ESTUDIANTE";
-            this.iDESTUDIANTEDataGridViewTextBoxColumn.HeaderText = "ESTUDIANTE";
-            this.iDESTUDIANTEDataGridViewTextBoxColumn.Name = "iDESTUDIANTEDataGridViewTextBoxColumn";
-            this.iDESTUDIANTEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDESTUDIANTEDataGridViewTextBoxColumn.Width = 106;
-            // 
-            // nOTA1DataGridViewTextBoxColumn
-            // 
-            this.nOTA1DataGridViewTextBoxColumn.DataPropertyName = "NOTA 1";
-            this.nOTA1DataGridViewTextBoxColumn.HeaderText = "NOTA 1";
-            this.nOTA1DataGridViewTextBoxColumn.Name = "nOTA1DataGridViewTextBoxColumn";
-            this.nOTA1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOTA1DataGridViewTextBoxColumn.Width = 73;
-            // 
-            // nOTA2DataGridViewTextBoxColumn
-            // 
-            this.nOTA2DataGridViewTextBoxColumn.DataPropertyName = "NOTA 2";
-            this.nOTA2DataGridViewTextBoxColumn.HeaderText = "NOTA 2";
-            this.nOTA2DataGridViewTextBoxColumn.Name = "nOTA2DataGridViewTextBoxColumn";
-            this.nOTA2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOTA2DataGridViewTextBoxColumn.Width = 73;
-            // 
-            // nOTA3DataGridViewTextBoxColumn
-            // 
-            this.nOTA3DataGridViewTextBoxColumn.DataPropertyName = "NOTA 3";
-            this.nOTA3DataGridViewTextBoxColumn.HeaderText = "NOTA 3";
-            this.nOTA3DataGridViewTextBoxColumn.Name = "nOTA3DataGridViewTextBoxColumn";
-            this.nOTA3DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOTA3DataGridViewTextBoxColumn.Width = 73;
-            // 
-            // pROMEDIODataGridViewTextBoxColumn
-            // 
-            this.pROMEDIODataGridViewTextBoxColumn.DataPropertyName = "PROMEDIO";
-            this.pROMEDIODataGridViewTextBoxColumn.HeaderText = "PROMEDIO";
-            this.pROMEDIODataGridViewTextBoxColumn.Name = "pROMEDIODataGridViewTextBoxColumn";
-            this.pROMEDIODataGridViewTextBoxColumn.ReadOnly = true;
-            this.pROMEDIODataGridViewTextBoxColumn.Width = 97;
-            // 
-            // iDPERIODODataGridViewTextBoxColumn
-            // 
-            this.iDPERIODODataGridViewTextBoxColumn.DataPropertyName = "ID_PERIODO";
-            this.iDPERIODODataGridViewTextBoxColumn.HeaderText = "PERIODO";
-            this.iDPERIODODataGridViewTextBoxColumn.Name = "iDPERIODODataGridViewTextBoxColumn";
-            this.iDPERIODODataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDPERIODODataGridViewTextBoxColumn.Width = 86;
             // 
             // NOTAS
             // 
@@ -323,8 +324,8 @@
             this.Text = "NOTAS";
             this.Load += new System.EventHandler(this.NOTAS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

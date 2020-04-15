@@ -21,5 +21,10 @@ namespace SistemaAcademico
         {
             InitializeComponent();
         }
+
+        private void Asignaturas_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Explica como funciona");
+        }
     }
 }

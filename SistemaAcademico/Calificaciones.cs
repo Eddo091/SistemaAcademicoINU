@@ -16,5 +16,10 @@ namespace SistemaAcademico
         {
             InitializeComponent();
         }
+
+        private void Calificaciones_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Explica como funciona");
+        }
     }
 }

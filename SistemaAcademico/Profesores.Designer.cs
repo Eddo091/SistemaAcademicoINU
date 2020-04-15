@@ -36,23 +36,23 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.dataSet = new SistemaAcademico.DataSet();
-            this.dataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dOCENTESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dOCENTESTableAdapter = new SistemaAcademico.DataSetTableAdapters.DOCENTESTableAdapter();
             this.idDOCENTESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMBRESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aPELLIDOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mATERIASIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uSUARIOSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOCENTESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new SistemaAcademico.DataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.dOCENTESTableAdapter = new SistemaAcademico.DataSetTableAdapters.DOCENTESTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCENTESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -137,6 +137,70 @@
             this.dataGridView1.Size = new System.Drawing.Size(849, 286);
             this.dataGridView1.TabIndex = 36;
             // 
+            // idDOCENTESDataGridViewTextBoxColumn
+            // 
+            this.idDOCENTESDataGridViewTextBoxColumn.DataPropertyName = "Id_DOCENTES";
+            this.idDOCENTESDataGridViewTextBoxColumn.HeaderText = "Id_DOCENTES";
+            this.idDOCENTESDataGridViewTextBoxColumn.Name = "idDOCENTESDataGridViewTextBoxColumn";
+            this.idDOCENTESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDOCENTESDataGridViewTextBoxColumn.Visible = false;
+            this.idDOCENTESDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // nOMBRESDataGridViewTextBoxColumn
+            // 
+            this.nOMBRESDataGridViewTextBoxColumn.DataPropertyName = "NOMBRES";
+            this.nOMBRESDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.nOMBRESDataGridViewTextBoxColumn.HeaderText = "NOMBRES";
+            this.nOMBRESDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.nOMBRESDataGridViewTextBoxColumn.Name = "nOMBRESDataGridViewTextBoxColumn";
+            this.nOMBRESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOMBRESDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // aPELLIDOSDataGridViewTextBoxColumn
+            // 
+            this.aPELLIDOSDataGridViewTextBoxColumn.DataPropertyName = "APELLIDOS";
+            this.aPELLIDOSDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.aPELLIDOSDataGridViewTextBoxColumn.HeaderText = "APELLIDOS";
+            this.aPELLIDOSDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.aPELLIDOSDataGridViewTextBoxColumn.Name = "aPELLIDOSDataGridViewTextBoxColumn";
+            this.aPELLIDOSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aPELLIDOSDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // mATERIASIDDataGridViewTextBoxColumn
+            // 
+            this.mATERIASIDDataGridViewTextBoxColumn.DataPropertyName = "MATERIAS_ID";
+            this.mATERIASIDDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.mATERIASIDDataGridViewTextBoxColumn.HeaderText = "MATERIAS";
+            this.mATERIASIDDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.mATERIASIDDataGridViewTextBoxColumn.Name = "mATERIASIDDataGridViewTextBoxColumn";
+            this.mATERIASIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mATERIASIDDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // uSUARIOSIDDataGridViewTextBoxColumn
+            // 
+            this.uSUARIOSIDDataGridViewTextBoxColumn.DataPropertyName = "USUARIOS_ID";
+            this.uSUARIOSIDDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.uSUARIOSIDDataGridViewTextBoxColumn.HeaderText = "USUARIOS";
+            this.uSUARIOSIDDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.uSUARIOSIDDataGridViewTextBoxColumn.Name = "uSUARIOSIDDataGridViewTextBoxColumn";
+            this.uSUARIOSIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uSUARIOSIDDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // dOCENTESBindingSource
+            // 
+            this.dOCENTESBindingSource.DataMember = "DOCENTES";
+            this.dOCENTESBindingSource.DataSource = this.dataSetBindingSource;
+            // 
+            // dataSetBindingSource
+            // 
+            this.dataSetBindingSource.DataSource = this.dataSet;
+            this.dataSetBindingSource.Position = 0;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -157,6 +221,7 @@
             this.button1.Text = "Buscar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuevo
             // 
@@ -222,73 +287,9 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSetBindingSource
-            // 
-            this.dataSetBindingSource.DataSource = this.dataSet;
-            this.dataSetBindingSource.Position = 0;
-            // 
-            // dOCENTESBindingSource
-            // 
-            this.dOCENTESBindingSource.DataMember = "DOCENTES";
-            this.dOCENTESBindingSource.DataSource = this.dataSetBindingSource;
-            // 
             // dOCENTESTableAdapter
             // 
             this.dOCENTESTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDOCENTESDataGridViewTextBoxColumn
-            // 
-            this.idDOCENTESDataGridViewTextBoxColumn.DataPropertyName = "Id_DOCENTES";
-            this.idDOCENTESDataGridViewTextBoxColumn.HeaderText = "Id_DOCENTES";
-            this.idDOCENTESDataGridViewTextBoxColumn.Name = "idDOCENTESDataGridViewTextBoxColumn";
-            this.idDOCENTESDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDOCENTESDataGridViewTextBoxColumn.Visible = false;
-            this.idDOCENTESDataGridViewTextBoxColumn.Width = 114;
-            // 
-            // nOMBRESDataGridViewTextBoxColumn
-            // 
-            this.nOMBRESDataGridViewTextBoxColumn.DataPropertyName = "NOMBRES";
-            this.nOMBRESDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.nOMBRESDataGridViewTextBoxColumn.HeaderText = "NOMBRES";
-            this.nOMBRESDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.nOMBRESDataGridViewTextBoxColumn.Name = "nOMBRESDataGridViewTextBoxColumn";
-            this.nOMBRESDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOMBRESDataGridViewTextBoxColumn.Width = 93;
-            // 
-            // aPELLIDOSDataGridViewTextBoxColumn
-            // 
-            this.aPELLIDOSDataGridViewTextBoxColumn.DataPropertyName = "APELLIDOS";
-            this.aPELLIDOSDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.aPELLIDOSDataGridViewTextBoxColumn.HeaderText = "APELLIDOS";
-            this.aPELLIDOSDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.aPELLIDOSDataGridViewTextBoxColumn.Name = "aPELLIDOSDataGridViewTextBoxColumn";
-            this.aPELLIDOSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aPELLIDOSDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // mATERIASIDDataGridViewTextBoxColumn
-            // 
-            this.mATERIASIDDataGridViewTextBoxColumn.DataPropertyName = "MATERIAS_ID";
-            this.mATERIASIDDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.mATERIASIDDataGridViewTextBoxColumn.HeaderText = "MATERIAS";
-            this.mATERIASIDDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.mATERIASIDDataGridViewTextBoxColumn.Name = "mATERIASIDDataGridViewTextBoxColumn";
-            this.mATERIASIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mATERIASIDDataGridViewTextBoxColumn.Width = 91;
-            // 
-            // uSUARIOSIDDataGridViewTextBoxColumn
-            // 
-            this.uSUARIOSIDDataGridViewTextBoxColumn.DataPropertyName = "USUARIOS_ID";
-            this.uSUARIOSIDDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.uSUARIOSIDDataGridViewTextBoxColumn.HeaderText = "USUARIOS";
-            this.uSUARIOSIDDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.uSUARIOSIDDataGridViewTextBoxColumn.Name = "uSUARIOSIDDataGridViewTextBoxColumn";
-            this.uSUARIOSIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.uSUARIOSIDDataGridViewTextBoxColumn.Width = 93;
             // 
             // Profesores
             // 
@@ -309,9 +310,9 @@
             this.Text = "Profesores";
             this.Load += new System.EventHandler(this.Profesores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCENTESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

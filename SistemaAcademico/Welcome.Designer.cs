@@ -81,9 +81,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(77, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 16);
+            this.label1.Size = new System.Drawing.Size(249, 16);
             this.label1.TabIndex = 4;
-            this.label1.Text = "SISTEMA ACADEMICO DEL INSTITUTO NACIONAL DE USULUTAN";
+            this.label1.Text = "INSTITUTO NACIONAL DE USULUTAN";
             // 
             // label2
             // 

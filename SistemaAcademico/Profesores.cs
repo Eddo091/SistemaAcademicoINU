@@ -34,5 +34,10 @@ namespace SistemaAcademico
             this.dOCENTESTableAdapter.Fill(this.dataSet.DOCENTES);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Falta el cuadro de busqueda, por cierto usuarios es donde iba el usuario y contraseña u.u");
+        }
     }
 }

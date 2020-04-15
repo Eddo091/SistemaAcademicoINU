@@ -33,5 +33,10 @@ namespace SistemaAcademico
             this.notasTableAdapter.Fill(this.dataSet.Notas);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Falta el cuadro de busqueda");
+        }
     }
 }
