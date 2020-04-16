@@ -118,10 +118,10 @@
             this.circularProgressBar1.Location = new System.Drawing.Point(389, 76);
             this.circularProgressBar1.MarqueeAnimationSpeed = 4000;
             this.circularProgressBar1.Name = "circularProgressBar1";
-            this.circularProgressBar1.OuterColor = System.Drawing.Color.DarkOliveGreen;
+            this.circularProgressBar1.OuterColor = System.Drawing.Color.LightSeaGreen;
             this.circularProgressBar1.OuterMargin = -25;
             this.circularProgressBar1.OuterWidth = 26;
-            this.circularProgressBar1.ProgressColor = System.Drawing.Color.YellowGreen;
+            this.circularProgressBar1.ProgressColor = System.Drawing.Color.DarkSlateGray;
             this.circularProgressBar1.ProgressWidth = 35;
             this.circularProgressBar1.RightToLeftLayout = true;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
