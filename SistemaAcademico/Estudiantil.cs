@@ -32,7 +32,7 @@ namespace SistemaAcademico
         //DB
         void actualizarDs()
         {
-            tbl = objconexion.obtener_datos().Tables["Estudiante"];
+            tbl = objconexion.obtener_datosEstudiante().Tables["Estudiante"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["ID_ESTUDIANTE"] };
         }
         void Mostrardatos()
@@ -120,19 +120,11 @@ namespace SistemaAcademico
         //boton de guardar
         private void button1_Click(object sender, EventArgs e)
         {
-            if (button1.Text == "Guardar")
-            {//boton de nuevo
-                btnCancelar.Tag = "Cancelar";
-                accion = "nuevo";
-
-                limpiar_cajas();
+            
+          
 
 
 
-
-            }
-            else
-            {
                 
                 String[] valores = {
                       txtName.Text,
@@ -142,7 +134,7 @@ namespace SistemaAcademico
             txtSeccion.Text,
             txtModalidad.Text,
             txtYear.Text };
-                objconexion.mantenimiento_datos(valores, accion);
+                objconexion.mantenimiento_datosEstudiante(valores, accion);
                 actualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 MessageBox.Show("Datos: " + valores, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -151,7 +143,7 @@ namespace SistemaAcademico
 
 
 
-            }
+            
 
 
 
@@ -162,7 +154,7 @@ namespace SistemaAcademico
             if (MessageBox.Show("¿Está seguro de eliminar a " + txtName.Text + " ?", "Estudiantes", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblid.Text };
-                objconexion.mantenimiento_datos(valores, "eliminar");
+                objconexion.mantenimiento_datosEstudiante(valores, "eliminar");
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
                 Mostrardatos();

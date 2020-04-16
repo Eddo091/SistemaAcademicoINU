@@ -43,6 +43,7 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.lblid = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.btnelim = new System.Windows.Forms.Button();
-            this.lblid = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
@@ -79,7 +79,7 @@
             this.txtModalidad.Location = new System.Drawing.Point(178, 203);
             this.txtModalidad.Name = "txtModalidad";
             this.txtModalidad.Size = new System.Drawing.Size(244, 22);
-            this.txtModalidad.TabIndex = 46;
+            this.txtModalidad.TabIndex = 6;
             // 
             // pictureBox1
             // 
@@ -105,7 +105,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(544, 220);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 35);
-            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -122,7 +122,7 @@
             this.button1.Location = new System.Drawing.Point(441, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 35);
-            this.button1.TabIndex = 41;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -178,7 +178,7 @@
             this.txtSeccion.Location = new System.Drawing.Point(178, 175);
             this.txtSeccion.Name = "txtSeccion";
             this.txtSeccion.Size = new System.Drawing.Size(244, 22);
-            this.txtSeccion.TabIndex = 36;
+            this.txtSeccion.TabIndex = 5;
             // 
             // txtEspecialidad
             // 
@@ -187,7 +187,7 @@
             this.txtEspecialidad.Location = new System.Drawing.Point(178, 146);
             this.txtEspecialidad.Name = "txtEspecialidad";
             this.txtEspecialidad.Size = new System.Drawing.Size(244, 22);
-            this.txtEspecialidad.TabIndex = 35;
+            this.txtEspecialidad.TabIndex = 4;
             // 
             // txtApellido
             // 
@@ -196,7 +196,7 @@
             this.txtApellido.Location = new System.Drawing.Point(178, 87);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(244, 22);
-            this.txtApellido.TabIndex = 34;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtName
             // 
@@ -205,7 +205,7 @@
             this.txtName.Location = new System.Drawing.Point(178, 58);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(244, 22);
-            this.txtName.TabIndex = 33;
+            this.txtName.TabIndex = 1;
             // 
             // BarraTitulo
             // 
@@ -217,6 +217,18 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(676, 38);
             this.BarraTitulo.TabIndex = 32;
+            // 
+            // lblid
+            // 
+            this.lblid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblid.ForeColor = System.Drawing.Color.White;
+            this.lblid.Location = new System.Drawing.Point(632, 9);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(0, 16);
+            this.lblid.TabIndex = 16;
             // 
             // label6
             // 
@@ -248,9 +260,8 @@
             this.txtCodigo.ForeColor = System.Drawing.Color.Black;
             this.txtCodigo.Location = new System.Drawing.Point(178, 115);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(244, 22);
-            this.txtCodigo.TabIndex = 48;
+            this.txtCodigo.TabIndex = 3;
             // 
             // label8
             // 
@@ -270,7 +281,7 @@
             this.txtYear.Location = new System.Drawing.Point(178, 232);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(244, 22);
-            this.txtYear.TabIndex = 50;
+            this.txtYear.TabIndex = 7;
             // 
             // grbNavegacionAlumnos
             // 
@@ -308,7 +319,7 @@
             this.btnultimo.Location = new System.Drawing.Point(203, 36);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(39, 46);
-            this.btnultimo.TabIndex = 17;
+            this.btnultimo.TabIndex = 14;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = false;
             this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
@@ -321,7 +332,7 @@
             this.btnsiguiente.Location = new System.Drawing.Point(158, 36);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(39, 46);
-            this.btnsiguiente.TabIndex = 16;
+            this.btnsiguiente.TabIndex = 13;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
@@ -334,7 +345,7 @@
             this.btnanterior.Location = new System.Drawing.Point(51, 36);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(39, 46);
-            this.btnanterior.TabIndex = 15;
+            this.btnanterior.TabIndex = 12;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = false;
             this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
@@ -347,7 +358,7 @@
             this.btnprimero.Location = new System.Drawing.Point(6, 36);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(39, 46);
-            this.btnprimero.TabIndex = 14;
+            this.btnprimero.TabIndex = 11;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = false;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
@@ -364,22 +375,10 @@
             this.btnelim.Location = new System.Drawing.Point(496, 255);
             this.btnelim.Name = "btnelim";
             this.btnelim.Size = new System.Drawing.Size(120, 35);
-            this.btnelim.TabIndex = 53;
+            this.btnelim.TabIndex = 10;
             this.btnelim.Text = "Eliminar";
             this.btnelim.UseVisualStyleBackColor = false;
             this.btnelim.Click += new System.EventHandler(this.btnelim_Click);
-            // 
-            // lblid
-            // 
-            this.lblid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.ForeColor = System.Drawing.Color.White;
-            this.lblid.Location = new System.Drawing.Point(632, 9);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(0, 16);
-            this.lblid.TabIndex = 16;
             // 
             // Estudiantil
             // 

@@ -126,10 +126,10 @@ namespace SistemaAcademico
                     txtModalidad.Text
             };
 
-            objconexion.mantenimiento_datos(valores1, accion); //estudiante
-            objconexion.mantenimiento_datos(valores2, accion); //especialidad
-            objconexion.mantenimiento_datos(valores3, accion); //Seccion
-            objconexion.mantenimiento_datos(valores4, accion);//Modalidad
+            objconexion.mantenimiento_datosEstudiante(valores1, accion); //estudiante
+            objconexion.mantenimientodatos_Especialidad(valores2, accion); //especialidad
+            objconexion.mantenimientodatos_Seccion(valores3, accion); //Seccion
+            objconexion.mantenimientodatos_Modalidad(valores4, accion);//Modalidad
             actualizarDs();
             posicion = tbl.Rows.Count - 1;
             Mostrardatos();

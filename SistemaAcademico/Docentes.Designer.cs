@@ -40,6 +40,7 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.lblid = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.grbNavegacionAlumnos = new System.Windows.Forms.GroupBox();
@@ -49,7 +50,6 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.btnelim = new System.Windows.Forms.Button();
-            this.lblid = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
@@ -90,7 +90,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(544, 157);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 35);
-            this.btnCancelar.TabIndex = 62;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -106,7 +106,7 @@
             this.button1.Location = new System.Drawing.Point(441, 157);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 35);
-            this.button1.TabIndex = 61;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -151,7 +151,7 @@
             this.txtMateria.Location = new System.Drawing.Point(161, 155);
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.Size = new System.Drawing.Size(244, 22);
-            this.txtMateria.TabIndex = 55;
+            this.txtMateria.TabIndex = 4;
             // 
             // txtApellido
             // 
@@ -160,7 +160,7 @@
             this.txtApellido.Location = new System.Drawing.Point(161, 127);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(244, 22);
-            this.txtApellido.TabIndex = 54;
+            this.txtApellido.TabIndex = 3;
             // 
             // txtName
             // 
@@ -169,7 +169,7 @@
             this.txtName.Location = new System.Drawing.Point(161, 98);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(244, 22);
-            this.txtName.TabIndex = 53;
+            this.txtName.TabIndex = 2;
             // 
             // BarraTitulo
             // 
@@ -181,6 +181,18 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(657, 38);
             this.BarraTitulo.TabIndex = 52;
+            // 
+            // lblid
+            // 
+            this.lblid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblid.ForeColor = System.Drawing.Color.White;
+            this.lblid.Location = new System.Drawing.Point(609, 9);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(0, 16);
+            this.lblid.TabIndex = 17;
             // 
             // label6
             // 
@@ -202,7 +214,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(162, 70);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(244, 22);
-            this.txtCodigo.TabIndex = 68;
+            this.txtCodigo.TabIndex = 1;
             // 
             // grbNavegacionAlumnos
             // 
@@ -240,7 +252,7 @@
             this.btnultimo.Location = new System.Drawing.Point(203, 36);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(39, 46);
-            this.btnultimo.TabIndex = 17;
+            this.btnultimo.TabIndex = 11;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = false;
             this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
@@ -253,7 +265,7 @@
             this.btnsiguiente.Location = new System.Drawing.Point(158, 36);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(39, 46);
-            this.btnsiguiente.TabIndex = 16;
+            this.btnsiguiente.TabIndex = 10;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
@@ -266,7 +278,7 @@
             this.btnanterior.Location = new System.Drawing.Point(51, 36);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(39, 46);
-            this.btnanterior.TabIndex = 15;
+            this.btnanterior.TabIndex = 9;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = false;
             this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
@@ -279,7 +291,7 @@
             this.btnprimero.Location = new System.Drawing.Point(6, 36);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(39, 46);
-            this.btnprimero.TabIndex = 14;
+            this.btnprimero.TabIndex = 8;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = false;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
@@ -296,22 +308,10 @@
             this.btnelim.Location = new System.Drawing.Point(482, 195);
             this.btnelim.Name = "btnelim";
             this.btnelim.Size = new System.Drawing.Size(120, 35);
-            this.btnelim.TabIndex = 70;
+            this.btnelim.TabIndex = 7;
             this.btnelim.Text = "Eliminar";
             this.btnelim.UseVisualStyleBackColor = false;
             this.btnelim.Click += new System.EventHandler(this.btnelim_Click);
-            // 
-            // lblid
-            // 
-            this.lblid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.ForeColor = System.Drawing.Color.White;
-            this.lblid.Location = new System.Drawing.Point(609, 9);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(0, 16);
-            this.lblid.TabIndex = 17;
             // 
             // Docentes
             // 

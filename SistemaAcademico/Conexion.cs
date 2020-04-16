@@ -176,150 +176,166 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
 
 
         //Estudiante
-        public void mantenimiento_datos(String[] datos, String accion)
+        public void mantenimiento_datosEstudiante(String[] datos, String accion)
         {
+            try {
+                String sql = "";
+                if (accion == "nuevo")
+                {
+                    sql = "INSERT INTO Estudiante (Nombre,Apellido,COD_ESTUDIANTE,ID_ESPECIALIDAD,ID_SECCION,ID_MODALIDAD,ID_AÑO,ID_USUARIOS) VALUE (" +
+                        "'" + datos[1] + "'," +
+                        "'" + datos[2] + "'," +
+                        "'" + datos[3] + "'," +
+                        "'" + datos[4] + "'," +
+                        "'" + datos[5] + "'," +
+                        "'" + datos[6] + "'," +
+                        "'" + datos[7] + "'," +
+
+                        "'" + ")";
+
+
+                }
+                else if (accion == "modificar")
+                {
+                    sql = "UPDATE Estudiante SET " +
+                        "Nombre        = '" + datos[1] + "'," +
+                        "Apellido         = '" + datos[2] + "'," +
+                        "COD_ESTUDIANTE        = '" + datos[3] + "'," +
+                        "ID_ESPECIALIDAD        = '" + datos[4] + "'," +
+                        "ID_SECCION       = '" + datos[5] + "'," +
+                        "ID_MODALIDAD      = '" + datos[6] + "'," +
+                        "ID_AÑO     = '" + datos[7] + "'," +
+                        "WHERE ID_ESTUDIANTE = '" + datos[0] + "'"
+                        + "'";
+                }
+                else if (accion == "eliminar")
+                {
+                    sql = "DELETE Estudiante FROM Estudiante WHERE ID_ESTUDIANTE='" + datos[0] + "'";
+                }
+                procesarSQL(sql);
+            } catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
            
-            String sql = "";
-            if (accion == "nuevo") {
-                sql = "INSERT INTO Estudiante (Nombre,Apellido,COD_ESTUDIANTE,ID_ESPECIALIDAD,ID_SECCION,ID_MODALIDAD,ID_AÑO,ID_USUARIOS) VALUE (" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'," +
-                    "'" + datos[7] + "'," +
-
-                    "'" + ")";
-
-
-            } else if (accion=="modificar") {
-                sql = "UPDATE Estudiante SET " +
-                    "Nombre        = '" + datos[1] + "'," +
-                    "Apellido         = '" + datos[2] + "',"+
-                    "COD_ESTUDIANTE        = '" + datos[3] + "'," +
-                    "ID_ESPECIALIDAD        = '" + datos[4] + "'," +
-                    "ID_SECCION       = '" + datos[5] + "'," +
-                    "ID_MODALIDAD      = '" + datos[6] + "'," +
-                    "ID_AÑO     = '" + datos[7] + "'," +
-                    "WHERE ID_ESTUDIANTE = '" + datos[0] + "'"
-                    + "'";
-            }
-            else if (accion == "eliminar")
-            {
-                sql = "DELETE Estudiante FROM Estudiante WHERE ID_ESTUDIANTE='" + datos[0] + "'";
-            }
-            procesarSQL(sql);
         }
 
         //Docente
         public void mantenimientodatos_Docente(String[] datos, String accion) {
-            String sql = "";
-            if (accion == "nuevo")
-            {
-                sql = "INSERT INTO DOCENTES (NOMBRES,APELLIDOS,CODIGO_DOCENTE,MATERIAS_ID,USUARIOS_ID) VALUE (" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                     "'" + datos[5] + "'," +
+            try {
+                String sql = "";
+                if (accion == "nuevo")
+                {
+                    sql = "INSERT INTO DOCENTES (NOMBRES,APELLIDOS,CODIGO_DOCENTE,MATERIAS_ID,USUARIOS_ID) VALUE (" +
+                        "'" + datos[1] + "'," +
+                        "'" + datos[2] + "'," +
+                        "'" + datos[3] + "'," +
+                        "'" + datos[4] + "'," +
+                         "'" + datos[5] + "'," +
 
-                    "'" + ")";
+                        "'" + ")";
 
 
-            }
-            else if (accion == "modificar")
-            {
-                sql = "UPDATE DOCENTES SET " +
-                    "NOMBRES       = '" + datos[1] + "'," +
-                    "APELLIDOS         = '" + datos[2] + "'," +
-                     "CODIGO_DOCENTE         = '" + datos[3] + "'," +
-                    "MATERIAS_ID       = '" + datos[4] + "'," +
-                    "USUARIOS_ID       = '" + datos[5] + "'," +
+                }
+                else if (accion == "modificar")
+                {
+                    sql = "UPDATE DOCENTES SET " +
+                        "NOMBRES       = '" + datos[1] + "'," +
+                        "APELLIDOS         = '" + datos[2] + "'," +
+                         "CODIGO_DOCENTE         = '" + datos[3] + "'," +
+                        "MATERIAS_ID       = '" + datos[4] + "'," +
+                        "USUARIOS_ID       = '" + datos[5] + "'," +
 
-                 
-                    "WHERE Id_DOCENTES = '" + datos[0] + "'"
-                    + "'";
-            }
-            else if (accion == "eliminar")
-            {
-                sql = "DELETE DOCENTES FROM DOCENTES WHERE Id_DOCENTES='" + datos[0] + "'";
-            }
-            procesarSQL(sql);
+
+                        "WHERE Id_DOCENTES = '" + datos[0] + "'"
+                        + "'";
+                }
+                else if (accion == "eliminar")
+                {
+                    sql = "DELETE DOCENTES FROM DOCENTES WHERE Id_DOCENTES='" + datos[0] + "'";
+                }
+                procesarSQL(sql);
+            } catch  (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            
         }
         //Materias
         public void mantenimientodatos_Materia(String[] datos, String accion)
         {
-            String sql = "";
-            if (accion == "nuevo")
+            try
             {
-                sql = "INSERT INTO MATERIAS (MATERIAS,ID_PERSONAL) VALUE (" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                  
+                String sql = "";
+                if (accion == "nuevo")
+                {
+                    sql = "INSERT INTO MATERIAS (MATERIAS,ID_PERSONAL) VALUE (" +
+                        "'" + datos[1] + "'," +
+                        "'" + datos[2] + "'," +
 
-                    "'" + ")";
+
+                        "'" + ")";
 
 
+                }
+                else if (accion == "modificar")
+                {
+                    sql = "UPDATE MATERIAS SET " +
+                        "MATERIAS      = '" + datos[1] + "'," +
+                        "ID_PERSONAL         = '" + datos[2] + "'," +
+
+
+                        "WHERE Id_MATERIAS = '" + datos[0] + "'"
+                        + "'";
+                }
+                else if (accion == "eliminar")
+                {
+                    sql = "DELETE MATERIAS FROM MATERIAS WHERE Id_MATERIAS='" + datos[0] + "'";
+                }
+                procesarSQL(sql);
             }
-            else if (accion == "modificar")
-            {
-                sql = "UPDATE MATERIAS SET " +
-                    "MATERIAS      = '" + datos[1] + "'," +
-                    "ID_PERSONAL         = '" + datos[2] + "'," +
-                    
-
-                    "WHERE Id_MATERIAS = '" + datos[0] + "'"
-                    + "'";
-            }
-            else if (accion == "eliminar")
-            {
-                sql = "DELETE MATERIAS FROM MATERIAS WHERE Id_MATERIAS='" + datos[0] + "'";
-            }
-            procesarSQL(sql);
-
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         //Notas
         public void mantenimientodatos_Notas(String[] datos, String accion)
         {
-            String sql = "";
-            if (accion == "nuevo")
+            try
             {
-                sql = "INSERT INTO Notas (ID_MATERIA,ID_ESTUDIANTE,NOTA_1,NOTA_2,NOTA_3,PROMEDIO,ID_PERIODO) VALUE (" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'," +
-                    "'" + datos[7] + "'," +
-                    "'" + ")";
+                String sql = "";
+                if (accion == "nuevo")
+                {
+                    sql = "INSERT INTO Notas (ID_MATERIA,ID_ESTUDIANTE,NOTA_1,NOTA_2,NOTA_3,PROMEDIO,ID_PERIODO) VALUE (" +
+                        "'" + datos[1] + "'," +
+                        "'" + datos[2] + "'," +
+                        "'" + datos[3] + "'," +
+                        "'" + datos[4] + "'," +
+                        "'" + datos[5] + "'," +
+                        "'" + datos[6] + "'," +
+                        "'" + datos[7] + "'," +
+                        "'" + ")";
 
 
-            }
-            else if (accion == "modificar")
-            {
-                sql = "UPDATE Notas SET " +
-                    "ID_MATERIA      = '" + datos[1] + "'," +
-                    "ID_ESTUDIANTE       = '" + datos[2] + "'," +
-                    "NOTA_1       = '" + datos[3] + "'," +
-                    "NOTA_2       = '" + datos[4] + "'," +
-                    "NOTA_3       = '" + datos[5] + "'," +
-                    "PROMEDIO      = '" + datos[6] + "'," +
-                    "ID_PROMEDIO       = '" + datos[7] + "'," +
+                }
+                else if (accion == "modificar")
+                {
+                    sql = "UPDATE Notas SET " +
+                        "ID_MATERIA      = '" + datos[1] + "'," +
+                        "ID_ESTUDIANTE       = '" + datos[2] + "'," +
+                        "NOTA_1       = '" + datos[3] + "'," +
+                        "NOTA_2       = '" + datos[4] + "'," +
+                        "NOTA_3       = '" + datos[5] + "'," +
+                        "PROMEDIO      = '" + datos[6] + "'," +
+                        "ID_PROMEDIO       = '" + datos[7] + "'," +
 
-                    "WHERE Id_NOTAS = '" + datos[0] + "'"
-                    + "'";
+                        "WHERE Id_NOTAS = '" + datos[0] + "'"
+                        + "'";
+                }
+                else if (accion == "eliminar")
+                {
+                    sql = "DELETE Notas FROM Notas WHERE Id_NOTAS='" + datos[0] + "'";
+                }
+                procesarSQL(sql);
             }
-            else if (accion == "eliminar")
-            {
-                sql = "DELETE Notas FROM Notas WHERE Id_NOTAS='" + datos[0] + "'";
-            }
-            procesarSQL(sql);
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         //Notas_Promedio
         public void mantenimientodatos_NotasPromedio(String[] datos, String accion)
         {
+            try { 
             String sql = "";
             if (accion == "nuevo")
             {
@@ -351,11 +367,14 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 sql = "DELETE Notas FROM Notas WHERE Id_NOTAS='" + datos[0] + "'";
             }
             procesarSQL(sql);
+            }
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         //Año
         public void mantenimientodatos_Año(String[] datos, String accion)
         {
+            try { 
             String sql = "";
             if (accion == "nuevo")
             {
@@ -378,10 +397,13 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 sql = "DELETE AÑO FROM AÑO WHERE Id_AÑO='" + datos[0] + "'";
             }
             procesarSQL(sql);
+            }
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         //Modalidad
         public void mantenimientodatos_Modalidad(String[] datos, String accion)
         {
+            try { 
             String sql = "";
             if (accion == "nuevo")
             {
@@ -404,10 +426,13 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 sql = "DELETE MODALIDAD FROM MODALIDAD WHERE Id_MODALIDAD='" + datos[0] + "'";
             }
             procesarSQL(sql);
+            }
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         //Especialidad
         public void mantenimientodatos_Especialidad(String[] datos, String accion)
         {
+            try { 
             String sql = "";
             if (accion == "nuevo")
             {
@@ -430,10 +455,13 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 sql = "DELETE ESPECIALIDAD FROM ESPECIALIDAD WHERE Id_ESPECIALIDAD='" + datos[0] + "'";
             }
             procesarSQL(sql);
+            }
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         //Seccion
         public void mantenimientodatos_Seccion(String[] datos, String accion)
         {
+            try { 
             String sql = "";
             if (accion == "nuevo")
             {
@@ -456,10 +484,13 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 sql = "DELETE SECCION FROM SECCION WHERE Id_SECCION='" + datos[0] + "'";
             }
             procesarSQL(sql);
+            }
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         //Usuarios
         public void mantenimientodatos_Usuarios(String[] datos, String accion)
         {
+            try { 
             String sql = "";
             if (accion == "nuevo")
             {
@@ -484,6 +515,8 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 sql = "DELETE USUARIOS FROM USUARIOS WHERE Id_USUARIOS='" + datos[0] + "'";
             }
             procesarSQL(sql);
+            }
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         void procesarSQL(String sql)

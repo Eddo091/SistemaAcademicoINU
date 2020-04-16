@@ -14,8 +14,8 @@ namespace SistemaAcademico
     public partial class Asignaturas : Form
     {
         Conexion objconexion = new Conexion();
-        int posicion = 0;
-        string accion = "nuevo";
+        /*int posicion = 0;
+        string accion = "nuevo";*/
         DataTable tbl = new DataTable(); //Materias
         public Asignaturas()
         {
