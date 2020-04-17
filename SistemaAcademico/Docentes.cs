@@ -16,6 +16,7 @@ namespace SistemaAcademico
         int posicion = 0;
         string accion = "nuevo";
         DataTable tbl = new DataTable(); //Docente
+        DataTable tbl2 = new DataTable(); //Materia
         public Docentes()
         {
             InitializeComponent();
@@ -95,7 +96,7 @@ namespace SistemaAcademico
                 txtName.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtApellido.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtCodigo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txtMateria.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txtMateria.Text = tbl2.Rows[posicion].ItemArray[1].ToString();
 
 
             }
@@ -121,6 +122,16 @@ namespace SistemaAcademico
             actualizarDs();
             posicion = tbl.Rows.Count - 1;
             MessageBox.Show("Datos: " + valores, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mostrardatos();
+
+            String[] valores2 = {
+                   
+            txtMateria.Text
+            };
+            objconexion.mantenimientodatos_Docente(valores2, accion);
+            actualizarDs();
+            posicion = tbl.Rows.Count - 1;
+            MessageBox.Show("Datos: " + valores2, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Mostrardatos();
         }
 

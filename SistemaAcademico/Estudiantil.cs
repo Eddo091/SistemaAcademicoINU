@@ -16,7 +16,11 @@ namespace SistemaAcademico
         Conexion objconexion = new Conexion();
         int posicion = 0;
         string accion = "nuevo";
-        DataTable tbl = new DataTable();
+        DataTable tbl = new DataTable(); //Estudiante
+        DataTable tbl2 = new DataTable();//Especialidad
+        DataTable tbl3 = new DataTable(); //Seccion
+        DataTable tbl4 = new DataTable(); //Modalidad
+        DataTable tbl5 = new DataTable(); //Año
         public Estudiantil()
         {
             InitializeComponent();
@@ -43,10 +47,10 @@ namespace SistemaAcademico
                 txtName.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtApellido.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtCodigo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txtEspecialidad.Text = tbl.Rows[posicion].ItemArray[4].ToString();
-                txtSeccion.Text = tbl.Rows[posicion].ItemArray[5].ToString();
-                txtModalidad.Text = tbl.Rows[posicion].ItemArray[6].ToString();
-                txtYear.Text = tbl.Rows[posicion].ItemArray[7].ToString();
+                txtEspecialidad.Text = tbl2.Rows[posicion].ItemArray[1].ToString();
+                txtSeccion.Text = tbl3.Rows[posicion].ItemArray[1].ToString();
+                txtModalidad.Text = tbl4.Rows[posicion].ItemArray[1].ToString();
+                txtYear.Text = tbl5.Rows[posicion].ItemArray[1].ToString();
             }
             catch (Exception e)
             {
@@ -125,7 +129,7 @@ namespace SistemaAcademico
 
 
 
-                
+                //Estudiantes
                 String[] valores = {
                       txtName.Text,
             txtApellido.Text,
@@ -140,10 +144,58 @@ namespace SistemaAcademico
                 MessageBox.Show("Datos: " + valores, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Mostrardatos();
 
+            //Esp
+            String[] valores2 = {
+
+
+            txtEspecialidad.Text };
+           
+            objconexion.mantenimientodatos_Especialidad(valores, accion);
+            actualizarDs();
+            posicion = tbl.Rows.Count - 1;
+            MessageBox.Show("Datos: " + valores2, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mostrardatos();
+
+            //sec
+            String[] valores3 = {
+
+
+           
+            txtSeccion.Text};
+            objconexion.mantenimientodatos_Seccion(valores, accion);
+            actualizarDs();
+            posicion = tbl.Rows.Count - 1;
+            MessageBox.Show("Datos: " + valores3, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mostrardatos();
+
+            //Mod
+            String[] valores4 = {
 
 
 
             
+            txtModalidad.Text,
+           };
+            objconexion.mantenimientodatos_Modalidad(valores4, accion);
+            actualizarDs();
+            posicion = tbl.Rows.Count - 1;
+            MessageBox.Show("Datos: " + valores4, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mostrardatos();
+            //Año
+
+            String[] valores5 = {
+
+
+
+            
+          
+            txtYear.Text };
+            objconexion.mantenimientodatos_Año(valores5, accion);
+            actualizarDs();
+            posicion = tbl.Rows.Count - 1;
+            MessageBox.Show("Datos: " + valores5, "Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mostrardatos();
+
 
 
 
