@@ -178,7 +178,8 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
         //Estudiante
         public void mantenimiento_datosEstudiante(String[] datos, String accion)
         {
-            try {
+            try
+            {
                 String sql = "";
                 if (accion == "nuevo")
                 {
@@ -213,8 +214,9 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                     sql = "DELETE Estudiante FROM Estudiante WHERE ID_ESTUDIANTE='" + datos[0] + "'";
                 }
                 procesarSQL(sql);
-            } catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-           
+            }
+            catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
         }
 
         //Docente
