@@ -203,6 +203,7 @@ namespace SistemaAcademico
         //Eliminar
         private void btnelim_Click(object sender, EventArgs e)
         {
+            accion = "eliminar";
             if (MessageBox.Show("¿Está seguro de eliminar a " + txtName.Text + " ?", "Estudiantes", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { lblid.Text };
@@ -211,6 +212,11 @@ namespace SistemaAcademico
                 posicion = posicion > 0 ? posicion - 1 : 0;
                 Mostrardatos();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            accion = "modificar";
         }
     }
 }

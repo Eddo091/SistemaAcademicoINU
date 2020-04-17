@@ -50,6 +50,7 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.btnelim = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
@@ -252,7 +253,7 @@
             this.btnultimo.Location = new System.Drawing.Point(203, 36);
             this.btnultimo.Name = "btnultimo";
             this.btnultimo.Size = new System.Drawing.Size(39, 46);
-            this.btnultimo.TabIndex = 11;
+            this.btnultimo.TabIndex = 12;
             this.btnultimo.Text = ">|";
             this.btnultimo.UseVisualStyleBackColor = false;
             this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
@@ -265,7 +266,7 @@
             this.btnsiguiente.Location = new System.Drawing.Point(158, 36);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(39, 46);
-            this.btnsiguiente.TabIndex = 10;
+            this.btnsiguiente.TabIndex = 11;
             this.btnsiguiente.Text = ">";
             this.btnsiguiente.UseVisualStyleBackColor = false;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
@@ -278,7 +279,7 @@
             this.btnanterior.Location = new System.Drawing.Point(51, 36);
             this.btnanterior.Name = "btnanterior";
             this.btnanterior.Size = new System.Drawing.Size(39, 46);
-            this.btnanterior.TabIndex = 9;
+            this.btnanterior.TabIndex = 10;
             this.btnanterior.Text = "<";
             this.btnanterior.UseVisualStyleBackColor = false;
             this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
@@ -291,7 +292,7 @@
             this.btnprimero.Location = new System.Drawing.Point(6, 36);
             this.btnprimero.Name = "btnprimero";
             this.btnprimero.Size = new System.Drawing.Size(39, 46);
-            this.btnprimero.TabIndex = 8;
+            this.btnprimero.TabIndex = 9;
             this.btnprimero.Text = "|<";
             this.btnprimero.UseVisualStyleBackColor = false;
             this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
@@ -305,13 +306,30 @@
             this.btnelim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnelim.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnelim.ForeColor = System.Drawing.Color.Black;
-            this.btnelim.Location = new System.Drawing.Point(482, 195);
+            this.btnelim.Location = new System.Drawing.Point(544, 189);
             this.btnelim.Name = "btnelim";
-            this.btnelim.Size = new System.Drawing.Size(120, 35);
-            this.btnelim.TabIndex = 7;
+            this.btnelim.Size = new System.Drawing.Size(101, 35);
+            this.btnelim.TabIndex = 8;
             this.btnelim.Text = "Eliminar";
             this.btnelim.UseVisualStyleBackColor = false;
             this.btnelim.Click += new System.EventHandler(this.btnelim_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(441, 189);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 35);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Modificar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Docentes
             // 
@@ -319,6 +337,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(657, 306);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnelim);
             this.Controls.Add(this.grbNavegacionAlumnos);
             this.Controls.Add(this.txtCodigo);
@@ -369,5 +388,6 @@
         private System.Windows.Forms.Button btnprimero;
         private System.Windows.Forms.Button btnelim;
         private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.Button button2;
     }
 }

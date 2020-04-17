@@ -137,9 +137,8 @@ namespace SistemaAcademico
 
         }
 
-        private void btnelim_Click(object sender, EventArgs e)
-        {
+     
 
-        }
+    
     }
 }

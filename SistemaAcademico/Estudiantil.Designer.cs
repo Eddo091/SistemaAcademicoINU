@@ -56,6 +56,7 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.btnelim = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             this.grbNavegacionAlumnos.SuspendLayout();
@@ -372,13 +373,30 @@
             this.btnelim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnelim.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnelim.ForeColor = System.Drawing.Color.Black;
-            this.btnelim.Location = new System.Drawing.Point(496, 255);
+            this.btnelim.Location = new System.Drawing.Point(544, 255);
             this.btnelim.Name = "btnelim";
             this.btnelim.Size = new System.Drawing.Size(120, 35);
-            this.btnelim.TabIndex = 10;
+            this.btnelim.TabIndex = 11;
             this.btnelim.Text = "Eliminar";
             this.btnelim.UseVisualStyleBackColor = false;
             this.btnelim.Click += new System.EventHandler(this.btnelim_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(441, 255);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 35);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Modificar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Estudiantil
             // 
@@ -386,6 +404,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(676, 373);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnelim);
             this.Controls.Add(this.grbNavegacionAlumnos);
             this.Controls.Add(this.label8);
@@ -449,5 +468,6 @@
         private System.Windows.Forms.Button btnprimero;
         private System.Windows.Forms.Button btnelim;
         private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.Button button2;
     }
 }
