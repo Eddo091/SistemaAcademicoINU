@@ -86,6 +86,8 @@ namespace SistemaAcademico
         {
             tbl = objconexion.obtener_datosDocente().Tables["DOCENTES"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["Id_DOCENTES"] };
+            tbl2 = objconexion.obtener_datosDocente().Tables["MATERIAS"];
+            tbl2.PrimaryKey = new DataColumn[] { tbl.Columns["Id_MATERIAS"] };
         }
         void Mostrardatos()
         {
