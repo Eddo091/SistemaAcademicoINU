@@ -24,7 +24,7 @@ namespace SistemaAcademico
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = dataGridView1.DataSource;
-            bs.Filter = "Nombre like '%" + valor + "%'";
+            bs.Filter = "NOMBRES like '%" + valor + "%'"+ "or APELLIDOS like '%" + valor + "%'" + "or MATERIAS like '%" + valor + "%'";
             dataGridView1.DataSource = bs;
         }
         public int _codDocen;

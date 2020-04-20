@@ -46,6 +46,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.mATERIASTableAdapter = new SistemaAcademico.DataSetTableAdapters.MATERIASTableAdapter();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
@@ -256,12 +257,20 @@
             // 
             this.mATERIASTableAdapter.ClearBeforeFill = true;
             // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(266, 34);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(424, 20);
+            this.txtbuscar.TabIndex = 38;
+            // 
             // Materias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1026, 383);
+            this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button1);
@@ -296,5 +305,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idMATERIASDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mATERIASDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDPERSONALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtbuscar;
     }
 }

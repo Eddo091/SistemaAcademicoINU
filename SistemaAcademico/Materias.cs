@@ -21,6 +21,13 @@ namespace SistemaAcademico
         {
             this.Close();
         }
+        void filtrar_datos(String valor)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = "MATERIAS like '%" + valor + "%'" + "or PERSONAL like '%" + valor + "%'";
+            dataGridView1.DataSource = bs;
+        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -37,7 +44,7 @@ namespace SistemaAcademico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Falta el cuadro de busqueda");
+            filtrar_datos(txtbuscar.Text);
         }
     }
 }

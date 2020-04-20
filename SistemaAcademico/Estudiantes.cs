@@ -33,7 +33,8 @@ namespace SistemaAcademico
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = dataGridView1.DataSource;
-            bs.Filter = "Nombre like '%" + valor + "%'";
+            bs.Filter = "Nombre like '%" + valor + "%'"+"or Apellido like '%"+valor + "%'" + "or Codigo Estudiante like '%"+valor + "%'" + "or Especialidad '%"+valor
+               + "%'" + "or Seccion like '%"+valor + "%'" + "or Modalidad like '%"+valor + "%'" + "or Año like '%"+valor + "%'";
             dataGridView1.DataSource = bs;
         }
         public int _codEstu;
