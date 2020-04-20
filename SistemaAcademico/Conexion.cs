@@ -190,7 +190,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                         "'" + datos[4] + "'," +
                         "'" + datos[5] + "'," +
                         "'" + datos[6] + "'," +
-                        "'" + datos[7] + "'," +
+                        "'" + datos[7] + "'" +
 
                         "'" + ")";
 
@@ -205,7 +205,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                         "ID_ESPECIALIDAD        = '" + datos[4] + "'," +
                         "ID_SECCION       = '" + datos[5] + "'," +
                         "ID_MODALIDAD      = '" + datos[6] + "'," +
-                        "ID_AÑO     = '" + datos[7] + "'," +
+                        "ID_AÑO     = '" + datos[7] + "'" +
                         "WHERE ID_ESTUDIANTE = '" + datos[0] + "'"
                         + "'";
                 }
@@ -243,7 +243,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                         "APELLIDOS         = '" + datos[2] + "'," +
                          "CODIGO_DOCENTE         = '" + datos[3] + "'," +
                         "MATERIAS_ID       = '" + datos[4] + "'," +
-                        "USUARIOS_ID       = '" + datos[5] + "'," +
+                        "USUARIOS_ID       = '" + datos[5] + "'" +
 
 
                         "WHERE Id_DOCENTES = '" + datos[0] + "'"
@@ -267,7 +267,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 {
                     sql = "INSERT INTO MATERIAS (MATERIAS,ID_PERSONAL) VALUE (" +
                         "'" + datos[1] + "'," +
-                        "'" + datos[2] + "'," +
+                        "'" + datos[2] + "'" +
 
 
                         "'" + ")";
@@ -278,7 +278,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 {
                     sql = "UPDATE MATERIAS SET " +
                         "MATERIAS      = '" + datos[1] + "'," +
-                        "ID_PERSONAL         = '" + datos[2] + "'," +
+                        "ID_PERSONAL         = '" + datos[2] + "'" +
 
 
                         "WHERE Id_MATERIAS = '" + datos[0] + "'"
@@ -307,7 +307,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                         "'" + datos[4] + "'," +
                         "'" + datos[5] + "'," +
                         "'" + datos[6] + "'," +
-                        "'" + datos[7] + "'," +
+                        "'" + datos[7] + "'" +
                         "'" + ")";
 
 
@@ -321,7 +321,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                         "NOTA_2       = '" + datos[4] + "'," +
                         "NOTA_3       = '" + datos[5] + "'," +
                         "PROMEDIO      = '" + datos[6] + "'," +
-                        "ID_PROMEDIO       = '" + datos[7] + "'," +
+                        "ID_PROMEDIO       = '" + datos[7] + "'" +
 
                         "WHERE Id_NOTAS = '" + datos[0] + "'"
                         + "'";
@@ -346,7 +346,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'," +
                     "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
+                    "'" + datos[5] + "'" +
                     "'" + ")";
 
 
@@ -358,7 +358,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                     "NOTA_PERIODO2      = '" + datos[2] + "'," +
                     "NOTA_PERIODO3       = '" + datos[3] + "'," +
                     "NOTA_PERIODO4       = '" + datos[4] + "'," +
-                    "PROMEDIOFINAL       = '" + datos[5] + "'," +
+                    "PROMEDIOFINAL       = '" + datos[5] + "'" +
                     
 
                     "WHERE ID_PERIODO = '" + datos[0] + "'"
@@ -381,7 +381,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             if (accion == "nuevo")
             {
                 sql = "INSERT INTO AÑO (AÑO) VALUE (" +
-                    "'" + datos[1] + "'," +
+                    "'" + datos[1] + "'" +
                      ")";
 
 
@@ -389,7 +389,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             else if (accion == "modificar")
             {
                 sql = "UPDATE AÑO SET " +
-                    "AÑO      = '" + datos[1] + "'," +
+                    "AÑO      = '" + datos[1] + "'" +
                     
                     "WHERE Id_AÑO = '" + datos[0] + "'"
                     + "'";
@@ -410,7 +410,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             if (accion == "nuevo")
             {
                 sql = "INSERT INTO MODALIDAD (MODALIDAD) VALUE (" +
-                    "'" + datos[1] + "'," +
+                    "'" + datos[1] + "'" +
                      ")";
 
 
@@ -418,7 +418,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             else if (accion == "modificar")
             {
                 sql = "UPDATE MODALIDAD SET " +
-                    "MODALIDAD      = '" + datos[1] + "'," +
+                    "MODALIDAD      = '" + datos[1] + "'" +
 
                     "WHERE Id_MODALIDAD = '" + datos[0] + "'"
                     + "'";
@@ -439,7 +439,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             if (accion == "nuevo")
             {
                 sql = "INSERT INTO ESPECIALIDAD (ESPECIALIDAD) VALUE (" +
-                    "'" + datos[1] + "'," +
+                    "'" + datos[1] + "'" +
                      ")";
 
 
@@ -447,7 +447,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             else if (accion == "modificar")
             {
                 sql = "UPDATE ESPECIALIDAD SET " +
-                    "ESPECIALIDAD     = '" + datos[1] + "'," +
+                    "ESPECIALIDAD     = '" + datos[1] + "'" +
 
                     "WHERE Id_ESPECIALIDAD = '" + datos[0] + "'"
                     + "'";
@@ -468,7 +468,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             if (accion == "nuevo")
             {
                 sql = "INSERT INTO SECCION (SECCION) VALUE (" +
-                    "'" + datos[1] + "'," +
+                    "'" + datos[1] + "'" +
                      ")";
 
 
@@ -476,7 +476,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             else if (accion == "modificar")
             {
                 sql = "UPDATE SECCION SET " +
-                    "SECCION      = '" + datos[1] + "'," +
+                    "SECCION      = '" + datos[1] + "'" +
 
                     "WHERE Id_SECCION = '" + datos[0] + "'"
                     + "'";
@@ -498,7 +498,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             {
                 sql = "INSERT INTO USUARIOS (USUARIO,CONTRASEÑA) VALUE (" +
                     "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
+                    "'" + datos[2] + "'" +
                      ")";
 
 
@@ -507,7 +507,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
             {
                 sql = "UPDATE USUARIOS SET " +
                     "USUARIO      = '" + datos[1] + "'," +
-                    "CONTRASEÑA      = '" + datos[2] + "'," +
+                    "CONTRASEÑA      = '" + datos[2] + "'" +
 
                     "WHERE Id_USUARIO = '" + datos[0] + "'"
                     + "'";
