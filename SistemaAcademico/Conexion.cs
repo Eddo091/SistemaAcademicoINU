@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;//libreria para conectarse al SQL Server
 using System.Windows.Forms;
 
@@ -20,8 +21,24 @@ namespace SistemaAcademico
             string cadena = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\INU_DB.mdf;Integrated Security=True";
             miConexion.ConnectionString = cadena;
             miConexion.Open();
+            //inicializar los parametros que se van en las consultas
+            parametrizacion();
+        }
+        private void parametrizacion()
+        {
+            comandoSQL.Parameters.Add("@ID_ESTUDIANTE", SqlDbType.Int).Value = 0;
+            comandoSQL.Parameters.Add("@Nombre", SqlDbType.Char).Value = "";
+            comandoSQL.Parameters.Add("@Apellido", SqlDbType.Char).Value = "";
+            comandoSQL.Parameters.Add("@COD_ESTUDIANTE", SqlDbType.Int).Value = 3;
+            comandoSQL.Parameters.Add("@ID_ESPECIALIDAD", SqlDbType.Int).Value = 4;
+            comandoSQL.Parameters.Add("@ID_SECCION", SqlDbType.Int).Value = 5;
+            comandoSQL.Parameters.Add("@ID_MODALIDAD", SqlDbType.Int).Value = 6;
+            comandoSQL.Parameters.Add("@ID_AÑO", SqlDbType.Int).Value = 7;
+            comandoSQL.Parameters.Add("@ID_USUARIO", SqlDbType.Int).Value = 8;
+            
 
-            }
+        }
+
         public DataSet obtener_datosEstudiante()
         {
             ds.Clear();
@@ -183,35 +200,37 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                 String sql = "";
                 if (accion == "nuevo")
                 {
-                    sql = "INSERT INTO Estudiante (Nombre,Apellido,COD_ESTUDIANTE,ID_ESPECIALIDAD,ID_SECCION,ID_MODALIDAD,ID_AÑO,ID_USUARIOS) VALUE (" +
-                        "'" + datos[1] + "'," +
-                        "'" + datos[2] + "'," +
-                        "'" + datos[3] + "'," +
-                        "'" + datos[4] + "'," +
-                        "'" + datos[5] + "'," +
-                        "'" + datos[6] + "'," +
-                        "'" + datos[7] + "'" +
-
-                        "'" + ")";
+                    sql = "INSERT INTO Estudiante (Nombre,Apellido,COD_ESTUDIANTE,ID_ESPECIALIDAD,ID_SECCION,ID_MODALIDAD,ID_AÑO,ID_USUARIOS) VALUE (@Nombre,@apellido,@COD_ESTUDIANTE,@ID_ESPECIALIDAD,@ID_SECCION,@ID_MODALIDAD,@ID_AÑO)";
 
 
                 }
                 else if (accion == "modificar")
                 {
                     sql = "UPDATE Estudiante SET " +
-                        "Nombre        = '" + datos[1] + "'," +
-                        "Apellido         = '" + datos[2] + "'," +
-                        "COD_ESTUDIANTE        = '" + datos[3] + "'," +
-                        "ID_ESPECIALIDAD        = '" + datos[4] + "'," +
-                        "ID_SECCION       = '" + datos[5] + "'," +
-                        "ID_MODALIDAD      = '" + datos[6] + "'," +
-                        "ID_AÑO     = '" + datos[7] + "'" +
-                        "WHERE ID_ESTUDIANTE = '" + datos[0] + "'"
+                        "Nombre        = @Nombre" +
+                        "Apellido         = @Apellido" +
+                        "COD_ESTUDIANTE        = @COD_ESTUDIANTE" +
+                        "ID_ESPECIALIDAD        = @ID_ESPECIALIDAD" +
+                        "ID_SECCION       = @ID_SECCION" +
+                        "ID_MODALIDAD      = @ID_MODALIDAD" +
+                        "ID_AÑO     = @ID_AÑO" +
+                        "WHERE ID_ESTUDIANTE = @ID_ESTUDIANTE"
                         + "'";
                 }
                 else if (accion == "eliminar")
                 {
-                    sql = "DELETE Estudiante FROM Estudiante WHERE ID_ESTUDIANTE='" + datos[0] + "'";
+                    sql = "DELETE Estudiante FROM Estudiante WHERE ID_ESTUDIANTE=@ID_ESTUDIANTE";
+                    comandoSQL.Parameters["@ID_ESTUDIANTE"].Value = datos[0];
+                    if (accion != "eliminar")
+                    {
+                        comandoSQL.Parameters["@Nombre"].Value = datos[1];
+                        comandoSQL.Parameters["@Apellido"].Value = datos[2];
+                        comandoSQL.Parameters["@COD_ESTUDIANTE"].Value = datos[3];
+                        comandoSQL.Parameters["@ID_ESPECIALIDAD"].Value = datos[4];
+                        comandoSQL.Parameters["@ID_SECCION"].Value = datos[5];
+                        comandoSQL.Parameters["@ID_MODALIDAD"].Value = datos[6];
+                        comandoSQL.Parameters["@ID_AÑO"].Value = datos[7];
+                    }
                 }
                 procesarSQL(sql);
             }
