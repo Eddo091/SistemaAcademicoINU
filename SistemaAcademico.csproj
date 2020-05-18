@@ -77,18 +77,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asignaturas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Asignaturas.Designer.cs">
-      <DependentUpon>Asignaturas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Calificaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Calificaciones.Designer.cs">
-      <DependentUpon>Calificaciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
@@ -146,12 +134,6 @@
     <Compile Include="Matriculas.Designer.cs">
       <DependentUpon>Matriculas.cs</DependentUpon>
     </Compile>
-    <Compile Include="NOTAS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NOTAS.Designer.cs">
-      <DependentUpon>NOTAS.cs</DependentUpon>
-    </Compile>
     <Compile Include="NotasEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,12 +155,6 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Asignaturas.resx">
-      <DependentUpon>Asignaturas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Calificaciones.resx">
-      <DependentUpon>Calificaciones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Docentes.resx">
       <DependentUpon>Docentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Matriculas.resx">
       <DependentUpon>Matriculas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NOTAS.resx">
-      <DependentUpon>NOTAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotasEstudiante.resx">
       <DependentUpon>NotasEstudiante.cs</DependentUpon>

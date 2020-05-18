@@ -31,12 +31,15 @@ namespace SistemaAcademico
             lab2 = int.Parse(fila.Cells["Laboratorio 2"].ToString());
             parcial = int.Parse(fila.Cells["Parcial"].ToString());
             prom = int.Parse(fila.Cells["Promedio"].ToString());
-
+                prom1 = (lab1 * 0.30) + (lab2 * 0.30) + (parcial * 0.40);
+                prom = prom1;
+                pROMEDIOLabel1.Text = prom.ToString();
             }
 
-            prom1 = (lab1 * 0.30) + (lab2 * 0.30) + (parcial * 0.40);
-            prom = prom1;
-             
+            
+
+
+
         }
 
 

@@ -36,8 +36,8 @@
             System.Windows.Forms.Label nombre_Label;
             System.Windows.Forms.Label apellidoLabel;
             System.Windows.Forms.Label eSPECIALIDADLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotasEstudiante));
             System.Windows.Forms.Label pROMEDIOLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotasEstudiante));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -184,6 +184,16 @@
             eSPECIALIDADLabel.TabIndex = 96;
             eSPECIALIDADLabel.Text = "Especialidad:";
             eSPECIALIDADLabel.Click += new System.EventHandler(this.eSPECIALIDADLabel_Click);
+            // 
+            // pROMEDIOLabel
+            // 
+            pROMEDIOLabel.AutoSize = true;
+            pROMEDIOLabel.Font = new System.Drawing.Font("Georgia", 12F);
+            pROMEDIOLabel.Location = new System.Drawing.Point(718, 123);
+            pROMEDIOLabel.Name = "pROMEDIOLabel";
+            pROMEDIOLabel.Size = new System.Drawing.Size(101, 18);
+            pROMEDIOLabel.TabIndex = 110;
+            pROMEDIOLabel.Text = "PROMEDIO:";
             // 
             // BarraTitulo
             // 
@@ -519,6 +529,7 @@
             // mATERIASComboBox
             // 
             this.mATERIASComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mATERIASBindingSource, "MATERIAS", true));
+            this.mATERIASComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mATERIASComboBox.FormattingEnabled = true;
             this.mATERIASComboBox.Location = new System.Drawing.Point(568, 80);
             this.mATERIASComboBox.Name = "mATERIASComboBox";
@@ -537,6 +548,7 @@
             // eSPECIALIDADComboBox
             // 
             this.eSPECIALIDADComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eSPECIALIDADBindingSource, "ESPECIALIDAD", true));
+            this.eSPECIALIDADComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.eSPECIALIDADComboBox.FormattingEnabled = true;
             this.eSPECIALIDADComboBox.Location = new System.Drawing.Point(842, 79);
             this.eSPECIALIDADComboBox.Name = "eSPECIALIDADComboBox";
@@ -656,16 +668,6 @@
             this.nOTA_3TextBox.Size = new System.Drawing.Size(100, 20);
             this.nOTA_3TextBox.TabIndex = 110;
             // 
-            // pROMEDIOLabel
-            // 
-            pROMEDIOLabel.AutoSize = true;
-            pROMEDIOLabel.Font = new System.Drawing.Font("Georgia", 12F);
-            pROMEDIOLabel.Location = new System.Drawing.Point(718, 123);
-            pROMEDIOLabel.Name = "pROMEDIOLabel";
-            pROMEDIOLabel.Size = new System.Drawing.Size(101, 18);
-            pROMEDIOLabel.TabIndex = 110;
-            pROMEDIOLabel.Text = "PROMEDIO:";
-            // 
             // pROMEDIOLabel1
             // 
             this.pROMEDIOLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "PROMEDIO", true));
@@ -679,6 +681,7 @@
             // nombre_ComboBox1
             // 
             this.nombre_ComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "Nombre ", true));
+            this.nombre_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nombre_ComboBox1.FormattingEnabled = true;
             this.nombre_ComboBox1.Location = new System.Drawing.Point(101, 81);
             this.nombre_ComboBox1.Name = "nombre_ComboBox1";
@@ -688,6 +691,7 @@
             // apellidoComboBox
             // 
             this.apellidoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "Apellido", true));
+            this.apellidoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.apellidoComboBox.FormattingEnabled = true;
             this.apellidoComboBox.Location = new System.Drawing.Point(337, 79);
             this.apellidoComboBox.Name = "apellidoComboBox";
