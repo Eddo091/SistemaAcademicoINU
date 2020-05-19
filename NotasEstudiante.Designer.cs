@@ -219,6 +219,7 @@
             this.btnCerrar.Size = new System.Drawing.Size(32, 31);
             this.btnCerrar.TabIndex = 82;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label6
             // 
@@ -577,7 +578,7 @@
             this.grbNavegacionAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbNavegacionAlumnos.Location = new System.Drawing.Point(337, 416);
             this.grbNavegacionAlumnos.Name = "grbNavegacionAlumnos";
-            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 132);
+            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 77);
             this.grbNavegacionAlumnos.TabIndex = 107;
             this.grbNavegacionAlumnos.TabStop = false;
             this.grbNavegacionAlumnos.Text = "Navegacion ";

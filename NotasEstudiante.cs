@@ -20,6 +20,7 @@ namespace SistemaAcademico
 
         private void Promedio()
         {
+            
             double lab1, lab2, parcial, nfilas = 0, prom1, prom;
             
             nfilas = notasdelEstudianteDataGridView.RowCount;
@@ -27,16 +28,16 @@ namespace SistemaAcademico
             for (int i = 0; i<nfilas; i++)
            { 
             fila = notasdelEstudianteDataGridView.Rows[i];
-            lab1 = int.Parse(fila.Cells["Laboratorio 1"].ToString());
-            lab2 = int.Parse(fila.Cells["Laboratorio 2"].ToString());
-            parcial = int.Parse(fila.Cells["Parcial"].ToString());
+            lab1 = int.Parse(fila.Cells["Laboratorio 1"].Value.ToString());
+            lab2 = int.Parse(fila.Cells["Laboratorio 2"].Value.ToString());
+            parcial = int.Parse(fila.Cells["Parcial"].Value.ToString());
             prom = int.Parse(fila.Cells["Promedio"].ToString());
-                prom1 = (lab1 * 0.30) + (lab2 * 0.30) + (parcial * 0.40);
+                prom1 =+ (lab1 * 0.30) + (lab2 * 0.30) + (parcial * 0.40);
                 prom = prom1;
                 pROMEDIOLabel1.Text = prom.ToString();
             }
-
             
+
 
 
 
@@ -76,21 +77,30 @@ namespace SistemaAcademico
         private void btnprimero_Click(object sender, EventArgs e)
         {
             notasBindingSource.MoveFirst();
+            Promedio();
         }
 
         private void btnanterior_Click(object sender, EventArgs e)
         {
             notasBindingSource.MovePrevious();
+            Promedio();
         }
 
         private void btnsiguiente_Click(object sender, EventArgs e)
         {
             notasBindingSource.MoveLast();
+            Promedio();
         }
 
         private void btnultimo_Click(object sender, EventArgs e)
         {
             notasBindingSource.MoveNext();
+            Promedio();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
