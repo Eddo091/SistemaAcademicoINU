@@ -220,6 +220,7 @@
             this.btnCerrar.Size = new System.Drawing.Size(32, 31);
             this.btnCerrar.TabIndex = 82;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label6
             // 

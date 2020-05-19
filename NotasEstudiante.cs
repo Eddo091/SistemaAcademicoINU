@@ -97,5 +97,10 @@ namespace SistemaAcademico
             notasBindingSource.MoveNext();
             Promedio();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
