@@ -93,6 +93,7 @@
             this.pROMEDIOLabel1 = new System.Windows.Forms.Label();
             this.nombre_ComboBox1 = new System.Windows.Forms.ComboBox();
             this.apellidoComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             nOTA_1Label = new System.Windows.Forms.Label();
             nOTA_2Label = new System.Windows.Forms.Label();
             nOTA_3Label = new System.Windows.Forms.Label();
@@ -577,7 +578,7 @@
             this.grbNavegacionAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbNavegacionAlumnos.Location = new System.Drawing.Point(337, 416);
             this.grbNavegacionAlumnos.Name = "grbNavegacionAlumnos";
-            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 132);
+            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 77);
             this.grbNavegacionAlumnos.TabIndex = 107;
             this.grbNavegacionAlumnos.TabStop = false;
             this.grbNavegacionAlumnos.Text = "Navegacion ";
@@ -698,11 +699,24 @@
             this.apellidoComboBox.Size = new System.Drawing.Size(121, 21);
             this.apellidoComboBox.TabIndex = 113;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Wheat;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Georgia", 9F);
+            this.button1.Location = new System.Drawing.Point(634, 440);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 30);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // NotasEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 560);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.apellidoComboBox);
             this.Controls.Add(this.nombre_ComboBox1);
             this.Controls.Add(pROMEDIOLabel);
@@ -804,5 +818,6 @@
         private System.Windows.Forms.Label pROMEDIOLabel1;
         private System.Windows.Forms.ComboBox nombre_ComboBox1;
         private System.Windows.Forms.ComboBox apellidoComboBox;
+        private System.Windows.Forms.Button button1;
     }
 }
