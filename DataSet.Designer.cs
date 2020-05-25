@@ -4013,6 +4013,16 @@ namespace SistemaAcademico {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public NotasdelEstudianteRow FindById_MATERIASId_NOTASID_ESPECIALIDADID_ESTUDIANTE(int Id_MATERIAS, int Id_NOTAS, int ID_ESPECIALIDAD, int ID_ESTUDIANTE) {
+                return ((NotasdelEstudianteRow)(this.Rows.Find(new object[] {
+                            Id_MATERIAS,
+                            Id_NOTAS,
+                            ID_ESPECIALIDAD,
+                            ID_ESTUDIANTE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 NotasdelEstudianteDataTable cln = ((NotasdelEstudianteDataTable)(base.Clone()));
                 cln.InitVars();
@@ -4085,7 +4095,7 @@ namespace SistemaAcademico {
                                 this.columnId_MATERIAS,
                                 this.columnId_NOTAS,
                                 this.columnID_ESPECIALIDAD,
-                                this.columnID_ESTUDIANTE}, false));
+                                this.columnID_ESTUDIANTE}, true));
                 this.columnMATERIAS.MaxLength = 10;
                 this.columnNombre_.MaxLength = 10;
                 this.columnApellido.MaxLength = 10;
@@ -10217,7 +10227,7 @@ SELECT Id_SECCION, SECCION FROM SECCION WHERE (Id_SECCION = @Id_SECCION)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Notas.NOTA_1, Notas.NOTA_2, Notas.NOTA_3, Notas.PROMEDIO, MATERIAS.MATERIAS, Estudiante.[Nombre ], Estudiante.Apellido, ESPECIALIDAD.ESPECIALIDAD, MATERIAS.Id_MATERIAS, Notas.Id_NOTAS, 
@@ -10227,6 +10237,24 @@ FROM            MATERIAS INNER JOIN
                          ESPECIALIDAD INNER JOIN
                          Estudiante ON ESPECIALIDAD.ID_ESPECIALIDAD = Estudiante.ID_ESPECIALIDAD ON Notas.ID_ESTUDIANTE = Estudiante.ID_ESTUDIANTE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Notas.NOTA_1, Notas.NOTA_2, Notas.NOTA_3, Notas.PROMEDIO, MATERIAS.MATERIAS, Estudiante.[Nombre ], Estudiante.Apellido, ESPECIALIDAD.ESPECIALIDAD, MATERIAS.Id_MATERIAS, Notas.Id_NOTAS, 
+                         ESPECIALIDAD.ID_ESPECIALIDAD, Estudiante.ID_ESTUDIANTE
+FROM            MATERIAS INNER JOIN
+                         Notas ON MATERIAS.Id_MATERIAS = Notas.ID_MATERIA INNER JOIN
+                         ESPECIALIDAD INNER JOIN
+                         Estudiante ON ESPECIALIDAD.ID_ESPECIALIDAD = Estudiante.ID_ESPECIALIDAD ON Notas.ID_ESTUDIANTE = Estudiante.ID_ESTUDIANTE";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        Notas.NOTA_1, Notas.NOTA_2, Notas.NOTA_3, Notas.PROMEDIO, MATERIAS.MATERIAS, Estudiante.[Nombre ], Estudiante.Apellido, ESPECIALIDAD.ESPECIALIDAD, MATERIAS.Id_MATERIAS, Notas.Id_NOTAS, 
+                         ESPECIALIDAD.ID_ESPECIALIDAD, Estudiante.ID_ESTUDIANTE
+FROM            MATERIAS INNER JOIN
+                         Notas ON MATERIAS.Id_MATERIAS = Notas.ID_MATERIA INNER JOIN
+                         ESPECIALIDAD INNER JOIN
+                         Estudiante ON ESPECIALIDAD.ID_ESPECIALIDAD = Estudiante.ID_ESPECIALIDAD ON Notas.ID_ESTUDIANTE = Estudiante.ID_ESTUDIANTE";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10251,6 +10279,32 @@ FROM            MATERIAS INNER JOIN
             DataSet.NotasdelEstudianteDataTable dataTable = new DataSet.NotasdelEstudianteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DataSet.NotasdelEstudianteDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(DataSet.NotasdelEstudianteDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     

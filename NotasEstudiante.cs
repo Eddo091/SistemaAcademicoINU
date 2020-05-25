@@ -13,15 +13,18 @@ namespace SistemaAcademico
 {
     public partial class NotasEstudiante : Form
     {
+        //BD
+        Conexion objconexion = new Conexion();
+
         public NotasEstudiante()
         {
             InitializeComponent();
         }
-
+    
         private void Promedio()
         {
             
-            double lab1, lab2, parcial, nfilas = 0, prom1, prom;
+            double lab1, lab2, parcial, nfilas = 0, prom1, prom=0;
             
             nfilas = notasdelEstudianteDataGridView.RowCount;
             DataGridViewRow fila = new DataGridViewRow();
@@ -36,16 +39,34 @@ namespace SistemaAcademico
                 prom = prom1;
                 pROMEDIOLabel1.Text = prom.ToString();
             }
+
+           
+
             
 
 
-
-
         }
-
+        private void accion()
+        {
+            String[] valores = { nOTA_1TextBox.Text, nOTA_2TextBox.Text, nOTA_3TextBox.Text };
+        }
 
         private void NotasEstudiante_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.Notas' Puede moverla o quitarla según sea necesario.
+            this.notasTableAdapter.Fill(this.dataSet.Notas);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.DOCENTES' Puede moverla o quitarla según sea necesario.
+            this.dOCENTESTableAdapter.Fill(this.dataSet.DOCENTES);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.NotasdelEstudiante' Puede moverla o quitarla según sea necesario.
+            this.notasdelEstudianteTableAdapter.FillNotasEstudiante(this.dataSet1.NotasdelEstudiante);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.Estudiante' Puede moverla o quitarla según sea necesario.
+            this.estudianteTableAdapter.Fill(this.dataSet1.Estudiante);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.Notas' Puede moverla o quitarla según sea necesario.
+            this.notasTableAdapter.Fill(this.dataSet.Notas);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.Notas' Puede moverla o quitarla según sea necesario.
+            this.notasTableAdapter.Fill(this.dataSet.Notas);
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.DOCENTES' Puede moverla o quitarla según sea necesario.
+            this.dOCENTESTableAdapter.Fill(this.dataSet.DOCENTES);
             // TODO: esta línea de código carga datos en la tabla 'dataSet.Notas' Puede moverla o quitarla según sea necesario.
             this.notasTableAdapter.Fill(this.dataSet.Notas);
             // TODO: esta línea de código carga datos en la tabla 'dataSet.ESPECIALIDAD' Puede moverla o quitarla según sea necesario.
@@ -101,6 +122,43 @@ namespace SistemaAcademico
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void notasdelEstudianteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.notasdelEstudianteTableAdapter.FillBy(this.dataSet.NotasdelEstudiante);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+           // notasBindingSource.Insert(int.Parse( accion));
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.notasdelEstudianteTableAdapter.FillBy1(this.dataSet.NotasdelEstudiante);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

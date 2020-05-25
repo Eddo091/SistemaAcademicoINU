@@ -701,7 +701,34 @@ FROM            MATERIAS INNER JOIN
               <Mapping SourceColumn="ID_ESPECIALIDAD" DataSetColumn="ID_ESPECIALIDAD" />
               <Mapping SourceColumn="ID_ESTUDIANTE" DataSetColumn="ID_ESTUDIANTE" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="INU_DBDataSet (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Notas.NOTA_1, Notas.NOTA_2, Notas.NOTA_3, Notas.PROMEDIO, MATERIAS.MATERIAS, Estudiante.[Nombre ], Estudiante.Apellido, ESPECIALIDAD.ESPECIALIDAD, MATERIAS.Id_MATERIAS, Notas.Id_NOTAS, 
+                         ESPECIALIDAD.ID_ESPECIALIDAD, Estudiante.ID_ESTUDIANTE
+FROM            MATERIAS INNER JOIN
+                         Notas ON MATERIAS.Id_MATERIAS = Notas.ID_MATERIA INNER JOIN
+                         ESPECIALIDAD INNER JOIN
+                         Estudiante ON ESPECIALIDAD.ID_ESPECIALIDAD = Estudiante.ID_ESPECIALIDAD ON Notas.ID_ESTUDIANTE = Estudiante.ID_ESTUDIANTE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="INU_DBDataSet (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Notas.NOTA_1, Notas.NOTA_2, Notas.NOTA_3, Notas.PROMEDIO, MATERIAS.MATERIAS, Estudiante.[Nombre ], Estudiante.Apellido, ESPECIALIDAD.ESPECIALIDAD, MATERIAS.Id_MATERIAS, Notas.Id_NOTAS, 
+                         ESPECIALIDAD.ID_ESPECIALIDAD, Estudiante.ID_ESTUDIANTE
+FROM            MATERIAS INNER JOIN
+                         Notas ON MATERIAS.Id_MATERIAS = Notas.ID_MATERIA INNER JOIN
+                         ESPECIALIDAD INNER JOIN
+                         Estudiante ON ESPECIALIDAD.ID_ESPECIALIDAD = Estudiante.ID_ESPECIALIDAD ON Notas.ID_ESTUDIANTE = Estudiante.ID_ESTUDIANTE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -711,7 +738,7 @@ FROM            MATERIAS INNER JOIN
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Estudiante" msprop:Generator_TableClassName="EstudianteDataTable" msprop:Generator_TableVarName="tableEstudiante" msprop:Generator_RowChangedName="EstudianteRowChanged" msprop:Generator_TablePropName="Estudiante" msprop:Generator_RowDeletingName="EstudianteRowDeleting" msprop:Generator_RowChangingName="EstudianteRowChanging" msprop:Generator_RowEvHandlerName="EstudianteRowChangeEventHandler" msprop:Generator_RowDeletedName="EstudianteRowDeleted" msprop:Generator_RowClassName="EstudianteRow" msprop:Generator_UserTableName="Estudiante" msprop:Generator_RowEvArgName="EstudianteRowChangeEvent">
+        <xs:element name="Estudiante" msprop:Generator_TableClassName="EstudianteDataTable" msprop:Generator_TableVarName="tableEstudiante" msprop:Generator_TablePropName="Estudiante" msprop:Generator_RowDeletingName="EstudianteRowDeleting" msprop:Generator_RowChangingName="EstudianteRowChanging" msprop:Generator_RowEvHandlerName="EstudianteRowChangeEventHandler" msprop:Generator_RowDeletedName="EstudianteRowDeleted" msprop:Generator_UserTableName="Estudiante" msprop:Generator_RowChangedName="EstudianteRowChanged" msprop:Generator_RowEvArgName="EstudianteRowChangeEvent" msprop:Generator_RowClassName="EstudianteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_ESTUDIANTE" msprop:Generator_ColumnVarNameInTable="columnID_ESTUDIANTE" msprop:Generator_ColumnPropNameInRow="ID_ESTUDIANTE" msprop:Generator_ColumnPropNameInTable="ID_ESTUDIANTEColumn" msprop:Generator_UserColumnName="ID_ESTUDIANTE" type="xs:int" />
@@ -745,7 +772,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MATERIAS" msprop:Generator_TableClassName="MATERIASDataTable" msprop:Generator_TableVarName="tableMATERIAS" msprop:Generator_RowChangedName="MATERIASRowChanged" msprop:Generator_TablePropName="MATERIAS" msprop:Generator_RowDeletingName="MATERIASRowDeleting" msprop:Generator_RowChangingName="MATERIASRowChanging" msprop:Generator_RowEvHandlerName="MATERIASRowChangeEventHandler" msprop:Generator_RowDeletedName="MATERIASRowDeleted" msprop:Generator_RowClassName="MATERIASRow" msprop:Generator_UserTableName="MATERIAS" msprop:Generator_RowEvArgName="MATERIASRowChangeEvent">
+        <xs:element name="MATERIAS" msprop:Generator_TableClassName="MATERIASDataTable" msprop:Generator_TableVarName="tableMATERIAS" msprop:Generator_TablePropName="MATERIAS" msprop:Generator_RowDeletingName="MATERIASRowDeleting" msprop:Generator_RowChangingName="MATERIASRowChanging" msprop:Generator_RowEvHandlerName="MATERIASRowChangeEventHandler" msprop:Generator_RowDeletedName="MATERIASRowDeleted" msprop:Generator_UserTableName="MATERIAS" msprop:Generator_RowChangedName="MATERIASRowChanged" msprop:Generator_RowEvArgName="MATERIASRowChangeEvent" msprop:Generator_RowClassName="MATERIASRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_MATERIAS" msprop:Generator_ColumnVarNameInTable="columnId_MATERIAS" msprop:Generator_ColumnPropNameInRow="Id_MATERIAS" msprop:Generator_ColumnPropNameInTable="Id_MATERIASColumn" msprop:Generator_UserColumnName="Id_MATERIAS" type="xs:int" />
@@ -760,7 +787,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ESPECIALIDAD" msprop:Generator_TableClassName="ESPECIALIDADDataTable" msprop:Generator_TableVarName="tableESPECIALIDAD" msprop:Generator_RowChangedName="ESPECIALIDADRowChanged" msprop:Generator_TablePropName="ESPECIALIDAD" msprop:Generator_RowDeletingName="ESPECIALIDADRowDeleting" msprop:Generator_RowChangingName="ESPECIALIDADRowChanging" msprop:Generator_RowEvHandlerName="ESPECIALIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="ESPECIALIDADRowDeleted" msprop:Generator_RowClassName="ESPECIALIDADRow" msprop:Generator_UserTableName="ESPECIALIDAD" msprop:Generator_RowEvArgName="ESPECIALIDADRowChangeEvent">
+        <xs:element name="ESPECIALIDAD" msprop:Generator_TableClassName="ESPECIALIDADDataTable" msprop:Generator_TableVarName="tableESPECIALIDAD" msprop:Generator_TablePropName="ESPECIALIDAD" msprop:Generator_RowDeletingName="ESPECIALIDADRowDeleting" msprop:Generator_RowChangingName="ESPECIALIDADRowChanging" msprop:Generator_RowEvHandlerName="ESPECIALIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="ESPECIALIDADRowDeleted" msprop:Generator_UserTableName="ESPECIALIDAD" msprop:Generator_RowChangedName="ESPECIALIDADRowChanged" msprop:Generator_RowEvArgName="ESPECIALIDADRowChangeEvent" msprop:Generator_RowClassName="ESPECIALIDADRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_ESPECIALIDAD" msprop:Generator_ColumnVarNameInTable="columnID_ESPECIALIDAD" msprop:Generator_ColumnPropNameInRow="ID_ESPECIALIDAD" msprop:Generator_ColumnPropNameInTable="ID_ESPECIALIDADColumn" msprop:Generator_UserColumnName="ID_ESPECIALIDAD" type="xs:int" />
@@ -774,7 +801,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MODALIDAD" msprop:Generator_TableClassName="MODALIDADDataTable" msprop:Generator_TableVarName="tableMODALIDAD" msprop:Generator_RowChangedName="MODALIDADRowChanged" msprop:Generator_TablePropName="MODALIDAD" msprop:Generator_RowDeletingName="MODALIDADRowDeleting" msprop:Generator_RowChangingName="MODALIDADRowChanging" msprop:Generator_RowEvHandlerName="MODALIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="MODALIDADRowDeleted" msprop:Generator_RowClassName="MODALIDADRow" msprop:Generator_UserTableName="MODALIDAD" msprop:Generator_RowEvArgName="MODALIDADRowChangeEvent">
+        <xs:element name="MODALIDAD" msprop:Generator_TableClassName="MODALIDADDataTable" msprop:Generator_TableVarName="tableMODALIDAD" msprop:Generator_TablePropName="MODALIDAD" msprop:Generator_RowDeletingName="MODALIDADRowDeleting" msprop:Generator_RowChangingName="MODALIDADRowChanging" msprop:Generator_RowEvHandlerName="MODALIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="MODALIDADRowDeleted" msprop:Generator_UserTableName="MODALIDAD" msprop:Generator_RowChangedName="MODALIDADRowChanged" msprop:Generator_RowEvArgName="MODALIDADRowChangeEvent" msprop:Generator_RowClassName="MODALIDADRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_MODALIDAD" msprop:Generator_ColumnVarNameInTable="columnId_MODALIDAD" msprop:Generator_ColumnPropNameInRow="Id_MODALIDAD" msprop:Generator_ColumnPropNameInTable="Id_MODALIDADColumn" msprop:Generator_UserColumnName="Id_MODALIDAD" type="xs:int" />
@@ -788,7 +815,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="USUARIOS" msprop:Generator_TableClassName="USUARIOSDataTable" msprop:Generator_TableVarName="tableUSUARIOS" msprop:Generator_RowChangedName="USUARIOSRowChanged" msprop:Generator_TablePropName="USUARIOS" msprop:Generator_RowDeletingName="USUARIOSRowDeleting" msprop:Generator_RowChangingName="USUARIOSRowChanging" msprop:Generator_RowEvHandlerName="USUARIOSRowChangeEventHandler" msprop:Generator_RowDeletedName="USUARIOSRowDeleted" msprop:Generator_RowClassName="USUARIOSRow" msprop:Generator_UserTableName="USUARIOS" msprop:Generator_RowEvArgName="USUARIOSRowChangeEvent">
+        <xs:element name="USUARIOS" msprop:Generator_TableClassName="USUARIOSDataTable" msprop:Generator_TableVarName="tableUSUARIOS" msprop:Generator_TablePropName="USUARIOS" msprop:Generator_RowDeletingName="USUARIOSRowDeleting" msprop:Generator_RowChangingName="USUARIOSRowChanging" msprop:Generator_RowEvHandlerName="USUARIOSRowChangeEventHandler" msprop:Generator_RowDeletedName="USUARIOSRowDeleted" msprop:Generator_UserTableName="USUARIOS" msprop:Generator_RowChangedName="USUARIOSRowChanged" msprop:Generator_RowEvArgName="USUARIOSRowChangeEvent" msprop:Generator_RowClassName="USUARIOSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_USUARIOS" msprop:Generator_ColumnVarNameInTable="columnId_USUARIOS" msprop:Generator_ColumnPropNameInRow="Id_USUARIOS" msprop:Generator_ColumnPropNameInTable="Id_USUARIOSColumn" msprop:Generator_UserColumnName="Id_USUARIOS" type="xs:int" />
@@ -809,7 +836,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DOCENTES" msprop:Generator_TableClassName="DOCENTESDataTable" msprop:Generator_TableVarName="tableDOCENTES" msprop:Generator_RowChangedName="DOCENTESRowChanged" msprop:Generator_TablePropName="DOCENTES" msprop:Generator_RowDeletingName="DOCENTESRowDeleting" msprop:Generator_RowChangingName="DOCENTESRowChanging" msprop:Generator_RowEvHandlerName="DOCENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="DOCENTESRowDeleted" msprop:Generator_RowClassName="DOCENTESRow" msprop:Generator_UserTableName="DOCENTES" msprop:Generator_RowEvArgName="DOCENTESRowChangeEvent">
+        <xs:element name="DOCENTES" msprop:Generator_TableClassName="DOCENTESDataTable" msprop:Generator_TableVarName="tableDOCENTES" msprop:Generator_TablePropName="DOCENTES" msprop:Generator_RowDeletingName="DOCENTESRowDeleting" msprop:Generator_RowChangingName="DOCENTESRowChanging" msprop:Generator_RowEvHandlerName="DOCENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="DOCENTESRowDeleted" msprop:Generator_UserTableName="DOCENTES" msprop:Generator_RowChangedName="DOCENTESRowChanged" msprop:Generator_RowEvArgName="DOCENTESRowChangeEvent" msprop:Generator_RowClassName="DOCENTESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_DOCENTES" msprop:Generator_ColumnVarNameInTable="columnId_DOCENTES" msprop:Generator_ColumnPropNameInRow="Id_DOCENTES" msprop:Generator_ColumnPropNameInTable="Id_DOCENTESColumn" msprop:Generator_UserColumnName="Id_DOCENTES" type="xs:int" />
@@ -832,7 +859,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AÑO" msprop:Generator_TableClassName="AÑODataTable" msprop:Generator_TableVarName="tableAÑO" msprop:Generator_RowChangedName="AÑORowChanged" msprop:Generator_TablePropName="AÑO" msprop:Generator_RowDeletingName="AÑORowDeleting" msprop:Generator_RowChangingName="AÑORowChanging" msprop:Generator_RowEvHandlerName="AÑORowChangeEventHandler" msprop:Generator_RowDeletedName="AÑORowDeleted" msprop:Generator_RowClassName="AÑORow" msprop:Generator_UserTableName="AÑO" msprop:Generator_RowEvArgName="AÑORowChangeEvent">
+        <xs:element name="AÑO" msprop:Generator_TableClassName="AÑODataTable" msprop:Generator_TableVarName="tableAÑO" msprop:Generator_TablePropName="AÑO" msprop:Generator_RowDeletingName="AÑORowDeleting" msprop:Generator_RowChangingName="AÑORowChanging" msprop:Generator_RowEvHandlerName="AÑORowChangeEventHandler" msprop:Generator_RowDeletedName="AÑORowDeleted" msprop:Generator_UserTableName="AÑO" msprop:Generator_RowChangedName="AÑORowChanged" msprop:Generator_RowEvArgName="AÑORowChangeEvent" msprop:Generator_RowClassName="AÑORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_AÑO" msprop:Generator_ColumnVarNameInTable="columnId_AÑO" msprop:Generator_ColumnPropNameInRow="Id_AÑO" msprop:Generator_ColumnPropNameInTable="Id_AÑOColumn" msprop:Generator_UserColumnName="Id_AÑO" type="xs:int" />
@@ -846,7 +873,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Notas" msprop:Generator_TableClassName="NotasDataTable" msprop:Generator_TableVarName="tableNotas" msprop:Generator_RowChangedName="NotasRowChanged" msprop:Generator_TablePropName="Notas" msprop:Generator_RowDeletingName="NotasRowDeleting" msprop:Generator_RowChangingName="NotasRowChanging" msprop:Generator_RowEvHandlerName="NotasRowChangeEventHandler" msprop:Generator_RowDeletedName="NotasRowDeleted" msprop:Generator_RowClassName="NotasRow" msprop:Generator_UserTableName="Notas" msprop:Generator_RowEvArgName="NotasRowChangeEvent">
+        <xs:element name="Notas" msprop:Generator_TableClassName="NotasDataTable" msprop:Generator_TableVarName="tableNotas" msprop:Generator_TablePropName="Notas" msprop:Generator_RowDeletingName="NotasRowDeleting" msprop:Generator_RowChangingName="NotasRowChanging" msprop:Generator_RowEvHandlerName="NotasRowChangeEventHandler" msprop:Generator_RowDeletedName="NotasRowDeleted" msprop:Generator_UserTableName="Notas" msprop:Generator_RowChangedName="NotasRowChanged" msprop:Generator_RowEvArgName="NotasRowChangeEvent" msprop:Generator_RowClassName="NotasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_NOTAS" msprop:Generator_ColumnVarNameInTable="columnId_NOTAS" msprop:Generator_ColumnPropNameInRow="Id_NOTAS" msprop:Generator_ColumnPropNameInTable="Id_NOTASColumn" msprop:Generator_UserColumnName="Id_NOTAS" type="xs:int" />
@@ -860,7 +887,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NOTAS_PERIODO" msprop:Generator_TableClassName="NOTAS_PERIODODataTable" msprop:Generator_TableVarName="tableNOTAS_PERIODO" msprop:Generator_RowChangedName="NOTAS_PERIODORowChanged" msprop:Generator_TablePropName="NOTAS_PERIODO" msprop:Generator_RowDeletingName="NOTAS_PERIODORowDeleting" msprop:Generator_RowChangingName="NOTAS_PERIODORowChanging" msprop:Generator_RowEvHandlerName="NOTAS_PERIODORowChangeEventHandler" msprop:Generator_RowDeletedName="NOTAS_PERIODORowDeleted" msprop:Generator_RowClassName="NOTAS_PERIODORow" msprop:Generator_UserTableName="NOTAS_PERIODO" msprop:Generator_RowEvArgName="NOTAS_PERIODORowChangeEvent">
+        <xs:element name="NOTAS_PERIODO" msprop:Generator_TableClassName="NOTAS_PERIODODataTable" msprop:Generator_TableVarName="tableNOTAS_PERIODO" msprop:Generator_TablePropName="NOTAS_PERIODO" msprop:Generator_RowDeletingName="NOTAS_PERIODORowDeleting" msprop:Generator_RowChangingName="NOTAS_PERIODORowChanging" msprop:Generator_RowEvHandlerName="NOTAS_PERIODORowChangeEventHandler" msprop:Generator_RowDeletedName="NOTAS_PERIODORowDeleted" msprop:Generator_UserTableName="NOTAS_PERIODO" msprop:Generator_RowChangedName="NOTAS_PERIODORowChanged" msprop:Generator_RowEvArgName="NOTAS_PERIODORowChangeEvent" msprop:Generator_RowClassName="NOTAS_PERIODORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_PERIODO" msprop:Generator_ColumnVarNameInTable="columnID_PERIODO" msprop:Generator_ColumnPropNameInRow="ID_PERIODO" msprop:Generator_ColumnPropNameInTable="ID_PERIODOColumn" msprop:Generator_UserColumnName="ID_PERIODO" type="xs:int" />
@@ -872,7 +899,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SECCION" msprop:Generator_TableClassName="SECCIONDataTable" msprop:Generator_TableVarName="tableSECCION" msprop:Generator_RowChangedName="SECCIONRowChanged" msprop:Generator_TablePropName="SECCION" msprop:Generator_RowDeletingName="SECCIONRowDeleting" msprop:Generator_RowChangingName="SECCIONRowChanging" msprop:Generator_RowEvHandlerName="SECCIONRowChangeEventHandler" msprop:Generator_RowDeletedName="SECCIONRowDeleted" msprop:Generator_RowClassName="SECCIONRow" msprop:Generator_UserTableName="SECCION" msprop:Generator_RowEvArgName="SECCIONRowChangeEvent">
+        <xs:element name="SECCION" msprop:Generator_TableClassName="SECCIONDataTable" msprop:Generator_TableVarName="tableSECCION" msprop:Generator_TablePropName="SECCION" msprop:Generator_RowDeletingName="SECCIONRowDeleting" msprop:Generator_RowChangingName="SECCIONRowChanging" msprop:Generator_RowEvHandlerName="SECCIONRowChangeEventHandler" msprop:Generator_RowDeletedName="SECCIONRowDeleted" msprop:Generator_UserTableName="SECCION" msprop:Generator_RowChangedName="SECCIONRowChanged" msprop:Generator_RowEvArgName="SECCIONRowChangeEvent" msprop:Generator_RowClassName="SECCIONRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_SECCION" msprop:Generator_ColumnVarNameInTable="columnId_SECCION" msprop:Generator_ColumnPropNameInRow="Id_SECCION" msprop:Generator_ColumnPropNameInTable="Id_SECCIONColumn" msprop:Generator_UserColumnName="Id_SECCION" type="xs:int" />
@@ -886,7 +913,7 @@ FROM            MATERIAS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NotasdelEstudiante" msprop:Generator_TableClassName="NotasdelEstudianteDataTable" msprop:Generator_TableVarName="tableNotasdelEstudiante" msprop:Generator_RowChangedName="NotasdelEstudianteRowChanged" msprop:Generator_TablePropName="NotasdelEstudiante" msprop:Generator_RowDeletingName="NotasdelEstudianteRowDeleting" msprop:Generator_RowChangingName="NotasdelEstudianteRowChanging" msprop:Generator_RowEvHandlerName="NotasdelEstudianteRowChangeEventHandler" msprop:Generator_RowDeletedName="NotasdelEstudianteRowDeleted" msprop:Generator_RowClassName="NotasdelEstudianteRow" msprop:Generator_UserTableName="NotasdelEstudiante" msprop:Generator_RowEvArgName="NotasdelEstudianteRowChangeEvent">
+        <xs:element name="NotasdelEstudiante" msprop:Generator_TableClassName="NotasdelEstudianteDataTable" msprop:Generator_TableVarName="tableNotasdelEstudiante" msprop:Generator_TablePropName="NotasdelEstudiante" msprop:Generator_RowDeletingName="NotasdelEstudianteRowDeleting" msprop:Generator_RowChangingName="NotasdelEstudianteRowChanging" msprop:Generator_RowEvHandlerName="NotasdelEstudianteRowChangeEventHandler" msprop:Generator_RowDeletedName="NotasdelEstudianteRowDeleted" msprop:Generator_UserTableName="NotasdelEstudiante" msprop:Generator_RowChangedName="NotasdelEstudianteRowChanged" msprop:Generator_RowEvArgName="NotasdelEstudianteRowChangeEvent" msprop:Generator_RowClassName="NotasdelEstudianteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOTA_1" msprop:Generator_ColumnVarNameInTable="columnNOTA_1" msprop:Generator_ColumnPropNameInRow="NOTA_1" msprop:Generator_ColumnPropNameInTable="NOTA_1Column" msprop:Generator_UserColumnName="NOTA_1" type="xs:decimal" minOccurs="0" />
@@ -970,7 +997,7 @@ FROM            MATERIAS INNER JOIN
       <xs:selector xpath=".//mstns:SECCION" />
       <xs:field xpath="mstns:Id_SECCION" />
     </xs:unique>
-    <xs:unique name="NotasdelEstudiante_Constraint1" msdata:ConstraintName="Constraint1">
+    <xs:unique name="NotasdelEstudiante_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:NotasdelEstudiante" />
       <xs:field xpath="mstns:Id_MATERIAS" />
       <xs:field xpath="mstns:Id_NOTAS" />
@@ -980,18 +1007,18 @@ FROM            MATERIAS INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="ID_ESPECIALIDAD" msdata:parent="ESPECIALIDAD" msdata:child="Estudiante" msdata:parentkey="ID_ESPECIALIDAD" msdata:childkey="ID_ESPECIALIDAD" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_ESPECIALIDAD" msprop:Generator_ParentPropName="ESPECIALIDADRow" msprop:Generator_RelationVarName="relationID_ESPECIALIDAD" msprop:Generator_UserParentTable="ESPECIALIDAD" />
-      <msdata:Relationship name="ID_MODALIDAD" msdata:parent="MODALIDAD" msdata:child="Estudiante" msdata:parentkey="Id_MODALIDAD" msdata:childkey="ID_MODALIDAD" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_MODALIDAD" msprop:Generator_ParentPropName="MODALIDADRow" msprop:Generator_RelationVarName="relationID_MODALIDAD" msprop:Generator_UserParentTable="MODALIDAD" />
-      <msdata:Relationship name="ID_USUARIOS" msdata:parent="USUARIOS" msdata:child="Estudiante" msdata:parentkey="Id_USUARIOS" msdata:childkey="ID_USUARIOS" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_USUARIOS" msprop:Generator_ParentPropName="USUARIOSRow" msprop:Generator_RelationVarName="relationID_USUARIOS" msprop:Generator_UserParentTable="USUARIOS" />
-      <msdata:Relationship name="ID_PERSONAL" msdata:parent="DOCENTES" msdata:child="MATERIAS" msdata:parentkey="Id_DOCENTES" msdata:childkey="ID_PERSONAL" msprop:Generator_UserChildTable="MATERIAS" msprop:Generator_ChildPropName="GetMATERIASRows" msprop:Generator_UserRelationName="ID_PERSONAL" msprop:Generator_ParentPropName="DOCENTESRow" msprop:Generator_RelationVarName="relationID_PERSONAL" msprop:Generator_UserParentTable="DOCENTES" />
-      <msdata:Relationship name="MATERIAS_ID" msdata:parent="MATERIAS" msdata:child="DOCENTES" msdata:parentkey="Id_MATERIAS" msdata:childkey="MATERIAS_ID" msprop:Generator_UserChildTable="DOCENTES" msprop:Generator_ChildPropName="GetDOCENTESRows" msprop:Generator_UserRelationName="MATERIAS_ID" msprop:Generator_RelationVarName="relationMATERIAS_ID" msprop:Generator_UserParentTable="MATERIAS" msprop:Generator_ParentPropName="MATERIASRow" />
-      <msdata:Relationship name="USUARIOS_ID" msdata:parent="USUARIOS" msdata:child="DOCENTES" msdata:parentkey="Id_USUARIOS" msdata:childkey="USUARIOS_ID" msprop:Generator_UserChildTable="DOCENTES" msprop:Generator_ChildPropName="GetDOCENTESRows" msprop:Generator_UserRelationName="USUARIOS_ID" msprop:Generator_RelationVarName="relationUSUARIOS_ID" msprop:Generator_UserParentTable="USUARIOS" msprop:Generator_ParentPropName="USUARIOSRow" />
-      <msdata:Relationship name="ID_AÑO" msdata:parent="AÑO" msdata:child="Estudiante" msdata:parentkey="Id_AÑO" msdata:childkey="ID_AÑO" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_AÑO" msprop:Generator_ParentPropName="AÑORow" msprop:Generator_RelationVarName="relationID_AÑO" msprop:Generator_UserParentTable="AÑO" />
-      <msdata:Relationship name="ID_ESTUDIANTE" msdata:parent="Estudiante" msdata:child="Notas" msdata:parentkey="ID_ESTUDIANTE" msdata:childkey="ID_ESTUDIANTE" msprop:Generator_UserChildTable="Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="ID_ESTUDIANTE" msprop:Generator_RelationVarName="relationID_ESTUDIANTE" msprop:Generator_UserParentTable="Estudiante" msprop:Generator_ParentPropName="EstudianteRow" />
-      <msdata:Relationship name="ID_MATERIA" msdata:parent="MATERIAS" msdata:child="Notas" msdata:parentkey="Id_MATERIAS" msdata:childkey="ID_MATERIA" msprop:Generator_UserChildTable="Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="ID_MATERIA" msprop:Generator_RelationVarName="relationID_MATERIA" msprop:Generator_UserParentTable="MATERIAS" msprop:Generator_ParentPropName="MATERIASRow" />
-      <msdata:Relationship name="ID_PERIODO" msdata:parent="NOTAS_PERIODO" msdata:child="Notas" msdata:parentkey="ID_PERIODO" msdata:childkey="ID_PERIODO" msprop:Generator_UserChildTable="Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="ID_PERIODO" msprop:Generator_ParentPropName="NOTAS_PERIODORow" msprop:Generator_RelationVarName="relationID_PERIODO" msprop:Generator_UserParentTable="NOTAS_PERIODO" />
-      <msdata:Relationship name="ID_SECCION" msdata:parent="SECCION" msdata:child="Estudiante" msdata:parentkey="Id_SECCION" msdata:childkey="ID_SECCION" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_SECCION" msprop:Generator_ParentPropName="SECCIONRow" msprop:Generator_RelationVarName="relationID_SECCION" msprop:Generator_UserParentTable="SECCION" />
-      <msdata:Relationship name="FK_ID_ESPECIALIDAD" msdata:parent="NotasdelEstudiante" msdata:child="Estudiante" msdata:parentkey="ID_ESPECIALIDAD" msdata:childkey="ID_ESPECIALIDAD" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="FK_ID_ESPECIALIDAD" msprop:Generator_ParentPropName="NotasdelEstudianteRow" msprop:Generator_RelationVarName="relationFK_ID_ESPECIALIDAD" msprop:Generator_UserParentTable="NotasdelEstudiante" />
+      <msdata:Relationship name="ID_ESPECIALIDAD" msdata:parent="ESPECIALIDAD" msdata:child="Estudiante" msdata:parentkey="ID_ESPECIALIDAD" msdata:childkey="ID_ESPECIALIDAD" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_ESPECIALIDAD" msprop:Generator_RelationVarName="relationID_ESPECIALIDAD" msprop:Generator_UserParentTable="ESPECIALIDAD" msprop:Generator_ParentPropName="ESPECIALIDADRow" />
+      <msdata:Relationship name="ID_MODALIDAD" msdata:parent="MODALIDAD" msdata:child="Estudiante" msdata:parentkey="Id_MODALIDAD" msdata:childkey="ID_MODALIDAD" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_MODALIDAD" msprop:Generator_RelationVarName="relationID_MODALIDAD" msprop:Generator_UserParentTable="MODALIDAD" msprop:Generator_ParentPropName="MODALIDADRow" />
+      <msdata:Relationship name="ID_USUARIOS" msdata:parent="USUARIOS" msdata:child="Estudiante" msdata:parentkey="Id_USUARIOS" msdata:childkey="ID_USUARIOS" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_USUARIOS" msprop:Generator_RelationVarName="relationID_USUARIOS" msprop:Generator_UserParentTable="USUARIOS" msprop:Generator_ParentPropName="USUARIOSRow" />
+      <msdata:Relationship name="ID_PERSONAL" msdata:parent="DOCENTES" msdata:child="MATERIAS" msdata:parentkey="Id_DOCENTES" msdata:childkey="ID_PERSONAL" msprop:Generator_UserChildTable="MATERIAS" msprop:Generator_ChildPropName="GetMATERIASRows" msprop:Generator_UserRelationName="ID_PERSONAL" msprop:Generator_RelationVarName="relationID_PERSONAL" msprop:Generator_UserParentTable="DOCENTES" msprop:Generator_ParentPropName="DOCENTESRow" />
+      <msdata:Relationship name="MATERIAS_ID" msdata:parent="MATERIAS" msdata:child="DOCENTES" msdata:parentkey="Id_MATERIAS" msdata:childkey="MATERIAS_ID" msprop:Generator_UserChildTable="DOCENTES" msprop:Generator_ChildPropName="GetDOCENTESRows" msprop:Generator_UserRelationName="MATERIAS_ID" msprop:Generator_ParentPropName="MATERIASRow" msprop:Generator_RelationVarName="relationMATERIAS_ID" msprop:Generator_UserParentTable="MATERIAS" />
+      <msdata:Relationship name="USUARIOS_ID" msdata:parent="USUARIOS" msdata:child="DOCENTES" msdata:parentkey="Id_USUARIOS" msdata:childkey="USUARIOS_ID" msprop:Generator_UserChildTable="DOCENTES" msprop:Generator_ChildPropName="GetDOCENTESRows" msprop:Generator_UserRelationName="USUARIOS_ID" msprop:Generator_ParentPropName="USUARIOSRow" msprop:Generator_RelationVarName="relationUSUARIOS_ID" msprop:Generator_UserParentTable="USUARIOS" />
+      <msdata:Relationship name="ID_AÑO" msdata:parent="AÑO" msdata:child="Estudiante" msdata:parentkey="Id_AÑO" msdata:childkey="ID_AÑO" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_AÑO" msprop:Generator_RelationVarName="relationID_AÑO" msprop:Generator_UserParentTable="AÑO" msprop:Generator_ParentPropName="AÑORow" />
+      <msdata:Relationship name="ID_ESTUDIANTE" msdata:parent="Estudiante" msdata:child="Notas" msdata:parentkey="ID_ESTUDIANTE" msdata:childkey="ID_ESTUDIANTE" msprop:Generator_UserChildTable="Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="ID_ESTUDIANTE" msprop:Generator_ParentPropName="EstudianteRow" msprop:Generator_RelationVarName="relationID_ESTUDIANTE" msprop:Generator_UserParentTable="Estudiante" />
+      <msdata:Relationship name="ID_MATERIA" msdata:parent="MATERIAS" msdata:child="Notas" msdata:parentkey="Id_MATERIAS" msdata:childkey="ID_MATERIA" msprop:Generator_UserChildTable="Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="ID_MATERIA" msprop:Generator_ParentPropName="MATERIASRow" msprop:Generator_RelationVarName="relationID_MATERIA" msprop:Generator_UserParentTable="MATERIAS" />
+      <msdata:Relationship name="ID_PERIODO" msdata:parent="NOTAS_PERIODO" msdata:child="Notas" msdata:parentkey="ID_PERIODO" msdata:childkey="ID_PERIODO" msprop:Generator_UserChildTable="Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="ID_PERIODO" msprop:Generator_RelationVarName="relationID_PERIODO" msprop:Generator_UserParentTable="NOTAS_PERIODO" msprop:Generator_ParentPropName="NOTAS_PERIODORow" />
+      <msdata:Relationship name="ID_SECCION" msdata:parent="SECCION" msdata:child="Estudiante" msdata:parentkey="Id_SECCION" msdata:childkey="ID_SECCION" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="ID_SECCION" msprop:Generator_RelationVarName="relationID_SECCION" msprop:Generator_UserParentTable="SECCION" msprop:Generator_ParentPropName="SECCIONRow" />
+      <msdata:Relationship name="FK_ID_ESPECIALIDAD" msdata:parent="NotasdelEstudiante" msdata:child="Estudiante" msdata:parentkey="ID_ESPECIALIDAD" msdata:childkey="ID_ESPECIALIDAD" msprop:Generator_UserChildTable="Estudiante" msprop:Generator_ChildPropName="GetEstudianteRows" msprop:Generator_UserRelationName="FK_ID_ESPECIALIDAD" msprop:Generator_RelationVarName="relationFK_ID_ESPECIALIDAD" msprop:Generator_UserParentTable="NotasdelEstudiante" msprop:Generator_ParentPropName="NotasdelEstudianteRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
