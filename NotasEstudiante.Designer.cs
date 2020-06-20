@@ -108,6 +108,7 @@
             this.iDESTUDIANTEBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.notasdelEstudianteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mATERIASIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             nOTA_1Label = new System.Windows.Forms.Label();
             nOTA_2Label = new System.Windows.Forms.Label();
             nOTA_3Label = new System.Windows.Forms.Label();
@@ -750,7 +751,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Wheat;
             this.button1.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button1.Location = new System.Drawing.Point(739, 432);
+            this.button1.Location = new System.Drawing.Point(686, 432);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 31);
             this.button1.TabIndex = 114;
@@ -817,11 +818,23 @@
             this.mATERIASIDBindingSource1.DataMember = "MATERIAS_ID";
             this.mATERIASIDBindingSource1.DataSource = this.mATERIASBindingSource;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Wheat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 12F);
+            this.button2.Location = new System.Drawing.Point(789, 432);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 31);
+            this.button2.TabIndex = 115;
+            this.button2.Text = "Imprimir";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // NotasEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 560);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.apellidoComboBox);
             this.Controls.Add(this.nombre_ComboBox1);
@@ -952,5 +965,6 @@
         private System.Windows.Forms.BindingSource notasdelEstudianteBindingSource1;
         private System.Windows.Forms.BindingSource mATERIASIDBindingSource1;
         private System.Windows.Forms.BindingSource iDMATERIABindingSource2;
+        private System.Windows.Forms.Button button2;
     }
 }
