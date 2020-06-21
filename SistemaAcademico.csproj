@@ -194,6 +194,12 @@
     <Compile Include="Reportescs.Designer.cs">
       <DependentUpon>Reportescs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportt.Designer.cs">
+      <DependentUpon>Reportt.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptDocentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Reportescs.resx">
       <DependentUpon>Reportescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportt.resx">
+      <DependentUpon>Reportt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptDocentes.resx">
       <DependentUpon>rptDocentes.cs</DependentUpon>

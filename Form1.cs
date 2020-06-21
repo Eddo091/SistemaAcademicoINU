@@ -228,7 +228,8 @@ namespace SistemaAcademico
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-
+            Reportescs Rep = new Reportescs();
+            Rep.ShowDialog();
         }
 
         private void PanelBarraTitulo_Paint(object sender, PaintEventArgs e)

@@ -163,7 +163,11 @@ namespace SistemaAcademico
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            try {
+                Reportescs imprimirnotas = new Reportescs();
+                imprimirnotas.ShowDialog();
+            } catch (Exception R) { MessageBox.Show("Error "+ R); }
+            
         }
     }
 }
