@@ -36,9 +36,9 @@ namespace SistemaAcademico
                 frm.txtCodigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 frm.txtName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 frm.txtApellido.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                frm.txtEspecialidad.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                frm.txtSeccion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                frm.txtModalidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+               // frm.txtEspecialidad.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+               // frm.txtSeccion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+               // frm.txtModalidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 frm.ShowDialog();
 
             }

@@ -221,9 +221,14 @@ namespace SistemaAcademico
 
         private void btnNotas_Click(object sender, EventArgs e)
         {
-            NOTAS fm = new NOTAS();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
+            NotasEstudiante Notas = new NotasEstudiante();
+            Notas.ShowDialog();
+
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void PanelBarraTitulo_Paint(object sender, PaintEventArgs e)

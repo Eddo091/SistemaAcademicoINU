@@ -59,7 +59,8 @@ namespace SistemaAcademico
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Traté de hacer un reporte, pero no me salió:c, me estresa", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            NotasEstudiante Notas = new NotasEstudiante();
+            Notas.ShowDialog();
         }
 
     }

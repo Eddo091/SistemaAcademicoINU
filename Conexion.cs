@@ -233,6 +233,7 @@ miAdaptadorDatos.Fill(ds, "USUARIOS");
                     }
                 }
                 procesarSQL(sql);
+                
             }
             catch (IndexOutOfRangeException ior) { MessageBox.Show(ior.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 

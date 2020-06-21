@@ -316,8 +316,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -574,9 +574,9 @@
             this.grbNavegacionAlumnos.Controls.Add(this.btnanterior);
             this.grbNavegacionAlumnos.Controls.Add(this.btnprimero);
             this.grbNavegacionAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grbNavegacionAlumnos.Location = new System.Drawing.Point(337, 416);
+            this.grbNavegacionAlumnos.Location = new System.Drawing.Point(862, 172);
             this.grbNavegacionAlumnos.Name = "grbNavegacionAlumnos";
-            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 77);
+            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 0);
             this.grbNavegacionAlumnos.TabIndex = 107;
             this.grbNavegacionAlumnos.TabStop = false;
             this.grbNavegacionAlumnos.Text = "Navegacion ";
@@ -749,9 +749,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Wheat;
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button1.Location = new System.Drawing.Point(686, 432);
+            this.button1.Location = new System.Drawing.Point(878, 255);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 31);
             this.button1.TabIndex = 114;
@@ -820,20 +820,22 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Wheat;
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button2.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button2.Location = new System.Drawing.Point(789, 432);
+            this.button2.Location = new System.Drawing.Point(981, 255);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 31);
             this.button2.TabIndex = 115;
             this.button2.Text = "Imprimir";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // NotasEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 560);
+            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.ClientSize = new System.Drawing.Size(1100, 404);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.apellidoComboBox);
