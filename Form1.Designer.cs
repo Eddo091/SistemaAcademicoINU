@@ -239,7 +239,6 @@
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // pictureBox6
             // 

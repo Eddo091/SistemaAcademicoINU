@@ -39,13 +39,17 @@ namespace SistemaAcademico
             tbl = objconexion.obtener_datosEstudiante().Tables["Estudiante"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["ID_ESTUDIANTE"] };
             //Esp
-           
+            tbl2 = objconexion.obtener_datosEspecialidad().Tables["ESPECIALIDAD"];
+            tbl2.PrimaryKey = new DataColumn[] { tbl.Columns["ID_EPECIALIDAD"] };
             //Secc
-            
+            tbl3 = objconexion.obtener_datosSeccion().Tables["SECCION"];
+            tbl3.PrimaryKey = new DataColumn[] { tbl.Columns["Id_SECCION"] };
             //Mod
-       
+            tbl4 = objconexion.obtener_datosModalidad().Tables["MODALIDAD"];
+            tbl4.PrimaryKey = new DataColumn[] { tbl.Columns["Id_MODALIDAD"] };
             //Año
-           
+            tbl5 = objconexion.obtener_datosAño().Tables["AÑO"];
+            tbl5.PrimaryKey = new DataColumn[] { tbl.Columns["Id_AÑO"] };
 
         }
         void Mostrardatos()
@@ -57,9 +61,9 @@ namespace SistemaAcademico
                 txtApellido.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtCodigo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
                 txtEspecialidad.Text = tbl2.Rows[posicion].ItemArray[1].ToString();
-                txtSeccion.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txtModalidad.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                txtYear.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                txtSeccion.Text = tbl3.Rows[posicion].ItemArray[1].ToString();
+                txtModalidad.Text = tbl4.Rows[posicion].ItemArray[1].ToString();
+                txtYear.Text = tbl5.Rows[posicion].ItemArray[1].ToString();
             }
             catch (Exception e)
             {

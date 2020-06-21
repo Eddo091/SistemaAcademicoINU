@@ -30,17 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profesores));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDOCENTESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMBRESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aPELLIDOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mATERIASIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uSUARIOSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOCENTESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet = new SistemaAcademico.DataSet();
@@ -50,6 +45,11 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.dOCENTESTableAdapter = new SistemaAcademico.DataSetTableAdapters.DOCENTESTableAdapter();
             this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.idDOCENTESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMBRESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aPELLIDOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIASIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSUARIOSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCENTESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).BeginInit();
@@ -97,14 +97,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDOCENTESDataGridViewTextBoxColumn,
@@ -113,80 +113,30 @@
             this.mATERIASIDDataGridViewTextBoxColumn,
             this.uSUARIOSIDDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dOCENTESBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.dataGridView1.Location = new System.Drawing.Point(11, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.PaleVioletRed;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Size = new System.Drawing.Size(849, 286);
             this.dataGridView1.TabIndex = 36;
-            // 
-            // idDOCENTESDataGridViewTextBoxColumn
-            // 
-            this.idDOCENTESDataGridViewTextBoxColumn.DataPropertyName = "Id_DOCENTES";
-            this.idDOCENTESDataGridViewTextBoxColumn.HeaderText = "Id_DOCENTES";
-            this.idDOCENTESDataGridViewTextBoxColumn.Name = "idDOCENTESDataGridViewTextBoxColumn";
-            this.idDOCENTESDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDOCENTESDataGridViewTextBoxColumn.Visible = false;
-            this.idDOCENTESDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // nOMBRESDataGridViewTextBoxColumn
-            // 
-            this.nOMBRESDataGridViewTextBoxColumn.DataPropertyName = "NOMBRES";
-            this.nOMBRESDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.nOMBRESDataGridViewTextBoxColumn.HeaderText = "NOMBRES";
-            this.nOMBRESDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.nOMBRESDataGridViewTextBoxColumn.Name = "nOMBRESDataGridViewTextBoxColumn";
-            this.nOMBRESDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nOMBRESDataGridViewTextBoxColumn.Width = 93;
-            // 
-            // aPELLIDOSDataGridViewTextBoxColumn
-            // 
-            this.aPELLIDOSDataGridViewTextBoxColumn.DataPropertyName = "APELLIDOS";
-            this.aPELLIDOSDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.aPELLIDOSDataGridViewTextBoxColumn.HeaderText = "APELLIDOS";
-            this.aPELLIDOSDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.aPELLIDOSDataGridViewTextBoxColumn.Name = "aPELLIDOSDataGridViewTextBoxColumn";
-            this.aPELLIDOSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aPELLIDOSDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // mATERIASIDDataGridViewTextBoxColumn
-            // 
-            this.mATERIASIDDataGridViewTextBoxColumn.DataPropertyName = "MATERIAS_ID";
-            this.mATERIASIDDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.mATERIASIDDataGridViewTextBoxColumn.HeaderText = "MATERIAS";
-            this.mATERIASIDDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.mATERIASIDDataGridViewTextBoxColumn.Name = "mATERIASIDDataGridViewTextBoxColumn";
-            this.mATERIASIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mATERIASIDDataGridViewTextBoxColumn.Width = 91;
-            // 
-            // uSUARIOSIDDataGridViewTextBoxColumn
-            // 
-            this.uSUARIOSIDDataGridViewTextBoxColumn.DataPropertyName = "USUARIOS_ID";
-            this.uSUARIOSIDDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.uSUARIOSIDDataGridViewTextBoxColumn.HeaderText = "USUARIOS";
-            this.uSUARIOSIDDataGridViewTextBoxColumn.MinimumWidth = 50;
-            this.uSUARIOSIDDataGridViewTextBoxColumn.Name = "uSUARIOSIDDataGridViewTextBoxColumn";
-            this.uSUARIOSIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.uSUARIOSIDDataGridViewTextBoxColumn.Visible = false;
-            this.uSUARIOSIDDataGridViewTextBoxColumn.Width = 94;
             // 
             // dOCENTESBindingSource
             // 
@@ -256,7 +206,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +214,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 58);
             this.button2.TabIndex = 33;
-            this.button2.Text = "Notas a estudiantes";
+            this.button2.Text = "Reporte";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -301,6 +251,56 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(424, 20);
             this.txtbuscar.TabIndex = 37;
+            // 
+            // idDOCENTESDataGridViewTextBoxColumn
+            // 
+            this.idDOCENTESDataGridViewTextBoxColumn.DataPropertyName = "Id_DOCENTES";
+            this.idDOCENTESDataGridViewTextBoxColumn.HeaderText = "Id_DOCENTES";
+            this.idDOCENTESDataGridViewTextBoxColumn.Name = "idDOCENTESDataGridViewTextBoxColumn";
+            this.idDOCENTESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDOCENTESDataGridViewTextBoxColumn.Visible = false;
+            this.idDOCENTESDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // nOMBRESDataGridViewTextBoxColumn
+            // 
+            this.nOMBRESDataGridViewTextBoxColumn.DataPropertyName = "NOMBRES";
+            this.nOMBRESDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.nOMBRESDataGridViewTextBoxColumn.HeaderText = "NOMBRES";
+            this.nOMBRESDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.nOMBRESDataGridViewTextBoxColumn.Name = "nOMBRESDataGridViewTextBoxColumn";
+            this.nOMBRESDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOMBRESDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // aPELLIDOSDataGridViewTextBoxColumn
+            // 
+            this.aPELLIDOSDataGridViewTextBoxColumn.DataPropertyName = "APELLIDOS";
+            this.aPELLIDOSDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.aPELLIDOSDataGridViewTextBoxColumn.HeaderText = "APELLIDOS";
+            this.aPELLIDOSDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.aPELLIDOSDataGridViewTextBoxColumn.Name = "aPELLIDOSDataGridViewTextBoxColumn";
+            this.aPELLIDOSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aPELLIDOSDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // mATERIASIDDataGridViewTextBoxColumn
+            // 
+            this.mATERIASIDDataGridViewTextBoxColumn.DataPropertyName = "MATERIAS_ID";
+            this.mATERIASIDDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.mATERIASIDDataGridViewTextBoxColumn.HeaderText = "MATERIAS";
+            this.mATERIASIDDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.mATERIASIDDataGridViewTextBoxColumn.Name = "mATERIASIDDataGridViewTextBoxColumn";
+            this.mATERIASIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mATERIASIDDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // uSUARIOSIDDataGridViewTextBoxColumn
+            // 
+            this.uSUARIOSIDDataGridViewTextBoxColumn.DataPropertyName = "USUARIOS_ID";
+            this.uSUARIOSIDDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.uSUARIOSIDDataGridViewTextBoxColumn.HeaderText = "USUARIOS";
+            this.uSUARIOSIDDataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.uSUARIOSIDDataGridViewTextBoxColumn.Name = "uSUARIOSIDDataGridViewTextBoxColumn";
+            this.uSUARIOSIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uSUARIOSIDDataGridViewTextBoxColumn.Visible = false;
+            this.uSUARIOSIDDataGridViewTextBoxColumn.Width = 93;
             // 
             // Profesores
             // 

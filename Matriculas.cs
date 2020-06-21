@@ -72,8 +72,6 @@ namespace SistemaAcademico
 
         private void Matriculas_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSet.Matricula_estudiante' Puede moverla o quitarla según sea necesario.
-            this.matricula_estudianteTableAdapter.Fill(this.dataSet.Matricula_estudiante);
             //DB
             actualizarDs();
             Mostrardatos();

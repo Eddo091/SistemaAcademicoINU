@@ -31,7 +31,8 @@ namespace SistemaAcademico
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-           
+            Asignaturas frm = new Asignaturas();
+            frm.ShowDialog();
         }
 
         private void Materias_Load(object sender, EventArgs e)
