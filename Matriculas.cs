@@ -72,6 +72,8 @@ namespace SistemaAcademico
 
         private void Matriculas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSet.Matricula_estudiante' Puede moverla o quitarla según sea necesario.
+            this.matricula_estudianteTableAdapter.Fill(this.dataSet.Matricula_estudiante);
             //DB
             actualizarDs();
             Mostrardatos();
@@ -95,9 +97,9 @@ namespace SistemaAcademico
                 txtName.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtApellido.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtCodigo.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-                txtEspecialidad.Text = tbl2.Rows[posicion].ItemArray[1].ToString();
-                txtSeccion.Text = tbl3.Rows[posicion].ItemArray[1].ToString();
-                txtModalidad.Text = tbl4.Rows[posicion].ItemArray[1].ToString();
+                //txtEspecialidad.Text = tbl2.Rows[posicion].ItemArray[1].ToString();
+                //txtSeccion.Text = tbl3.Rows[posicion].ItemArray[1].ToString();
+                //txtModalidad.Text = tbl4.Rows[posicion].ItemArray[1].ToString();
                
             }
             catch (Exception e)
@@ -117,13 +119,13 @@ namespace SistemaAcademico
             txtCodigo.Text,
             };
             String[] valores2 = {
-                      txtEspecialidad.Text
+                   //   txtEspecialidad.Text
             };
             String[] valores3 = {
-                      txtSeccion.Text
+                    //  txtSeccion.Text
             };
             String[] valores4 = {
-                    txtModalidad.Text
+                   // txtModalidad.Text
             };
 
             objconexion.mantenimiento_datosEstudiante(valores1, accion); //estudiante

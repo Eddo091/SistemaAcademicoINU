@@ -75,7 +75,7 @@ namespace SistemaAcademico
 
         private void button2_Click(object sender, EventArgs e)
         {
-            NotasEstudiante notas = new NotasEstudiante();
+            InformeAlumnos notas = new InformeAlumnos();
             notas.ShowDialog();
 
         }

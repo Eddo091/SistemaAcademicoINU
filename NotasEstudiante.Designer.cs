@@ -43,6 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.notasdelEstudianteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.notasdelEstudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new SistemaAcademico.DataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -55,23 +57,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.notasdelEstudianteBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.notasdelEstudianteDataGridView = new System.Windows.Forms.DataGridView();
-            this.mATERIASComboBox = new System.Windows.Forms.ComboBox();
-            this.eSPECIALIDADComboBox = new System.Windows.Forms.ComboBox();
-            this.grbNavegacionAlumnos = new System.Windows.Forms.GroupBox();
-            this.lblnregistros = new System.Windows.Forms.Label();
-            this.btnultimo = new System.Windows.Forms.Button();
-            this.btnsiguiente = new System.Windows.Forms.Button();
-            this.btnanterior = new System.Windows.Forms.Button();
-            this.btnprimero = new System.Windows.Forms.Button();
-            this.nOTA_1TextBox = new System.Windows.Forms.TextBox();
-            this.nOTA_2TextBox = new System.Windows.Forms.TextBox();
-            this.nOTA_3TextBox = new System.Windows.Forms.TextBox();
-            this.nombre_ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.apellidoComboBox = new System.Windows.Forms.ComboBox();
-            this.notasdelEstudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet = new SistemaAcademico.DataSet();
-            this.eSPECIALIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mATERIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,9 +69,28 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIASComboBox = new System.Windows.Forms.ComboBox();
+            this.mATERIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDMATERIABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.eSPECIALIDADComboBox = new System.Windows.Forms.ComboBox();
+            this.eSPECIALIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDESPECIALIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grbNavegacionAlumnos = new System.Windows.Forms.GroupBox();
+            this.lblnregistros = new System.Windows.Forms.Label();
+            this.btnultimo = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
+            this.btnanterior = new System.Windows.Forms.Button();
+            this.btnprimero = new System.Windows.Forms.Button();
+            this.nOTA_1TextBox = new System.Windows.Forms.TextBox();
+            this.nOTA_2TextBox = new System.Windows.Forms.TextBox();
+            this.nOTA_3TextBox = new System.Windows.Forms.TextBox();
+            this.nombre_ComboBox1 = new System.Windows.Forms.ComboBox();
+            this.iDESTUDIANTEBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apellidoComboBox = new System.Windows.Forms.ComboBox();
+            this.iDESTUDIANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notasdelEstudianteTableAdapter = new SistemaAcademico.DataSetTableAdapters.NotasdelEstudianteTableAdapter();
             this.tableAdapterManager = new SistemaAcademico.DataSetTableAdapters.TableAdapterManager();
-            this.estudianteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estudianteTableAdapter = new SistemaAcademico.DataSetTableAdapters.EstudianteTableAdapter();
             this.mATERIASTableAdapter = new SistemaAcademico.DataSetTableAdapters.MATERIASTableAdapter();
             this.eSPECIALIDADTableAdapter = new SistemaAcademico.DataSetTableAdapters.ESPECIALIDADTableAdapter();
@@ -97,17 +101,14 @@
             this.mATERIASIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOCENTESTableAdapter = new SistemaAcademico.DataSetTableAdapters.DOCENTESTableAdapter();
             this.iDMATERIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDESTUDIANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDMATERIABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.iDESPECIALIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDESTUDIANTEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new SistemaAcademico.DataSet();
             this.estudianteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.iDESTUDIANTEBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.iDESTUDIANTEBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.notasdelEstudianteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mATERIASIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.iDMATERIABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             nOTA_1Label = new System.Windows.Forms.Label();
             nOTA_2Label = new System.Windows.Forms.Label();
             nOTA_3Label = new System.Windows.Forms.Label();
@@ -119,27 +120,27 @@
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteBindingNavigator)).BeginInit();
             this.notasdelEstudianteBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteDataGridView)).BeginInit();
-            this.grbNavegacionAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eSPECIALIDADBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSPECIALIDADBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDESPECIALIDADBindingSource)).BeginInit();
+            this.grbNavegacionAlumnos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASIDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDESPECIALIDADBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASIDBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // nOTA_1Label
@@ -302,11 +303,21 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
+            // notasdelEstudianteBindingSource
+            // 
+            this.notasdelEstudianteBindingSource.DataMember = "NotasdelEstudiante";
+            this.notasdelEstudianteBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -414,174 +425,6 @@
             this.notasdelEstudianteDataGridView.TabIndex = 97;
             this.notasdelEstudianteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.notasdelEstudianteDataGridView_CellContentClick);
             // 
-            // mATERIASComboBox
-            // 
-            this.mATERIASComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mATERIASBindingSource, "MATERIAS", true));
-            this.mATERIASComboBox.DataSource = this.iDMATERIABindingSource2;
-            this.mATERIASComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mATERIASComboBox.FormattingEnabled = true;
-            this.mATERIASComboBox.Location = new System.Drawing.Point(568, 80);
-            this.mATERIASComboBox.Name = "mATERIASComboBox";
-            this.mATERIASComboBox.Size = new System.Drawing.Size(121, 21);
-            this.mATERIASComboBox.TabIndex = 101;
-            // 
-            // eSPECIALIDADComboBox
-            // 
-            this.eSPECIALIDADComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eSPECIALIDADBindingSource, "ESPECIALIDAD", true));
-            this.eSPECIALIDADComboBox.DataSource = this.iDESPECIALIDADBindingSource;
-            this.eSPECIALIDADComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.eSPECIALIDADComboBox.FormattingEnabled = true;
-            this.eSPECIALIDADComboBox.Location = new System.Drawing.Point(842, 79);
-            this.eSPECIALIDADComboBox.Name = "eSPECIALIDADComboBox";
-            this.eSPECIALIDADComboBox.Size = new System.Drawing.Size(121, 21);
-            this.eSPECIALIDADComboBox.TabIndex = 102;
-            // 
-            // grbNavegacionAlumnos
-            // 
-            this.grbNavegacionAlumnos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbNavegacionAlumnos.Controls.Add(this.lblnregistros);
-            this.grbNavegacionAlumnos.Controls.Add(this.btnultimo);
-            this.grbNavegacionAlumnos.Controls.Add(this.btnsiguiente);
-            this.grbNavegacionAlumnos.Controls.Add(this.btnanterior);
-            this.grbNavegacionAlumnos.Controls.Add(this.btnprimero);
-            this.grbNavegacionAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grbNavegacionAlumnos.Location = new System.Drawing.Point(337, 416);
-            this.grbNavegacionAlumnos.Name = "grbNavegacionAlumnos";
-            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 77);
-            this.grbNavegacionAlumnos.TabIndex = 107;
-            this.grbNavegacionAlumnos.TabStop = false;
-            this.grbNavegacionAlumnos.Text = "Navegacion ";
-            // 
-            // lblnregistros
-            // 
-            this.lblnregistros.AutoSize = true;
-            this.lblnregistros.Font = new System.Drawing.Font("Georgia", 9F);
-            this.lblnregistros.Location = new System.Drawing.Point(96, 32);
-            this.lblnregistros.Name = "lblnregistros";
-            this.lblnregistros.Size = new System.Drawing.Size(41, 15);
-            this.lblnregistros.TabIndex = 4;
-            this.lblnregistros.Text = "x de n";
-            // 
-            // btnultimo
-            // 
-            this.btnultimo.BackColor = System.Drawing.Color.Wheat;
-            this.btnultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnultimo.Font = new System.Drawing.Font("Georgia", 9F);
-            this.btnultimo.Location = new System.Drawing.Point(188, 16);
-            this.btnultimo.Name = "btnultimo";
-            this.btnultimo.Size = new System.Drawing.Size(39, 46);
-            this.btnultimo.TabIndex = 12;
-            this.btnultimo.Text = ">|";
-            this.btnultimo.UseVisualStyleBackColor = false;
-            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
-            // 
-            // btnsiguiente
-            // 
-            this.btnsiguiente.BackColor = System.Drawing.Color.Wheat;
-            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsiguiente.Font = new System.Drawing.Font("Georgia", 9F);
-            this.btnsiguiente.Location = new System.Drawing.Point(143, 16);
-            this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(39, 46);
-            this.btnsiguiente.TabIndex = 11;
-            this.btnsiguiente.Text = ">";
-            this.btnsiguiente.UseVisualStyleBackColor = false;
-            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
-            // 
-            // btnanterior
-            // 
-            this.btnanterior.BackColor = System.Drawing.Color.Wheat;
-            this.btnanterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnanterior.Font = new System.Drawing.Font("Georgia", 9F);
-            this.btnanterior.Location = new System.Drawing.Point(51, 16);
-            this.btnanterior.Name = "btnanterior";
-            this.btnanterior.Size = new System.Drawing.Size(39, 46);
-            this.btnanterior.TabIndex = 10;
-            this.btnanterior.Text = "<";
-            this.btnanterior.UseVisualStyleBackColor = false;
-            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
-            // 
-            // btnprimero
-            // 
-            this.btnprimero.BackColor = System.Drawing.Color.Wheat;
-            this.btnprimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnprimero.Font = new System.Drawing.Font("Georgia", 9F);
-            this.btnprimero.Location = new System.Drawing.Point(6, 16);
-            this.btnprimero.Name = "btnprimero";
-            this.btnprimero.Size = new System.Drawing.Size(39, 46);
-            this.btnprimero.TabIndex = 9;
-            this.btnprimero.Text = "|<";
-            this.btnprimero.UseVisualStyleBackColor = false;
-            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
-            // 
-            // nOTA_1TextBox
-            // 
-            this.nOTA_1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "NOTA_1", true));
-            this.nOTA_1TextBox.Location = new System.Drawing.Point(122, 115);
-            this.nOTA_1TextBox.Name = "nOTA_1TextBox";
-            this.nOTA_1TextBox.Size = new System.Drawing.Size(100, 20);
-            this.nOTA_1TextBox.TabIndex = 108;
-            // 
-            // nOTA_2TextBox
-            // 
-            this.nOTA_2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "NOTA_2", true));
-            this.nOTA_2TextBox.Location = new System.Drawing.Point(337, 113);
-            this.nOTA_2TextBox.Name = "nOTA_2TextBox";
-            this.nOTA_2TextBox.Size = new System.Drawing.Size(100, 20);
-            this.nOTA_2TextBox.TabIndex = 109;
-            // 
-            // nOTA_3TextBox
-            // 
-            this.nOTA_3TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "NOTA_3", true));
-            this.nOTA_3TextBox.Location = new System.Drawing.Point(560, 113);
-            this.nOTA_3TextBox.Name = "nOTA_3TextBox";
-            this.nOTA_3TextBox.Size = new System.Drawing.Size(100, 20);
-            this.nOTA_3TextBox.TabIndex = 110;
-            // 
-            // nombre_ComboBox1
-            // 
-            this.nombre_ComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "Nombre ", true));
-            this.nombre_ComboBox1.DataSource = this.iDESTUDIANTEBindingSource2;
-            this.nombre_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.nombre_ComboBox1.FormattingEnabled = true;
-            this.nombre_ComboBox1.Location = new System.Drawing.Point(101, 81);
-            this.nombre_ComboBox1.Name = "nombre_ComboBox1";
-            this.nombre_ComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.nombre_ComboBox1.TabIndex = 112;
-            // 
-            // apellidoComboBox
-            // 
-            this.apellidoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "Apellido", true));
-            this.apellidoComboBox.DataSource = this.iDESTUDIANTEBindingSource;
-            this.apellidoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.apellidoComboBox.FormattingEnabled = true;
-            this.apellidoComboBox.Location = new System.Drawing.Point(337, 79);
-            this.apellidoComboBox.Name = "apellidoComboBox";
-            this.apellidoComboBox.Size = new System.Drawing.Size(121, 21);
-            this.apellidoComboBox.TabIndex = 113;
-            // 
-            // notasdelEstudianteBindingSource
-            // 
-            this.notasdelEstudianteBindingSource.DataMember = "NotasdelEstudiante";
-            this.notasdelEstudianteBindingSource.DataSource = this.dataSet;
-            // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eSPECIALIDADBindingSource
-            // 
-            this.eSPECIALIDADBindingSource.DataMember = "ESPECIALIDAD";
-            this.eSPECIALIDADBindingSource.DataSource = this.dataSet;
-            // 
-            // mATERIASBindingSource
-            // 
-            this.mATERIASBindingSource.DataMember = "MATERIAS";
-            this.mATERIASBindingSource.DataSource = this.dataSet;
-            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Nombre ";
@@ -676,6 +519,193 @@
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Visible = false;
             // 
+            // mATERIASComboBox
+            // 
+            this.mATERIASComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mATERIASBindingSource, "MATERIAS", true));
+            this.mATERIASComboBox.DataSource = this.notasdelEstudianteBindingSource;
+            this.mATERIASComboBox.DisplayMember = "MATERIAS";
+            this.mATERIASComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mATERIASComboBox.FormattingEnabled = true;
+            this.mATERIASComboBox.Location = new System.Drawing.Point(568, 80);
+            this.mATERIASComboBox.Name = "mATERIASComboBox";
+            this.mATERIASComboBox.Size = new System.Drawing.Size(121, 21);
+            this.mATERIASComboBox.TabIndex = 101;
+            // 
+            // mATERIASBindingSource
+            // 
+            this.mATERIASBindingSource.DataMember = "MATERIAS";
+            this.mATERIASBindingSource.DataSource = this.dataSet;
+            // 
+            // iDMATERIABindingSource2
+            // 
+            this.iDMATERIABindingSource2.DataMember = "ID_MATERIA";
+            this.iDMATERIABindingSource2.DataSource = this.mATERIASBindingSource;
+            // 
+            // eSPECIALIDADComboBox
+            // 
+            this.eSPECIALIDADComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eSPECIALIDADBindingSource, "ESPECIALIDAD", true));
+            this.eSPECIALIDADComboBox.DataSource = this.notasdelEstudianteBindingSource;
+            this.eSPECIALIDADComboBox.DisplayMember = "ESPECIALIDAD";
+            this.eSPECIALIDADComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.eSPECIALIDADComboBox.FormattingEnabled = true;
+            this.eSPECIALIDADComboBox.Location = new System.Drawing.Point(842, 79);
+            this.eSPECIALIDADComboBox.Name = "eSPECIALIDADComboBox";
+            this.eSPECIALIDADComboBox.Size = new System.Drawing.Size(121, 21);
+            this.eSPECIALIDADComboBox.TabIndex = 102;
+            // 
+            // eSPECIALIDADBindingSource
+            // 
+            this.eSPECIALIDADBindingSource.DataMember = "ESPECIALIDAD";
+            this.eSPECIALIDADBindingSource.DataSource = this.dataSet;
+            // 
+            // iDESPECIALIDADBindingSource
+            // 
+            this.iDESPECIALIDADBindingSource.DataMember = "ID_ESPECIALIDAD";
+            this.iDESPECIALIDADBindingSource.DataSource = this.eSPECIALIDADBindingSource;
+            // 
+            // grbNavegacionAlumnos
+            // 
+            this.grbNavegacionAlumnos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbNavegacionAlumnos.Controls.Add(this.lblnregistros);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnultimo);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnsiguiente);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnanterior);
+            this.grbNavegacionAlumnos.Controls.Add(this.btnprimero);
+            this.grbNavegacionAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbNavegacionAlumnos.Location = new System.Drawing.Point(862, 172);
+            this.grbNavegacionAlumnos.Name = "grbNavegacionAlumnos";
+            this.grbNavegacionAlumnos.Size = new System.Drawing.Size(232, 0);
+            this.grbNavegacionAlumnos.TabIndex = 107;
+            this.grbNavegacionAlumnos.TabStop = false;
+            this.grbNavegacionAlumnos.Text = "Navegacion ";
+            // 
+            // lblnregistros
+            // 
+            this.lblnregistros.AutoSize = true;
+            this.lblnregistros.Font = new System.Drawing.Font("Georgia", 9F);
+            this.lblnregistros.Location = new System.Drawing.Point(96, 32);
+            this.lblnregistros.Name = "lblnregistros";
+            this.lblnregistros.Size = new System.Drawing.Size(41, 15);
+            this.lblnregistros.TabIndex = 4;
+            this.lblnregistros.Text = "x de n";
+            // 
+            // btnultimo
+            // 
+            this.btnultimo.BackColor = System.Drawing.Color.Wheat;
+            this.btnultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnultimo.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnultimo.Location = new System.Drawing.Point(188, 16);
+            this.btnultimo.Name = "btnultimo";
+            this.btnultimo.Size = new System.Drawing.Size(39, 46);
+            this.btnultimo.TabIndex = 12;
+            this.btnultimo.Text = ">|";
+            this.btnultimo.UseVisualStyleBackColor = false;
+            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
+            // 
+            // btnsiguiente
+            // 
+            this.btnsiguiente.BackColor = System.Drawing.Color.Wheat;
+            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsiguiente.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnsiguiente.Location = new System.Drawing.Point(143, 16);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(39, 46);
+            this.btnsiguiente.TabIndex = 11;
+            this.btnsiguiente.Text = ">";
+            this.btnsiguiente.UseVisualStyleBackColor = false;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
+            // 
+            // btnanterior
+            // 
+            this.btnanterior.BackColor = System.Drawing.Color.Wheat;
+            this.btnanterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnanterior.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnanterior.Location = new System.Drawing.Point(51, 16);
+            this.btnanterior.Name = "btnanterior";
+            this.btnanterior.Size = new System.Drawing.Size(39, 46);
+            this.btnanterior.TabIndex = 10;
+            this.btnanterior.Text = "<";
+            this.btnanterior.UseVisualStyleBackColor = false;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
+            // 
+            // btnprimero
+            // 
+            this.btnprimero.BackColor = System.Drawing.Color.Wheat;
+            this.btnprimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnprimero.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnprimero.Location = new System.Drawing.Point(6, 16);
+            this.btnprimero.Name = "btnprimero";
+            this.btnprimero.Size = new System.Drawing.Size(39, 46);
+            this.btnprimero.TabIndex = 9;
+            this.btnprimero.Text = "|<";
+            this.btnprimero.UseVisualStyleBackColor = false;
+            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
+            // 
+            // nOTA_1TextBox
+            // 
+            this.nOTA_1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "NOTA_1", true));
+            this.nOTA_1TextBox.Location = new System.Drawing.Point(122, 115);
+            this.nOTA_1TextBox.Name = "nOTA_1TextBox";
+            this.nOTA_1TextBox.Size = new System.Drawing.Size(100, 20);
+            this.nOTA_1TextBox.TabIndex = 108;
+            // 
+            // nOTA_2TextBox
+            // 
+            this.nOTA_2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "NOTA_2", true));
+            this.nOTA_2TextBox.Location = new System.Drawing.Point(337, 113);
+            this.nOTA_2TextBox.Name = "nOTA_2TextBox";
+            this.nOTA_2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.nOTA_2TextBox.TabIndex = 109;
+            // 
+            // nOTA_3TextBox
+            // 
+            this.nOTA_3TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "NOTA_3", true));
+            this.nOTA_3TextBox.Location = new System.Drawing.Point(560, 113);
+            this.nOTA_3TextBox.Name = "nOTA_3TextBox";
+            this.nOTA_3TextBox.Size = new System.Drawing.Size(100, 20);
+            this.nOTA_3TextBox.TabIndex = 110;
+            // 
+            // nombre_ComboBox1
+            // 
+            this.nombre_ComboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "Nombre ", true));
+            this.nombre_ComboBox1.DataSource = this.notasdelEstudianteBindingSource;
+            this.nombre_ComboBox1.DisplayMember = "Nombre ";
+            this.nombre_ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nombre_ComboBox1.FormattingEnabled = true;
+            this.nombre_ComboBox1.Location = new System.Drawing.Point(101, 81);
+            this.nombre_ComboBox1.Name = "nombre_ComboBox1";
+            this.nombre_ComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.nombre_ComboBox1.TabIndex = 112;
+            // 
+            // iDESTUDIANTEBindingSource2
+            // 
+            this.iDESTUDIANTEBindingSource2.DataMember = "ID_ESTUDIANTE";
+            this.iDESTUDIANTEBindingSource2.DataSource = this.estudianteBindingSource;
+            // 
+            // estudianteBindingSource
+            // 
+            this.estudianteBindingSource.DataMember = "Estudiante";
+            this.estudianteBindingSource.DataSource = this.dataSet;
+            // 
+            // apellidoComboBox
+            // 
+            this.apellidoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.notasdelEstudianteBindingSource, "Apellido", true));
+            this.apellidoComboBox.DataSource = this.notasdelEstudianteBindingSource;
+            this.apellidoComboBox.DisplayMember = "Apellido";
+            this.apellidoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.apellidoComboBox.FormattingEnabled = true;
+            this.apellidoComboBox.Location = new System.Drawing.Point(337, 79);
+            this.apellidoComboBox.Name = "apellidoComboBox";
+            this.apellidoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.apellidoComboBox.TabIndex = 113;
+            // 
+            // iDESTUDIANTEBindingSource
+            // 
+            this.iDESTUDIANTEBindingSource.DataMember = "ID_ESTUDIANTE";
+            this.iDESTUDIANTEBindingSource.DataSource = this.estudianteBindingSource;
+            // 
             // notasdelEstudianteTableAdapter
             // 
             this.notasdelEstudianteTableAdapter.ClearBeforeFill = true;
@@ -695,11 +725,6 @@
             this.tableAdapterManager.SECCIONTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SistemaAcademico.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USUARIOSTableAdapter = null;
-            // 
-            // estudianteBindingSource
-            // 
-            this.estudianteBindingSource.DataMember = "Estudiante";
-            this.estudianteBindingSource.DataSource = this.dataSet;
             // 
             // estudianteTableAdapter
             // 
@@ -724,11 +749,11 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Wheat;
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button1.Location = new System.Drawing.Point(739, 432);
+            this.button1.Location = new System.Drawing.Point(887, 240);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 31);
+            this.button1.Size = new System.Drawing.Size(157, 49);
             this.button1.TabIndex = 114;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
@@ -758,20 +783,10 @@
             this.iDMATERIABindingSource.DataMember = "ID_MATERIA";
             this.iDMATERIABindingSource.DataSource = this.mATERIASBindingSource;
             // 
-            // iDESTUDIANTEBindingSource
-            // 
-            this.iDESTUDIANTEBindingSource.DataMember = "ID_ESTUDIANTE";
-            this.iDESTUDIANTEBindingSource.DataSource = this.estudianteBindingSource;
-            // 
             // iDMATERIABindingSource1
             // 
             this.iDMATERIABindingSource1.DataMember = "ID_MATERIA";
             this.iDMATERIABindingSource1.DataSource = this.mATERIASBindingSource;
-            // 
-            // iDESPECIALIDADBindingSource
-            // 
-            this.iDESPECIALIDADBindingSource.DataMember = "ID_ESPECIALIDAD";
-            this.iDESPECIALIDADBindingSource.DataSource = this.eSPECIALIDADBindingSource;
             // 
             // iDESTUDIANTEBindingSource1
             // 
@@ -788,11 +803,6 @@
             this.estudianteBindingSource1.DataMember = "Estudiante";
             this.estudianteBindingSource1.DataSource = this.dataSet1;
             // 
-            // iDESTUDIANTEBindingSource2
-            // 
-            this.iDESTUDIANTEBindingSource2.DataMember = "ID_ESTUDIANTE";
-            this.iDESTUDIANTEBindingSource2.DataSource = this.estudianteBindingSource;
-            // 
             // iDESTUDIANTEBindingSource3
             // 
             this.iDESTUDIANTEBindingSource3.DataMember = "ID_ESTUDIANTE";
@@ -808,16 +818,35 @@
             this.mATERIASIDBindingSource1.DataMember = "MATERIAS_ID";
             this.mATERIASIDBindingSource1.DataSource = this.mATERIASBindingSource;
             // 
-            // iDMATERIABindingSource2
+            // button2
             // 
-            this.iDMATERIABindingSource2.DataMember = "ID_MATERIA";
-            this.iDMATERIABindingSource2.DataSource = this.mATERIASBindingSource;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(887, 292);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 58);
+            this.button2.TabIndex = 115;
+            this.button2.Text = "   Imprimir ";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // NotasEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 560);
+            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.ClientSize = new System.Drawing.Size(1100, 404);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.apellidoComboBox);
             this.Controls.Add(this.nombre_ComboBox1);
@@ -849,28 +878,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteBindingNavigator)).EndInit();
             this.notasdelEstudianteBindingNavigator.ResumeLayout(false);
             this.notasdelEstudianteBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteDataGridView)).EndInit();
-            this.grbNavegacionAlumnos.ResumeLayout(false);
-            this.grbNavegacionAlumnos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eSPECIALIDADBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSPECIALIDADBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDESPECIALIDADBindingSource)).EndInit();
+            this.grbNavegacionAlumnos.ResumeLayout(false);
+            this.grbNavegacionAlumnos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASIDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDESPECIALIDADBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDESTUDIANTEBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notasdelEstudianteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIASIDBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDMATERIABindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -948,5 +977,6 @@
         private System.Windows.Forms.BindingSource notasdelEstudianteBindingSource1;
         private System.Windows.Forms.BindingSource mATERIASIDBindingSource1;
         private System.Windows.Forms.BindingSource iDMATERIABindingSource2;
+        private System.Windows.Forms.Button button2;
     }
 }

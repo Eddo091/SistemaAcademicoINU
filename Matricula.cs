@@ -36,9 +36,9 @@ namespace SistemaAcademico
                 frm.txtCodigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 frm.txtName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 frm.txtApellido.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                frm.txtEspecialidad.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                frm.txtSeccion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                frm.txtModalidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+               // frm.txtEspecialidad.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+               // frm.txtSeccion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+               // frm.txtModalidad.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 frm.ShowDialog();
 
             }
@@ -57,6 +57,17 @@ namespace SistemaAcademico
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Falta el cuadro de busqueda");
+        }
+
+       // private void button2_Click(object sender, EventArgs e)
+       // {
+           
+       // }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            InformeMatricula matriculas = new InformeMatricula();
+            matriculas.ShowDialog();
         }
     }
 }

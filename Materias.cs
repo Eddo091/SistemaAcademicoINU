@@ -45,5 +45,11 @@ namespace SistemaAcademico
         {
             filtrar_datos(txtbuscar.Text);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            InformeMaterias notas = new InformeMaterias();
+            notas.ShowDialog();
+        }
     }
 }

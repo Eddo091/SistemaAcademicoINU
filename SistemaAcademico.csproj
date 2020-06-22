@@ -55,6 +55,22 @@
     <Reference Include="MetroFramework">
       <HintPath>..\..\..\ConversoresdeUnidad\packages\MetroModernUI.1.3.5.0\lib\net35\MetroFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.Runtime.12.0.2.2402\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.Runtime.12.0.2.2402\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.Runtime.12.0.2.2402\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
       <Private>True</Private>
@@ -77,6 +93,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asitencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asitencias.Designer.cs">
+      <DependentUpon>Asitencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
@@ -109,6 +131,42 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeAlumnos.Designer.cs">
+      <DependentUpon>InformeAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeAsistencia.Designer.cs">
+      <DependentUpon>InformeAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeMaterias.Designer.cs">
+      <DependentUpon>InformeMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeMatricula.Designer.cs">
+      <DependentUpon>InformeMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformesDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformesDocentes.Designer.cs">
+      <DependentUpon>InformesDocentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="informesNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informesNotas.Designer.cs">
+      <DependentUpon>informesNotas.cs</DependentUpon>
     </Compile>
     <Compile Include="LogoINU.cs">
       <SubType>Form</SubType>
@@ -148,6 +206,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportescs.Designer.cs">
+      <DependentUpon>Reportescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportt.Designer.cs">
+      <DependentUpon>Reportt.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -155,6 +225,9 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Asitencias.resx">
+      <DependentUpon>Asitencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Docentes.resx">
       <DependentUpon>Docentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +239,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeAlumnos.resx">
+      <DependentUpon>InformeAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeAsistencia.resx">
+      <DependentUpon>InformeAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeMaterias.resx">
+      <DependentUpon>InformeMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeMatricula.resx">
+      <DependentUpon>InformeMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformesDocentes.resx">
+      <DependentUpon>InformesDocentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informesNotas.resx">
+      <DependentUpon>informesNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogoINU.resx">
       <DependentUpon>LogoINU.cs</DependentUpon>
@@ -195,6 +286,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportedocentes.rdlc" />
+    <EmbeddedResource Include="Reportescs.resx">
+      <DependentUpon>Reportescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportt.resx">
+      <DependentUpon>Reportt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptIncripcion.rdlc" />
+    <EmbeddedResource Include="rptMateria.rdlc" />
+    <EmbeddedResource Include="RptMaterias.rdlc" />
+    <EmbeddedResource Include="RptMatricula.rdlc" />
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>

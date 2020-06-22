@@ -160,5 +160,20 @@ namespace SistemaAcademico
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            /*try {
+                Reportescs imprimirnotas = new Reportescs();
+                imprimirnotas.ShowDialog();
+            } catch (Exception R) { MessageBox.Show("Error "+ R); }
+            */
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+         //  informesNotas notas = new informesNotas();
+          //  notas.ShowDialog();
+        }
     }
 }
