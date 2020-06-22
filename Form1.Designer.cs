@@ -209,6 +209,7 @@
             this.btnAcademica.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnAcademica.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAcademica.UseVisualStyleBackColor = true;
+            this.btnAcademica.Visible = false;
             // 
             // pictureBox7
             // 
@@ -219,6 +220,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(10, 30);
             this.pictureBox7.TabIndex = 26;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Visible = false;
             // 
             // btnReportes
             // 
@@ -239,6 +241,7 @@
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Visible = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // pictureBox6
@@ -250,6 +253,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(10, 30);
             this.pictureBox6.TabIndex = 24;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
             // 
             // btnNotas
             // 

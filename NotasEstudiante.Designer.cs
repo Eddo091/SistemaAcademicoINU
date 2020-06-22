@@ -751,9 +751,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button1.Location = new System.Drawing.Point(878, 255);
+            this.button1.Location = new System.Drawing.Point(887, 240);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 31);
+            this.button1.Size = new System.Drawing.Size(157, 49);
             this.button1.TabIndex = 114;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
@@ -820,15 +820,25 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button2.Font = new System.Drawing.Font("Georgia", 12F);
-            this.button2.Location = new System.Drawing.Point(981, 255);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(887, 292);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 31);
+            this.button2.Size = new System.Drawing.Size(157, 58);
             this.button2.TabIndex = 115;
-            this.button2.Text = "Imprimir";
+            this.button2.Text = "   Imprimir ";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // NotasEstudiante
             // 

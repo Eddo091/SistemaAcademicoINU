@@ -138,6 +138,12 @@
     <Compile Include="InformeAlumnos.Designer.cs">
       <DependentUpon>InformeAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="InformeAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeAsistencia.Designer.cs">
+      <DependentUpon>InformeAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="InformeMaterias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,18 @@
     </Compile>
     <Compile Include="InformeMatricula.Designer.cs">
       <DependentUpon>InformeMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformesDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformesDocentes.Designer.cs">
+      <DependentUpon>InformesDocentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="informesNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informesNotas.Designer.cs">
+      <DependentUpon>informesNotas.cs</DependentUpon>
     </Compile>
     <Compile Include="LogoINU.cs">
       <SubType>Form</SubType>
@@ -200,12 +218,6 @@
     <Compile Include="Reportt.Designer.cs">
       <DependentUpon>Reportt.cs</DependentUpon>
     </Compile>
-    <Compile Include="rptDocentes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="rptDocentes.Designer.cs">
-      <DependentUpon>rptDocentes.cs</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -231,11 +243,20 @@
     <EmbeddedResource Include="InformeAlumnos.resx">
       <DependentUpon>InformeAlumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformeAsistencia.resx">
+      <DependentUpon>InformeAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InformeMaterias.resx">
       <DependentUpon>InformeMaterias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformeMatricula.resx">
       <DependentUpon>InformeMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformesDocentes.resx">
+      <DependentUpon>InformesDocentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informesNotas.resx">
+      <DependentUpon>informesNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogoINU.resx">
       <DependentUpon>LogoINU.cs</DependentUpon>
@@ -265,16 +286,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="reportedocentes.rdlc" />
     <EmbeddedResource Include="Reportescs.resx">
       <DependentUpon>Reportescs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportt.resx">
       <DependentUpon>Reportt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rptDocentes.resx">
-      <DependentUpon>rptDocentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RptIncripcion.rdlc" />
     <EmbeddedResource Include="rptMateria.rdlc" />

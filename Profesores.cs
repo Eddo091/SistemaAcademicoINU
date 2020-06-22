@@ -57,11 +57,16 @@ namespace SistemaAcademico
             frm.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            NotasEstudiante Notas = new NotasEstudiante();
-            Notas.ShowDialog();
-        }
+       // private void button2_Click(object sender, EventArgs e)
+       // {
+           // NotasEstudiante Notas = new NotasEstudiante();
+           // Notas.ShowDialog();
+      //  }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            InformesDocentes doc = new InformesDocentes();
+            doc.ShowDialog();
+        }
     }
 }

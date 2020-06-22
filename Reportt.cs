@@ -25,7 +25,7 @@ namespace SistemaAcademico
 
         private void button2_Click(object sender, EventArgs e)
         {
-            rptDocentes doce = new rptDocentes();
+            InformesDocentes doce = new InformesDocentes();
             doce.ShowDialog();
         }
 
@@ -37,8 +37,8 @@ namespace SistemaAcademico
 
         private void button3_Click(object sender, EventArgs e)
         {
-            InformeMatricula Matricula = new InformeMatricula();
-            Matricula.ShowDialog();
+            //InformeMatricula Matricula = new InformeMatricula();
+           // Matricula.ShowDialog();
         }
     }
 }

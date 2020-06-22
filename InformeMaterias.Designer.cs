@@ -30,37 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSet = new SistemaAcademico.DataSet();
             this.MATERIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet = new SistemaAcademico.DataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.MATERIASTableAdapter = new SistemaAcademico.DataSetTableAdapters.MATERIASTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MATERIASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // MATERIASBindingSource
             // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "rptMateria";
-            reportDataSource1.Value = this.MATERIASBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaAcademico.rptMateria.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(1, 2);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(682, 398);
-            this.reportViewer1.TabIndex = 0;
+            this.MATERIASBindingSource.DataMember = "MATERIAS";
+            this.MATERIASBindingSource.DataSource = this.DataSet;
             // 
             // DataSet
             // 
             this.DataSet.DataSetName = "DataSet";
             this.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // MATERIASBindingSource
+            // reportViewer1
             // 
-            this.MATERIASBindingSource.DataMember = "MATERIAS";
-            this.MATERIASBindingSource.DataSource = this.DataSet;
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.MATERIASBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaAcademico.RptMaterias.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(1, 2);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(682, 398);
+            this.reportViewer1.TabIndex = 0;
             // 
             // MATERIASTableAdapter
             // 
@@ -75,8 +75,8 @@
             this.Name = "InformeMaterias";
             this.Text = "InformeMaterias";
             this.Load += new System.EventHandler(this.InformeMaterias_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MATERIASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

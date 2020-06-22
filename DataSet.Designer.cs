@@ -5085,6 +5085,10 @@ namespace SistemaAcademico {
             
             private global::System.Data.DataColumn columnMATERIAS;
             
+            private global::System.Data.DataColumn columnESPECIALIDAD;
+            
+            private global::System.Data.DataColumn columnSECCION;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ASISTENCIADataTable() {
@@ -5144,6 +5148,22 @@ namespace SistemaAcademico {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ESPECIALIDADColumn {
+                get {
+                    return this.columnESPECIALIDAD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SECCIONColumn {
+                get {
+                    return this.columnSECCION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5179,12 +5199,14 @@ namespace SistemaAcademico {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ASISTENCIARow AddASISTENCIARow(string Nombre_, string Apellido, string MATERIAS) {
+            public ASISTENCIARow AddASISTENCIARow(string Nombre_, string Apellido, string MATERIAS, string ESPECIALIDAD, string SECCION) {
                 ASISTENCIARow rowASISTENCIARow = ((ASISTENCIARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre_,
                         Apellido,
-                        MATERIAS};
+                        MATERIAS,
+                        ESPECIALIDAD,
+                        SECCION};
                 rowASISTENCIARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowASISTENCIARow);
                 return rowASISTENCIARow;
@@ -5210,6 +5232,8 @@ namespace SistemaAcademico {
                 this.columnNombre_ = base.Columns["Nombre "];
                 this.columnApellido = base.Columns["Apellido"];
                 this.columnMATERIAS = base.Columns["MATERIAS"];
+                this.columnESPECIALIDAD = base.Columns["ESPECIALIDAD"];
+                this.columnSECCION = base.Columns["SECCION"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5221,9 +5245,15 @@ namespace SistemaAcademico {
                 base.Columns.Add(this.columnApellido);
                 this.columnMATERIAS = new global::System.Data.DataColumn("MATERIAS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMATERIAS);
+                this.columnESPECIALIDAD = new global::System.Data.DataColumn("ESPECIALIDAD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESPECIALIDAD);
+                this.columnSECCION = new global::System.Data.DataColumn("SECCION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSECCION);
                 this.columnNombre_.MaxLength = 10;
                 this.columnApellido.MaxLength = 10;
                 this.columnMATERIAS.MaxLength = 10;
+                this.columnESPECIALIDAD.MaxLength = 50;
+                this.columnSECCION.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7637,6 +7667,38 @@ namespace SistemaAcademico {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ESPECIALIDAD {
+                get {
+                    try {
+                        return ((string)(this[this.tableASISTENCIA.ESPECIALIDADColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ESPECIALIDAD\' de la tabla \'ASISTENCIA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableASISTENCIA.ESPECIALIDADColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SECCION {
+                get {
+                    try {
+                        return ((string)(this[this.tableASISTENCIA.SECCIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'SECCION\' de la tabla \'ASISTENCIA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableASISTENCIA.SECCIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombre_Null() {
                 return this.IsNull(this.tableASISTENCIA.Nombre_Column);
             }
@@ -7669,6 +7731,30 @@ namespace SistemaAcademico {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMATERIASNull() {
                 this[this.tableASISTENCIA.MATERIASColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsESPECIALIDADNull() {
+                return this.IsNull(this.tableASISTENCIA.ESPECIALIDADColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetESPECIALIDADNull() {
+                this[this.tableASISTENCIA.ESPECIALIDADColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSECCIONNull() {
+                return this.IsNull(this.tableASISTENCIA.SECCIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSECCIONNull() {
+                this[this.tableASISTENCIA.SECCIONColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -12608,6 +12694,8 @@ WHERE        (Notas.Id_NOTAS = @Id_NOTAS)";
             tableMapping.ColumnMappings.Add("Nombre ", "Nombre ");
             tableMapping.ColumnMappings.Add("Apellido", "Apellido");
             tableMapping.ColumnMappings.Add("MATERIAS", "MATERIAS");
+            tableMapping.ColumnMappings.Add("ESPECIALIDAD", "ESPECIALIDAD");
+            tableMapping.ColumnMappings.Add("SECCION", "SECCION");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -12624,10 +12712,12 @@ WHERE        (Notas.Id_NOTAS = @Id_NOTAS)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Estudiante.[Nombre ], Estudiante.Apellido, MATERIAS.MATERIAS\r\nFROM " +
-                "           DOCENTES INNER JOIN\r\n                         MATERIAS ON DOCENTES.MA" +
-                "TERIAS_ID = MATERIAS.Id_MATERIAS CROSS JOIN\r\n                         Estudiante" +
-                "";
+            this._commandCollection[0].CommandText = @"SELECT        Estudiante.[Nombre ], Estudiante.Apellido, MATERIAS.MATERIAS, ESPECIALIDAD.ESPECIALIDAD, SECCION.SECCION
+FROM            ESPECIALIDAD INNER JOIN
+                         Estudiante ON ESPECIALIDAD.ID_ESPECIALIDAD = Estudiante.ID_ESPECIALIDAD INNER JOIN
+                         SECCION ON Estudiante.ID_SECCION = SECCION.Id_SECCION CROSS JOIN
+                         DOCENTES INNER JOIN
+                         MATERIAS ON DOCENTES.MATERIAS_ID = MATERIAS.Id_MATERIAS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

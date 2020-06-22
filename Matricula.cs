@@ -59,9 +59,15 @@ namespace SistemaAcademico
             MessageBox.Show("Falta el cuadro de busqueda");
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+       // private void button2_Click(object sender, EventArgs e)
+       // {
            
+       // }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            InformeMatricula matriculas = new InformeMatricula();
+            matriculas.ShowDialog();
         }
     }
 }
